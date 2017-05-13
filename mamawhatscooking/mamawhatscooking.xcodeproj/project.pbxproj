@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
+		D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */; };
+		D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +21,8 @@
 		D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +58,7 @@
 		D01D03D81EC7BD1300B9ADF5 = {
 			isa = PBXGroup;
 			children = (
+				D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */,
 				D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */,
 				D01D03E21EC7BD1300B9ADF5 /* Products */,
 				B57FDDAAE18EA2D7E8832055 /* Pods */,
@@ -72,11 +77,28 @@
 		D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */ = {
 			isa = PBXGroup;
 			children = (
+				D0B85F4F1EC7BE3A003FCD7B /* viewcontrollers */,
+				D0B85F4E1EC7BE2B003FCD7B /* extensions */,
 				D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */,
 				D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */,
 				D01D03F01EC7BD1300B9ADF5 /* Info.plist */,
 			);
 			path = mamawhatscooking;
+			sourceTree = "<group>";
+		};
+		D0B85F4E1EC7BE2B003FCD7B /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		D0B85F4F1EC7BE3A003FCD7B /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */,
+			);
+			name = viewcontrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
+				D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
+				D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
