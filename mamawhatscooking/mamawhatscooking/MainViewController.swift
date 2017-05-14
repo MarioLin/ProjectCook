@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
         mainButton.height = 44
         mainButton.centerVertically()
         mainButton.centerHorizontally()
+        
+        mainButton.touchUpInsideBlock = { (sender: Any) in
+            
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

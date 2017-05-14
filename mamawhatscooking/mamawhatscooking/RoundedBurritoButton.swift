@@ -28,11 +28,10 @@ class RoundedBurritoButton: UIButton {
         }
     }
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
-        layer.cornerRadius = 3
+        layer.cornerRadius = 4.5
     }
     
     required convenience init(title: String, backgroundColor: UIColor = .white, borderColor: UIColor = .orange) {
