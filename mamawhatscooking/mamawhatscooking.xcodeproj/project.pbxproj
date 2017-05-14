@@ -15,6 +15,7 @@
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
 		D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */; };
+		D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
 		D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyApiTransaction.swift; sourceTree = "<group>"; };
+		D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */,
 				D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */,
 				D01D03F01EC7BD1300B9ADF5 /* Info.plist */,
+				D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */,
 			);
 			path = mamawhatscooking;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
+				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
 				D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */,
 			);

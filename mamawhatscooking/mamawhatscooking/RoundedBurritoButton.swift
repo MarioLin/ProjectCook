@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-typealias TouchBlock = (_ sender: Any) -> ()
-
 class RoundedBurritoButton: UIButton {
     var touchUpInsideBlock: TouchBlock?
     var savedBackgroundColor: UIColor?
