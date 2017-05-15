@@ -30,6 +30,10 @@ class YummlyApiTransaction: ApiTransaction {
     }
     
     override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
+        guard let matches = dictionary["matches"] as? [[String:Any]],
+            let attribution = dictionary["attribution"] as? [String: String] else {
+                return []
+        }
         return []
     }
 }
