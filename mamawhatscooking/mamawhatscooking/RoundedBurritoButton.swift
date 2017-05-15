@@ -19,6 +19,8 @@ class RoundedBurritoButton: UIButton {
             if let _ = savedBackgroundColor, let _ = savedBorderColor {
                 let mainColor = isHighlighted ? savedBackgroundColor : savedBorderColor
                 let outerColor = isHighlighted ? savedBorderColor : savedBackgroundColor
+                layer.borderWidth = isHighlighted ? 2 : 0
+
                 backgroundColor = outerColor
                 layer.borderColor = mainColor?.cgColor
                 setTitleColor(mainColor, for: .normal)
@@ -32,13 +34,13 @@ class RoundedBurritoButton: UIButton {
         layer.cornerRadius = 4.5
     }
     
-    required convenience init(title: String, backgroundColor: UIColor = .white, borderColor: UIColor = .orange) {
+    required convenience init(title: String, backgroundColor: UIColor = .orange, borderColor: UIColor = .white) {
         self.init(frame: .zero)
         self.backgroundColor = backgroundColor
         savedBackgroundColor = backgroundColor
         savedBorderColor = borderColor
         self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 0
         setTitle(title, for: .normal)
         setTitleColor(borderColor, for: .normal)
     }

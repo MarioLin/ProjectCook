@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     let mainButton = RoundedBurritoButton.init(title: "Start")
+    var transaction = YummlyApiTransaction.init()
     required init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,8 +25,15 @@ class MainViewController: UIViewController {
         mainButton.centerVertically()
         mainButton.centerHorizontally()
         
+        transaction.completion = { (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> () in
+            guard let data = data, let response = response else {
+                    return
+            }
+            print (data)
+            print (response)
+        }
         mainButton.touchUpInsideBlock = { (sender: Any) in
-            
+            self.transaction.makeSearchRequest(params: ["q" : "onion%20soup"])
         }
     }
     

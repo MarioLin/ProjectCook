@@ -10,3 +10,4 @@ import Foundation
 
 typealias VoidBlock = () -> ()
 typealias TouchBlock = (_ sender: Any) -> ()
+typealias DataTaskCompletionBlock = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> ()
