@@ -26,9 +26,10 @@ class ApiTransaction: NSObject {
             guard let data = data, let response = response else {
                     return
             }
-            
+            let dict = self.serializeDataToJson(data: data)
+            let savedObjects = self.saveObjectsFromDict(dictionary: dict)
             DispatchQueue.main.async {
-                completion(data, response, error)
+                completion(savedObjects, response, error)
             }
         }
         datatask.resume()
@@ -45,13 +46,25 @@ class ApiTransaction: NSObject {
             parsedUrl += "\(key)=\(value)&"
         }
         if parsedUrl.characters.last == "&" {
-            parsedUrl = parsedUrl.substring(to: parsedUrl.endIndex)
+            parsedUrl = parsedUrl.substring(to: parsedUrl.index(before:parsedUrl.endIndex))
         }
         return URL(string: parsedUrl)
     }
     
-//    func serializeDataToJson(data: Data) -> Dictionary<String, String> {
-//        
-//    }
-//    
+    func serializeDataToJson(data: Data) -> [String: Any] {
+        var json = Dictionary<String, Any>()
+        do {
+            json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
+        }
+        catch let error as NSError {
+            print (error)
+        }
+        return json
+    }
+    
+    func saveObjectsFromDict(dictionary: [String: Any]) -> [Any] {
+        // override
+        return []
+    }
+    
 }

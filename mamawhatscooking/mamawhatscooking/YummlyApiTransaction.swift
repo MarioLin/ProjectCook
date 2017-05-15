@@ -28,4 +28,8 @@ class YummlyApiTransaction: ApiTransaction {
     func makeRecipeRequest(recipeId: String) {
         params = ["_app_id" : app_id]
     }
+    
+    override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
+        return []
+    }
 }

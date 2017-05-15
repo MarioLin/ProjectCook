@@ -25,11 +25,11 @@ class MainViewController: UIViewController {
         mainButton.centerVertically()
         mainButton.centerHorizontally()
         
-        transaction.completion = { (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> () in
-            guard let data = data, let response = response else {
+        transaction.completion = { (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
+            guard let objects = objects, let response = response else {
                     return
             }
-            print (data)
+            print (objects)
             print (response)
         }
         mainButton.touchUpInsideBlock = { (sender: Any) in
