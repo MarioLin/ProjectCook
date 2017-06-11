@@ -49,3 +49,9 @@ class YummlySearchModel {
         }
     }
 }
+
+extension YummlySearchModel: CustomStringConvertible {
+    var description: String {
+        return recipeId ?? "no id found"
+    }
+}

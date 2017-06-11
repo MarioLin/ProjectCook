@@ -22,6 +22,8 @@ class ApiTransaction: NSObject {
         guard let completion = completion else {
             return
         }
+        
+        print("API get request: " + parsedUrl.absoluteString)
         let datatask = defaultSession.dataTask(with: parsedUrl) { (data, response, error) in
             guard let data = data, let response = response else {
                     return

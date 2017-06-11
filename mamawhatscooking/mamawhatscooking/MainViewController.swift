@@ -11,7 +11,6 @@ import UIKit
 
 class MainViewController: UIViewController {
     let mainButton = RoundedBurritoButton.init(title: "Start")
-    var transaction = YummlyApiTransaction.init()
     required init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,20 +24,33 @@ class MainViewController: UIViewController {
         mainButton.centerVertically()
         mainButton.centerHorizontally()
         
-        transaction.completion = { (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
-            guard let objects = objects, let response = response else {
-                    return
-            }
-            print (objects)
-            print (response)
-        }
-        mainButton.touchUpInsideBlock = { (sender: Any) in
-            self.transaction.makeSearchRequest(params: ["q" : "onion%20soup"])
+        mainButton.touchUpInsideBlock = { [weak self] (sender: Any) in
+            guard let strongSelf = self else { return }
+            strongSelf.makeTransaction()
         }
     }
     
+    func makeTransaction() {
+        let transaction = YummlyApiTransaction()
+        transaction.completion = { (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
+            guard let objects = objects else { return }
+            let randomNumber = arc4random_uniform(UInt32(objects.count))
+            guard let recipeToGet = objects[Int(randomNumber)] as? YummlySearchModel else { return }
+            
+            // get the selected recipe details
+            let recipeTransaction = YummlyRecipeDetailTransacation()
+            recipeTransaction.completion = { [weak self] (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
+                guard let strongSelf = self else { return }
+                let recipeVC = RecipeViewController()
+                let navVC = UINavigationController(rootViewController: recipeVC)
+                strongSelf.present(navVC, animated: true, completion: nil)
+            }
+            recipeTransaction.makeRecipeRequest(recipeId: recipeToGet.recipeId!)
+        }
+        transaction.makeSearchRequest(params: ["q" : "onion%20soup"])
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
 }

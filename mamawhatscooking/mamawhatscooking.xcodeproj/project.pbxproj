@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B23F1EEE04A80094890A /* RecipeViewController.swift */; };
+		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
+		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
 		D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */; };
@@ -25,10 +28,13 @@
 /* Begin PBXFileReference section */
 		1FC44F7C564FF026508EA444 /* Pods-mamawhatscooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.debug.xcconfig"; sourceTree = "<group>"; };
 		3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mamawhatscooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D012B23F1EEE04A80094890A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
 		D01D03E11EC7BD1300B9ADF5 /* mamawhatscooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamawhatscooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
 		D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorsModel.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		D01D03D81EC7BD1300B9ADF5 = {
 			isa = PBXGroup;
 			children = (
+				D065757E1EE8D46400846D7D /* Launch Screen.storyboard */,
 				D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */,
 				D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */,
 				D01D03E21EC7BD1300B9ADF5 /* Products */,
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */,
+				D012B23F1EEE04A80094890A /* RecipeViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 			children = (
 				D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */,
 				D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */,
+				D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */,
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
 				D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */,
 			);
@@ -276,6 +286,8 @@
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
+				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
+				D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
