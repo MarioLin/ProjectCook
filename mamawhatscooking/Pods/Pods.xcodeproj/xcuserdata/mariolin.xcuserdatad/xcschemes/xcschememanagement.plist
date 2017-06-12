@@ -9,20 +9,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Shimmer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2EE37BB79D795A0E6CC569498A6558E6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3C46248EE355C85D620E659035FAFC58</key>
+		<key>6A19BF990F321483122A82EE29F801BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

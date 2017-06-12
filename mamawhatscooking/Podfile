@@ -6,5 +6,4 @@ target 'mamawhatscooking' do
   use_frameworks!
 
   # Pods for mamawhatscooking
-  pod 'Shimmer'
 end
