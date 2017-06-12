@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B23F1EEE04A80094890A /* RecipeViewController.swift */; };
 		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
+		D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2431EEE177F0094890A /* RecipeModel.swift */; };
+		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
@@ -30,6 +32,8 @@
 		3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mamawhatscooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D012B23F1EEE04A80094890A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
+		D012B2431EEE177F0094890A /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		D012B2471EEE18150094890A /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
 		D01D03E11EC7BD1300B9ADF5 /* mamawhatscooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamawhatscooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				D06CAC761EC9565B0038B6CE /* AttributionModel.swift */,
 				D06CAC781EC956680038B6CE /* YummlySearchModel.swift */,
 				D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */,
+				D012B2431EEE177F0094890A /* RecipeModel.swift */,
+				D012B2471EEE18150094890A /* NutritionModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -285,8 +291,10 @@
 				D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */,
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
+				D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
+				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
 				D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
