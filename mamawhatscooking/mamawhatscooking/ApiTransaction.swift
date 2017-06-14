@@ -12,26 +12,17 @@ class ApiTransaction: NSObject {
     let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
     var url: URL?
     var completion: DataTaskCompletionBlock?
-    var params: Dictionary<String, String>?
+    var params: [String : String]?
     
     func makeNetworkRequest() {
-        guard let parsedUrl = parseParamsWithURL() else {
-            print ("malformed url")
-            return
-        }
-        guard let completion = completion else {
-            return
-        }
-        
+        guard let parsedUrl = parseParamsWithURL() else { fatalError("malformed url") }
         print("API get request: " + parsedUrl.absoluteString)
         let datatask = defaultSession.dataTask(with: parsedUrl) { (data, response, error) in
-            guard let data = data, let response = response else {
-                    return
-            }
+            guard let data = data, let response = response else { return }
             let dict = self.serializeDataToJson(data: data)
             let savedObjects = self.saveObjectsFromDict(dictionary: dict)
             DispatchQueue.main.async {
-                completion(savedObjects, response, error)
+                self.completion?(savedObjects, response, error)
             }
         }
         datatask.resume()
@@ -39,9 +30,7 @@ class ApiTransaction: NSObject {
     
     func parseParamsWithURL() -> URL? {
         var parsedUrl: String
-        guard let url = url, let params = params else {
-            return nil
-        }
+        guard let url = url, let params = params else { return nil }
         parsedUrl = url.absoluteString
         parsedUrl += "?"
         for (key, value) in params {
@@ -57,9 +46,8 @@ class ApiTransaction: NSObject {
         var json = Dictionary<String, Any>()
         do {
             json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
-        }
-        catch let error as NSError {
-            print (error)
+        } catch let error as NSError {
+            print(error)
         }
         return json
     }

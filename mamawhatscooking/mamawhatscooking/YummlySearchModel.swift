@@ -25,20 +25,11 @@ class YummlySearchModel {
             imageUrl = urlSize["90"]
         }
         smallImageUrls = dict["smallImageUrls"] as? [String]
-        
-        guard let id = dict["id"] as? String,
-            let name = dict["recipeName"] as? String,
-            let time = dict["totalTimeInSeconds"] as? Int,
-            let rate = dict["rating"] as? Int,
-            let ing = dict["ingredients"] as? [String] else {
-            print ("missing key fields")
-            return
-        }
-        recipeId = id
-        rating = rate
-        recipeName = name
-        timeInSeconds = time
-        ingredients = ing
+        recipeId = dict["id"] as? String
+        rating = dict["rating"] as? Int
+        recipeName = dict["recipeName"] as? String
+        timeInSeconds = dict["totalTimeInSeconds"] as? Int
+        ingredients = dict["ingredients"] as? [String]
         if let flavorsDict = dict["flavors"] as? [String:Float] {
             flavorRating = FlavorsModel(spicyRating: flavorsDict["piquant"],
                                         meatyRating: flavorsDict["meaty"],
@@ -52,6 +43,6 @@ class YummlySearchModel {
 
 extension YummlySearchModel: CustomStringConvertible {
     var description: String {
-        return recipeId ?? "no id found"
+        return "id: \(recipeId ?? "no id") \nname: \(recipeName ?? "none")"
     }
 }

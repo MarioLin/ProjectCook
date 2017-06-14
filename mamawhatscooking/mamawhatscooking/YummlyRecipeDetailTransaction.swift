@@ -23,6 +23,6 @@ class YummlyRecipeDetailTransacation : ApiTransaction {
     }
 
     override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
-        return []
+        return [RecipeModel(recipeDict: dictionary)]
     }
 }
