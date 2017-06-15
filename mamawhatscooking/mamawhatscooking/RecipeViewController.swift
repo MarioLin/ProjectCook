@@ -8,6 +8,12 @@
 
 import UIKit
 
-class RecipeViewController: UIViewController {
-    
+class RecipeViewController: BaseViewController {
+    required init() {
+        super.init()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
 }

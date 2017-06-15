@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     let mainButton = RoundedBurritoButton(title: "Cook up a recipe!")
     let chefHatView: UIImageView = {
         let imageView = UIImageView()
@@ -18,9 +18,9 @@ class MainViewController: UIViewController {
     }()
     
     required init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
-    
+
     override func viewDidLoad() {
         view.backgroundColor = .orange
         view.addSubview(mainButton)
