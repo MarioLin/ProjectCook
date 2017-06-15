@@ -19,7 +19,6 @@ class RoundedBurritoButton: UIButton {
             if let _ = savedBackgroundColor, let _ = savedBorderColor {
                 let mainColor = isHighlighted ? savedBackgroundColor : savedBorderColor
                 let outerColor = isHighlighted ? savedBorderColor : savedBackgroundColor
-                layer.borderWidth = isHighlighted ? 2 : 0
 
                 backgroundColor = outerColor
                 layer.borderColor = mainColor?.cgColor
@@ -40,7 +39,7 @@ class RoundedBurritoButton: UIButton {
         savedBackgroundColor = backgroundColor
         savedBorderColor = borderColor
         self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = 0
+        self.layer.borderWidth = 2
         setTitle(title, for: .normal)
         setTitleColor(borderColor, for: .normal)
     }

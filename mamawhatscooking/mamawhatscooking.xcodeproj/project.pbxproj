@@ -24,6 +24,8 @@
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
 		D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */; };
 		D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */; };
+		D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9071EF2433D000DA99E /* ImageConstants.swift */; };
+		D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
 		D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyApiTransaction.swift; sourceTree = "<group>"; };
 		D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
+		D0ECE9071EF2433D000DA99E /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDefinitions.swift; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 		D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */ = {
 			isa = PBXGroup;
 			children = (
+				D0ECE9061EF2432C000DA99E /* shared */,
 				D06CAC751EC9564D0038B6CE /* model */,
 				D0B85F571EC7D6D7003FCD7B /* network */,
 				D0B85F541EC7C89C003FCD7B /* views */,
@@ -112,7 +117,6 @@
 				D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */,
 				D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */,
 				D01D03F01EC7BD1300B9ADF5 /* Info.plist */,
-				D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */,
 			);
 			path = mamawhatscooking;
 			sourceTree = "<group>";
@@ -162,6 +166,16 @@
 				D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */,
 			);
 			name = network;
+			sourceTree = "<group>";
+		};
+		D0ECE9061EF2432C000DA99E /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */,
+				D0ECE9071EF2433D000DA99E /* ImageConstants.swift */,
+				D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */,
+			);
+			name = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +309,10 @@
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
+				D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */,
 				D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
+				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,

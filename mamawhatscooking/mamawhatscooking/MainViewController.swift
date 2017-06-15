@@ -10,24 +10,36 @@ import Foundation
 import UIKit
 
 class MainViewController: UIViewController {
-    let mainButton = RoundedBurritoButton.init(title: "Start")
+    let mainButton = RoundedBurritoButton(title: "Cook up a recipe!")
+    let chefHatView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: kImageChefHat)
+        return imageView
+    }()
+    
     required init() {
         super.init(nibName: nil, bundle: nil)
     }
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        view.backgroundColor = .orange
         view.addSubview(mainButton)
-
-        mainButton.width = view.width - 2 * 25;
-        mainButton.height = 44
-        mainButton.centerVertically()
-        mainButton.centerHorizontally()
-        
+        view.addSubview(chefHatView)
         mainButton.touchUpInsideBlock = { [weak self] (sender: Any) in
             guard let strongSelf = self else { return }
             strongSelf.makeTransaction()
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        mainButton.width = view.width - 2 * 25;
+        mainButton.height = 44
+        mainButton.centerVertically()
+        mainButton.centerHorizontally()
+        chefHatView.bottom = mainButton.top - 45
+        chefHatView.frame.size = CGSize(width: 100, height: 100)
+        chefHatView.centerHorizontally()
+
     }
     
     func makeTransaction() {
