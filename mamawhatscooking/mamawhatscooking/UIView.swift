@@ -63,6 +63,15 @@ extension UIView {
         }
     }
     
+    var size: CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            frame.size = newValue
+        }
+    }
+    
     func centerHorizontally() {
         guard let superview = superview else {
             return

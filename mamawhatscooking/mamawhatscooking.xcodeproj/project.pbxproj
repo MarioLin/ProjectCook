@@ -16,6 +16,7 @@
 		D0458DBE1F0065540036D0B5 /* RecipeTastes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTastes.swift */; };
 		D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */; };
 		D0458DC21F006B860036D0B5 /* TasteLevelPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */; };
+		D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC31F007AFD0036D0B5 /* LevelView.swift */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
@@ -48,6 +49,7 @@
 		D0458DBD1F0065540036D0B5 /* RecipeTastes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTastes.swift; sourceTree = "<group>"; };
 		D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
 		D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteLevelPreferenceView.swift; sourceTree = "<group>"; };
+		D0458DC31F007AFD0036D0B5 /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		D0B85F541EC7C89C003FCD7B /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D0458DC31F007AFD0036D0B5 /* LevelView.swift */,
 				D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */,
 				D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */,
 			);
@@ -322,6 +325,7 @@
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */,
 				D0ECE90E1EF24D32000DA99E /* TastesSurveyViewController.swift in Sources */,
+				D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */,
 				D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
 				D0458DBE1F0065540036D0B5 /* RecipeTastes.swift in Sources */,
