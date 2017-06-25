@@ -17,7 +17,7 @@ class MainViewController: BaseViewController {
         return imageView
     }()
     
-    required init() {
+    override init() {
         super.init()
     }
 
@@ -27,7 +27,10 @@ class MainViewController: BaseViewController {
         view.addSubview(chefHatView)
         mainButton.touchUpInsideBlock = { [weak self] (sender: Any) in
             guard let strongSelf = self else { return }
-            strongSelf.makeTransaction()
+            let recipeTastes = RecipeTastes()
+            let tasteSurveyVC = TastesSurveyViewController(surveryOption: globalSurveryOrder[0], recipeTastes: recipeTastes)
+            let navVC = BaseNavViewController(rootViewController: tasteSurveyVC)
+            strongSelf.present(navVC, animated: true, completion: nil)
         }
     }
     
@@ -42,26 +45,6 @@ class MainViewController: BaseViewController {
 
     }
     
-    func makeTransaction() {
-        let transaction = YummlyApiTransaction()
-        transaction.completion = { (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
-            guard let objects = objects else { return }
-            let randomNumber = arc4random_uniform(UInt32(objects.count))
-            guard let recipeToGet = objects[Int(randomNumber)] as? YummlySearchModel else { return }
-            
-            // get the selected recipe details
-            let recipeTransaction = YummlyRecipeDetailTransacation()
-            recipeTransaction.completion = { [weak self] (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
-                guard let strongSelf = self else { return }
-                let recipeVC = RecipeViewController()
-                let navVC = UINavigationController(rootViewController: recipeVC)
-                strongSelf.present(navVC, animated: true, completion: nil)
-            }
-            recipeTransaction.makeRecipeRequest(recipeId: recipeToGet.recipeId!)
-        }
-        transaction.makeSearchRequest(params: ["q" : "onion%20soup"])
-    }
-
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }

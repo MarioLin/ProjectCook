@@ -9,7 +9,7 @@
 import UIKit
 
 class RecipeViewController: BaseViewController {
-    required init() {
+    override init() {
         super.init()
     }
 

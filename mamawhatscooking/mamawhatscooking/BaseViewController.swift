@@ -14,7 +14,7 @@ class BaseViewController : UIViewController {
         view.backgroundColor = .orange
     }
     
-    required init() {
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
