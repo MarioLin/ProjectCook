@@ -8,18 +8,6 @@
 
 import Foundation
 
-enum TasteSurveryOption {
-    case sweet
-    case savory
-    case spicy
-    case allowedCuisine
-    case allowedDiet
-    case allowedAllergy
-    case allowedCourse
-}
-
 typealias VoidBlock = () -> ()
 typealias TouchBlock = (_ sender: Any) -> ()
 typealias DataTaskCompletionBlock = (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> ()
-
-let globalSurveryOrder: [TasteSurveryOption] = [.sweet, .savory, .spicy, .allowedCuisine, .allowedDiet, .allowedAllergy, .allowedCourse]

@@ -13,7 +13,7 @@
 		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
-		D0458DBE1F0065540036D0B5 /* RecipeTastes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTastes.swift */; };
+		D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */; };
 		D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */; };
 		D0458DC21F006B860036D0B5 /* TasteLevelPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */; };
 		D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC31F007AFD0036D0B5 /* LevelView.swift */; };
@@ -46,7 +46,7 @@
 		D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0458DBD1F0065540036D0B5 /* RecipeTastes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTastes.swift; sourceTree = "<group>"; };
+		D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTasteData.swift; sourceTree = "<group>"; };
 		D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
 		D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteLevelPreferenceView.swift; sourceTree = "<group>"; };
 		D0458DC31F007AFD0036D0B5 /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */,
 				D012B2431EEE177F0094890A /* RecipeModel.swift */,
 				D012B2471EEE18150094890A /* NutritionModel.swift */,
-				D0458DBD1F0065540036D0B5 /* RecipeTastes.swift */,
+				D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 				D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */,
 				D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
-				D0458DBE1F0065540036D0B5 /* RecipeTastes.swift in Sources */,
+				D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */,
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
 				D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */,

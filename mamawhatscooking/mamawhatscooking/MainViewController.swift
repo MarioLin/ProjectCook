@@ -27,10 +27,9 @@ class MainViewController: BaseViewController {
         view.addSubview(chefHatView)
         mainButton.touchUpInsideBlock = { [weak self] (sender: Any) in
             guard let strongSelf = self else { return }
-            let recipeTastes = RecipeTastes()
-            let tasteSurveyVC = TastesSurveyViewController(surveryOption: globalSurveryOrder[0], recipeTastes: recipeTastes)
-            let navVC = BaseNavViewController(rootViewController: tasteSurveyVC)
-            strongSelf.present(navVC, animated: true, completion: nil)
+            let emptyTasteData = RecipeTasteData()
+            let tasteSurveyVC = TastesSurveyViewController(recipeTasteData: emptyTasteData)
+            strongSelf.present(tasteSurveyVC, animated: true, completion: nil)
         }
     }
     

@@ -9,14 +9,55 @@
 import Foundation
 import UIKit
 
+enum TasteSurveryOption {
+    case sweet
+    case savory
+    case spicy
+    case allowedCuisine
+    case allowedDiet
+    case allowedAllergy
+    case allowedCourse
+    
+    static func globalSurveryOrder() -> [TasteSurveryOption] {
+        return [.sweet, .savory, .spicy, .allowedCuisine, .allowedDiet, .allowedAllergy, .allowedCourse]
+    }
+}
+
 // spicy, sweet, savory, allowedCuisine[], allowedDiet[], allowedAllergy[], allowedCourse
 class TastesSurveyViewController: BaseViewController {
-    init(surveryOption: TasteSurveryOption, recipeTastes: RecipeTastes) {
+    let tasteView = TasteLevelPreferenceView(frame: .zero)
+    let scrollView = UIScrollView()
+    let recipeTasteData: RecipeTasteData
+    init(recipeTasteData: RecipeTasteData) {
+        self.recipeTasteData = recipeTasteData
         super.init()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(tasteView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tasteView.size = CGSize(width: view.width, height: 300)
+        tasteView.backgroundColor = .red
+        tasteView.centerVertically()
+        tasteView.centerHorizontally()
+    }
+    
+    private func createModelForTasteView() -> TasteLevelPreferenceView {
+//        var stringToUse: String, imageToUse: UIImage
+//        switch surveyOption {
+//        case <#pattern#>:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+    }
+
     //TODO: called at end of flow
-    func makeTransaction() {
+    func fetchRecipes() {
         let transaction = YummlyApiTransaction()
         transaction.completion = { (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
             guard let objects = objects else { return }

@@ -13,11 +13,15 @@ class ApiTransaction: NSObject {
     var url: URL?
     var completion: DataTaskCompletionBlock?
     var params: [String : String]?
+    var didSucceed: Bool = false
     
     func makeNetworkRequest() {
         guard let parsedUrl = parseParamsWithURL() else { fatalError("malformed url") }
         print("API get request: " + parsedUrl.absoluteString)
         let datatask = defaultSession.dataTask(with: parsedUrl) { (data, response, error) in
+            if error == nil {
+                self.didSucceed = true
+            }
             guard let data = data, let response = response else { return }
             let dict = self.serializeDataToJson(data: data)
             let savedObjects = self.saveObjectsFromDict(dictionary: dict)

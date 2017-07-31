@@ -21,14 +21,16 @@ struct TasteLevelModel {
 
 class TasteLevelPreferenceView: UIView {
     private static let sizeForIcon: CGSize = CGSize(width: 40, height: 40)
-    
+    private static let topPadding: CGFloat = 20
+    private static let yummlyNumberOfLevels: Int = 5
+
     var levelSelectedClosure: ((Int) -> ())?
     private let tasteIconView = UIImageView()
     private let questionLabel: UILabel = {
         let label = UILabel()
         return label
     }()
-    private let levelView = LevelView(numberOfLevels: 5)
+    private let levelView = LevelView(numberOfLevels: TasteLevelPreferenceView.yummlyNumberOfLevels)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,10 +45,10 @@ class TasteLevelPreferenceView: UIView {
         tasteIconView.top = top
         tasteIconView.centerHorizontally()
         questionLabel.sizeToFit()
-        questionLabel.top = tasteIconView.bottom + 20
+        questionLabel.top = tasteIconView.bottom + TasteLevelPreferenceView.topPadding
         questionLabel.centerHorizontally()
         levelView.sizeToFit()
-        levelView.top = questionLabel.bottom + 20
+        levelView.top = questionLabel.bottom + TasteLevelPreferenceView.topPadding
     }
     
     func configure(model: TasteLevelModel) {
