@@ -40,20 +40,7 @@ class TastesSurveyViewController: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tasteView.size = CGSize(width: view.width, height: 300)
-        tasteView.backgroundColor = .red
-        tasteView.centerVertically()
-        tasteView.centerHorizontally()
-    }
-    
-    private func createModelForTasteView() -> TasteLevelPreferenceView {
-//        var stringToUse: String, imageToUse: UIImage
-//        switch surveyOption {
-//        case <#pattern#>:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
+
     }
 
     //TODO: called at end of flow
