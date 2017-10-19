@@ -10,37 +10,34 @@ import Foundation
 import UIKit
 
 enum TasteSurveryOption {
-    case sweet
-    case savory
-    case spicy
+    case tastePreference
     case allowedCuisine
     case allowedDiet
     case allowedAllergy
     case allowedCourse
     
     static func globalSurveryOrder() -> [TasteSurveryOption] {
-        return [.sweet, .savory, .spicy, .allowedCuisine, .allowedDiet, .allowedAllergy, .allowedCourse]
+        return [.allowedCourse, .tastePreference, .allowedCuisine, .allowedDiet,.allowedAllergy]
     }
 }
 
-// spicy, sweet, savory, allowedCuisine[], allowedDiet[], allowedAllergy[], allowedCourse
-class TastesSurveyViewController: BaseViewController {
-    let tasteView = TasteLevelPreferenceView(frame: .zero)
-    let scrollView = UIScrollView()
-    let recipeTasteData: RecipeTasteData
-    init(recipeTasteData: RecipeTasteData) {
-        self.recipeTasteData = recipeTasteData
+// allowedCourse[], [spicy, sweet, savory,], allowedCuisine[], allowedDiet[], allowedAllergy[]
+class TastesSurveyViewController: ScrollablePageViewController {
+    private let recipeTasteData = RecipeTasteData()
+    private let currentOptionIndex: Int = 0
+    private let option: TasteSurveryOption
+    let closeButton: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
+    
+    override init() {
+        self.option = TasteSurveryOption.globalSurveryOrder().first!
         super.init()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tasteView)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
     }
 
     //TODO: called at end of flow
@@ -53,15 +50,34 @@ class TastesSurveyViewController: BaseViewController {
             
             // get the selected recipe details
             let recipeTransaction = YummlyRecipeDetailTransacation()
-            recipeTransaction.completion = { [weak self] (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
-                guard let strongSelf = self else { return }
-                let recipeVC = RecipeViewController()
-                let navVC = BaseNavViewController(rootViewController: recipeVC)
-                strongSelf.present(navVC, animated: true, completion: nil)
-            }
+//            recipeTransaction.completion = { [weak self] (_ objects: [Any]?, _ response: URLResponse?, _ error: Error?) -> () in
+//                guard let strongSelf = self else { return }
+//                
+//            }
             recipeTransaction.makeRecipeRequest(recipeId: recipeToGet.recipeId!)
         }
         transaction.makeSearchRequest(params: ["q" : "onion%20soup"])
+    }
+    
+    override func buildPages() -> [UIView]? {
+        var pages = [UIView]()
+        let containerView = UIView(frame: self.view.bounds)
+        
+        let selectionVC = SelectionViewController(selections: spoofData())
+        containerView.addSubview(selectionVC.view)
+        
+        pages.append(containerView)
+        return pages
+    }
+    
+    
+    func spoofData() -> [SelectionEntity] {
+        var entitites = [SelectionEntity]()
+        for i in 1...10 {
+            let entity = SelectionEntity(displayName: "testest\(i)", machineName: "hi", type: "hi")
+            entitites.append(entity)
+        }
+        return entitites
     }
     
     required init?(coder aDecoder: NSCoder) {

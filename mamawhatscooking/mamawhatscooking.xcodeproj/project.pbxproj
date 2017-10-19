@@ -14,9 +14,6 @@
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
 		D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */; };
-		D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */; };
-		D0458DC21F006B860036D0B5 /* TasteLevelPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */; };
-		D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DC31F007AFD0036D0B5 /* LevelView.swift */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
@@ -32,6 +29,9 @@
 		D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */; };
 		D0ECE90C1EF24C2A000DA99E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */; };
 		D0ECE90E1EF24D32000DA99E /* TastesSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */; };
+		D0F194541F301C3D0087FEE4 /* ScrollablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */; };
+		D0F68B191F98ECBA00ABDF7D /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */; };
+		D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +47,6 @@
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTasteData.swift; sourceTree = "<group>"; };
-		D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
-		D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteLevelPreferenceView.swift; sourceTree = "<group>"; };
-		D0458DC31F007AFD0036D0B5 /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
@@ -65,6 +62,9 @@
 		D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDefinitions.swift; sourceTree = "<group>"; };
 		D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastesSurveyViewController.swift; sourceTree = "<group>"; };
+		D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollablePageViewController.swift; sourceTree = "<group>"; };
+		D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionEntity.swift; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +142,7 @@
 				D012B2431EEE177F0094890A /* RecipeModel.swift */,
 				D012B2471EEE18150094890A /* NutritionModel.swift */,
 				D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */,
+				D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -161,7 +162,8 @@
 				D012B23F1EEE04A80094890A /* RecipeViewController.swift */,
 				D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */,
 				D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */,
-				D0458DBF1F0066E80036D0B5 /* BaseNavViewController.swift */,
+				D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */,
+				D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -169,9 +171,7 @@
 		D0B85F541EC7C89C003FCD7B /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D0458DC31F007AFD0036D0B5 /* LevelView.swift */,
 				D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */,
-				D0458DC11F006B860036D0B5 /* TasteLevelPreferenceView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -325,21 +325,21 @@
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */,
 				D0ECE90E1EF24D32000DA99E /* TastesSurveyViewController.swift in Sources */,
-				D0458DC41F007AFD0036D0B5 /* LevelView.swift in Sources */,
-				D0458DC01F0066E80036D0B5 /* BaseNavViewController.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
 				D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */,
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
+				D0F194541F301C3D0087FEE4 /* ScrollablePageViewController.swift in Sources */,
 				D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */,
 				D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
+				D0F68B191F98ECBA00ABDF7D /* SelectionViewController.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
-				D0458DC21F006B860036D0B5 /* TasteLevelPreferenceView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
 				D0ECE90C1EF24C2A000DA99E /* BaseViewController.swift in Sources */,
+				D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */,
 				D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 			);

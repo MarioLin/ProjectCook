@@ -27,10 +27,18 @@ class MainViewController: BaseViewController {
         view.addSubview(chefHatView)
         mainButton.touchUpInsideBlock = { [weak self] (sender: Any) in
             guard let strongSelf = self else { return }
-            let emptyTasteData = RecipeTasteData()
-            let tasteSurveyVC = TastesSurveyViewController(recipeTasteData: emptyTasteData)
-            strongSelf.present(tasteSurveyVC, animated: true, completion: nil)
+            let detailVC = SelectionViewController(selections: strongSelf.spoofData())
+            strongSelf.present(detailVC, animated: true, completion: nil)
         }
+    }
+    
+    func spoofData() -> [SelectionEntity] {
+        var entitites = [SelectionEntity]()
+        for i in 1...10 {
+            let entity = SelectionEntity(displayName: "testest\(i)", machineName: "hi", type: "hi")
+            entitites.append(entity)
+        }
+        return entitites
     }
     
     override func viewDidLayoutSubviews() {

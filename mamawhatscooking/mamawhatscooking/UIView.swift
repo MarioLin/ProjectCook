@@ -91,5 +91,8 @@ extension UIView {
             top = diff / 2
         }
     }
-        
+    
+    static func genericCloseButton(block: () -> ()) -> UIImageView {
+        return UIImageView()
+    }
 }

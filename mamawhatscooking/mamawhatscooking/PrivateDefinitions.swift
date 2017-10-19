@@ -8,5 +8,5 @@
 
 import Foundation
 
-let yummly_app_key = "{your app key here}" // placeholders to hide app_key
-let yummly_app_id = "{your app id here}" // placeholders to hide app_id
+let yummly_app_key = "0eeccc2e5b07126072ba25f710d594ee" // placeholders to hide app_key
+let yummly_app_id = "e7510037" // placeholders to hide app_id
