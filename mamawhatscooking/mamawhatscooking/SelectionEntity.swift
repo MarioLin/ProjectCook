@@ -8,8 +8,15 @@
 
 import Foundation
 
-struct SelectionEntity {
+class SelectionEntity {
     let displayName: String
     let machineName: String
     let type: String
+    let isChecked: Bool
+    init(displayName: String, machineName: String, type: String, isChecked: Bool = false) {
+        self.displayName = displayName
+        self.machineName = machineName
+        self.type = type
+        self.isChecked = isChecked
+    }
 }
