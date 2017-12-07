@@ -26,22 +26,18 @@ class RoundedBurritoButton: UIButton {
             }
         }
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
-        layer.cornerRadius = 4.5
+    override var intrinsicContentSize : CGSize {
+        let superContentSize = super.intrinsicContentSize
+        let width = superContentSize.width + 20
+        return CGSize(width: width, height: superContentSize.height)
     }
     
-    required convenience init(title: String, backgroundColor: UIColor = .orange, borderColor: UIColor = .white) {
-        self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius = 4.5
+        addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
         savedBackgroundColor = backgroundColor
-        savedBorderColor = borderColor
-        self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = 2
-        setTitle(title, for: .normal)
-        setTitleColor(borderColor, for: .normal)
+        savedBorderColor = currentTitleColor
     }
     
     func touchedUpInside() {
@@ -49,10 +45,5 @@ class RoundedBurritoButton: UIButton {
             return
         }
         touchBlock(self)
-    }
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
     }
 }

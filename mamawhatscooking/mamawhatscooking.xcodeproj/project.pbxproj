@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B23F1EEE04A80094890A /* RecipeViewController.swift */; };
 		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
 		D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2431EEE177F0094890A /* RecipeModel.swift */; };
 		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
 		D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */; };
+		D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FCBCF1FD26A980020F89D /* MainViewController.swift */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
 		D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */; };
-		D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */; };
 		D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */; };
 		D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F521EC7C556003FCD7B /* UIView.swift */; };
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
@@ -27,18 +26,14 @@
 		D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */; };
 		D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9071EF2433D000DA99E /* ImageConstants.swift */; };
 		D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */; };
-		D0ECE90C1EF24C2A000DA99E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */; };
-		D0ECE90E1EF24D32000DA99E /* TastesSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */; };
-		D0F194541F301C3D0087FEE4 /* ScrollablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */; };
-		D0F68B191F98ECBA00ABDF7D /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */; };
 		D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */; };
+		D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1FC44F7C564FF026508EA444 /* Pods-mamawhatscooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.debug.xcconfig"; sourceTree = "<group>"; };
 		3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mamawhatscooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D012B23F1EEE04A80094890A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
 		D012B2431EEE177F0094890A /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D012B2471EEE18150094890A /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
@@ -47,11 +42,11 @@
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTasteData.swift; sourceTree = "<group>"; };
+		D05FCBCF1FD26A980020F89D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
 		D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorsModel.swift; sourceTree = "<group>"; };
-		D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0B85F521EC7C556003FCD7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
@@ -60,11 +55,8 @@
 		D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
 		D0ECE9071EF2433D000DA99E /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDefinitions.swift; sourceTree = "<group>"; };
-		D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastesSurveyViewController.swift; sourceTree = "<group>"; };
-		D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollablePageViewController.swift; sourceTree = "<group>"; };
-		D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionEntity.swift; sourceTree = "<group>"; };
+		D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +112,7 @@
 		D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6D7181FD269EC00349359 /* storyboards */,
 				D0ECE9061EF2432C000DA99E /* shared */,
 				D06CAC751EC9564D0038B6CE /* model */,
 				D0B85F571EC7D6D7003FCD7B /* network */,
@@ -158,12 +151,7 @@
 		D0B85F4F1EC7BE3A003FCD7B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				D0B85F4C1EC7BE1A003FCD7B /* MainViewController.swift */,
-				D012B23F1EEE04A80094890A /* RecipeViewController.swift */,
-				D0ECE90B1EF24C2A000DA99E /* BaseViewController.swift */,
-				D0ECE90D1EF24D32000DA99E /* TastesSurveyViewController.swift */,
-				D0F194531F301C3D0087FEE4 /* ScrollablePageViewController.swift */,
-				D0F68B181F98ECBA00ABDF7D /* SelectionViewController.swift */,
+				D05FCBCF1FD26A980020F89D /* MainViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -194,6 +182,14 @@
 				D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */,
 			);
 			name = shared;
+			sourceTree = "<group>";
+		};
+		D0F6D7181FD269EC00349359 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */,
+			);
+			name = storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +257,7 @@
 			files = (
 				D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */,
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
+				D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */,
 				D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,23 +321,18 @@
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */,
-				D0ECE90E1EF24D32000DA99E /* TastesSurveyViewController.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
 				D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */,
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
+				D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
-				D0F194541F301C3D0087FEE4 /* ScrollablePageViewController.swift in Sources */,
 				D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */,
-				D012B2401EEE04A80094890A /* RecipeViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
-				D0F68B191F98ECBA00ABDF7D /* SelectionViewController.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
-				D0ECE90C1EF24C2A000DA99E /* BaseViewController.swift in Sources */,
 				D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */,
-				D0B85F4D1EC7BE1A003FCD7B /* MainViewController.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
