@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class MainViewController: UIViewController {
+    @IBOutlet weak var startButton: RoundedBurritoButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
     }
 }
