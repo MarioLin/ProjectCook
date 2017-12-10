@@ -44,7 +44,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="wD3-vX-sE9" kind="presentation" id="7Pu-AQ-VHt"/>
+                                                    <segue destination="cej-t2-4sg" kind="presentation" id="Jp7-Yt-VXG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -69,88 +69,136 @@
                     </view>
                     <connections>
                         <outlet property="startButton" destination="fji-UX-OJ1" id="Qbh-a5-ZBL"/>
+                        <segue destination="NO3-go-S0u" kind="presentation" identifier="to_recipe_segue" id="3JZ-in-0Jz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dR-sm-waB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8658.3999999999996" y="-1446.0269865067467"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vYV-Yy-Kug">
+        <!--Taste View Controller-->
+        <scene sceneID="8KF-ox-1yO">
             <objects>
-                <viewController id="wD3-vX-sE9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OV8-Im-V7P">
+                <viewController id="Qui-bu-DhE" customClass="TasteViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3B7-uN-M1X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6i-62-2m2">
-                                <rect key="frame" x="-0.5" y="70" width="375" height="547"/>
-                                <connections>
-                                    <segue destination="1p2-Aq-Kzv" kind="embed" id="qz1-3Y-zdX"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="A6i-62-2m2" firstAttribute="centerX" secondItem="xZq-TE-1rL" secondAttribute="centerX" id="QzR-Xn-yqj"/>
-                            <constraint firstItem="A6i-62-2m2" firstAttribute="width" secondItem="OV8-Im-V7P" secondAttribute="width" id="dfF-Sc-8EQ"/>
-                            <constraint firstItem="xZq-TE-1rL" firstAttribute="bottom" secondItem="A6i-62-2m2" secondAttribute="bottom" constant="50" id="hhw-jM-Ybb"/>
-                            <constraint firstItem="A6i-62-2m2" firstAttribute="top" secondItem="xZq-TE-1rL" secondAttribute="top" constant="50" id="yGy-Og-N7z"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="xZq-TE-1rL"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="221-nG-94n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7932" y="-1447"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="f2h-xw-3k6">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1p2-Aq-Kzv" customClass="PageViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JUj-5E-Vmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7105" y="-1451"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tCd-GK-dQW">
-            <objects>
-                <viewController storyboardIdentifier="page1" id="aCF-8A-hmM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZPs-fh-v90">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPy-Fo-OhZ">
-                                <rect key="frame" x="20" y="30" width="94" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tastes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAz-k2-KQg">
+                                <rect key="frame" x="20" y="74" width="72" height="31.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZ6-ed-Twy">
-                                <rect key="frame" x="15" y="70" width="345" height="1"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59W-L6-l9R">
+                                <rect key="frame" x="15" y="110.5" width="345" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="OgM-nb-FDC"/>
+                                    <constraint firstAttribute="height" constant="1" id="TnU-d4-vbu"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-4B-NxW">
+                                <rect key="frame" x="15" y="261" width="230" height="212"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-kr-iRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="I like spicy!"/>
+                                        <connections>
+                                            <action selector="spicyButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="zdN-m6-BQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMY-ha-h9E">
+                                        <rect key="frame" x="0.0" y="84" width="230" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="I have a sweet tooth!"/>
+                                        <connections>
+                                            <action selector="sweetButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="C7G-1C-lNl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-XK-C20">
+                                        <rect key="frame" x="0.0" y="168" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="I want savory!"/>
+                                        <connections>
+                                            <action selector="savoryButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="iZC-b4-gVU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CPy-Fo-OhZ" firstAttribute="leading" secondItem="s3J-tj-G1k" secondAttribute="leading" constant="20" id="3sq-6k-n5N"/>
-                            <constraint firstItem="NZ6-ed-Twy" firstAttribute="leading" secondItem="s3J-tj-G1k" secondAttribute="leading" constant="15" id="RJ9-RO-fqw"/>
-                            <constraint firstItem="s3J-tj-G1k" firstAttribute="trailing" secondItem="NZ6-ed-Twy" secondAttribute="trailing" constant="15" id="WMV-Yu-Wr3"/>
-                            <constraint firstItem="CPy-Fo-OhZ" firstAttribute="top" secondItem="s3J-tj-G1k" secondAttribute="top" constant="10" id="df0-dh-Kxy"/>
-                            <constraint firstItem="NZ6-ed-Twy" firstAttribute="top" secondItem="CPy-Fo-OhZ" secondAttribute="bottom" constant="8" id="y38-Ir-0u0"/>
+                            <constraint firstItem="jC2-4B-NxW" firstAttribute="centerY" secondItem="ZWV-Z7-VcQ" secondAttribute="centerY" id="4M7-ab-j9F"/>
+                            <constraint firstItem="nAz-k2-KQg" firstAttribute="top" secondItem="ZWV-Z7-VcQ" secondAttribute="top" constant="10" id="AbX-4W-OZO"/>
+                            <constraint firstItem="jC2-4B-NxW" firstAttribute="leading" secondItem="59W-L6-l9R" secondAttribute="leading" id="D39-3g-BKW"/>
+                            <constraint firstItem="59W-L6-l9R" firstAttribute="leading" secondItem="3B7-uN-M1X" secondAttribute="leading" constant="15" id="Pqj-ME-fZR"/>
+                            <constraint firstItem="nAz-k2-KQg" firstAttribute="leading" secondItem="ZWV-Z7-VcQ" secondAttribute="leading" constant="20" id="ecs-km-gSq"/>
+                            <constraint firstAttribute="trailing" secondItem="59W-L6-l9R" secondAttribute="trailing" constant="15" id="oSu-jG-hqu"/>
+                            <constraint firstItem="59W-L6-l9R" firstAttribute="top" secondItem="nAz-k2-KQg" secondAttribute="bottom" constant="5" id="u7y-DH-765"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="s3J-tj-G1k"/>
+                        <viewLayoutGuide key="safeArea" id="ZWV-Z7-VcQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cKr-sn-uoi"/>
+                    <connections>
+                        <segue destination="kkP-uZ-Pit" kind="show" identifier="to_search_segue" id="zTU-la-Ntc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ug6-2Y-Ek1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7081" y="-1543"/>
+        </scene>
+        <!--Cooking Recipes View Controller-->
+        <scene sceneID="bTT-t6-kdC">
+            <objects>
+                <viewController id="kkP-uZ-Pit" customClass="CookingRecipesViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DOV-kT-Uy8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="loW-EK-SLC"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p0P-46-38d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NL1-al-Pgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7170.3999999999996" y="-724.58770614692662"/>
+            <point key="canvasLocation" x="-6300" y="-1543"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="KqK-46-Hyp">
+            <objects>
+                <viewController id="NO3-go-S0u" customClass="RecipeViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WTC-Bc-ax9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="rbh-32-wJO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-pF-myM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8658" y="-688"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j0a-mo-BDn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cej-t2-4sg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EVd-aD-Byg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qui-bu-DhE" kind="relationship" relationship="rootViewController" id="Jkf-Xw-dNy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCI-ol-gO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7836" y="-1543"/>
         </scene>
     </scenes>
     <resources>
         <image name="chef_hat" width="60" height="60"/>
     </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

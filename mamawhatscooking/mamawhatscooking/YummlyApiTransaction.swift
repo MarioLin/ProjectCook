@@ -23,11 +23,7 @@ class YummlyApiTransaction: ApiTransaction {
         self.url = URL(string: base_url + "recipes")
         makeNetworkRequest()
     }
-    
-    func makeRecipeRequest(recipeId: String) {
-        params = ["_app_id" : yummly_app_id]
-    }
-    
+        
     override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
         guard let matches = dictionary["matches"] as? [[String : Any]],
             let attribution = dictionary["attribution"] as? [String : String] else { return [] }

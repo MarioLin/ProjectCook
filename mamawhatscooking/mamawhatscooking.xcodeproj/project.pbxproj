@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00C8EB71FDC739A0085648C /* TasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EB61FDC739A0085648C /* TasteViewController.swift */; };
+		D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */; };
+		D00C8EBB1FDDEAA90085648C /* CookingRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */; };
+		D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EBC1FDDECBE0085648C /* Constants.swift */; };
 		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
 		D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2431EEE177F0094890A /* RecipeModel.swift */; };
 		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
@@ -14,7 +18,6 @@
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
 		D0458DBE1F0065540036D0B5 /* RecipeTasteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */; };
 		D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FCBCF1FD26A980020F89D /* MainViewController.swift */; };
-		D05FCBD21FD8FAFC0020F89D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FCBD11FD8FAFC0020F89D /* PageViewController.swift */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
@@ -25,7 +28,6 @@
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
 		D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */; };
 		D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */; };
-		D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9071EF2433D000DA99E /* ImageConstants.swift */; };
 		D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */; };
 		D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */; };
 		D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */; };
@@ -35,6 +37,10 @@
 /* Begin PBXFileReference section */
 		1FC44F7C564FF026508EA444 /* Pods-mamawhatscooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.debug.xcconfig"; sourceTree = "<group>"; };
 		3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mamawhatscooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00C8EB61FDC739A0085648C /* TasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteViewController.swift; sourceTree = "<group>"; };
+		D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingRecipesViewController.swift; sourceTree = "<group>"; };
+		D00C8EBC1FDDECBE0085648C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
 		D012B2431EEE177F0094890A /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D012B2471EEE18150094890A /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
@@ -44,7 +50,6 @@
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0458DBD1F0065540036D0B5 /* RecipeTasteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTasteData.swift; sourceTree = "<group>"; };
 		D05FCBCF1FD26A980020F89D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D05FCBD11FD8FAFC0020F89D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
@@ -55,7 +60,6 @@
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
 		D0B85F5A1EC7D8CC003FCD7B /* YummlyApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyApiTransaction.swift; sourceTree = "<group>"; };
 		D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
-		D0ECE9071EF2433D000DA99E /* ImageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDefinitions.swift; sourceTree = "<group>"; };
 		D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionEntity.swift; sourceTree = "<group>"; };
 		D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -154,7 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				D05FCBCF1FD26A980020F89D /* MainViewController.swift */,
-				D05FCBD11FD8FAFC0020F89D /* PageViewController.swift */,
+				D00C8EB61FDC739A0085648C /* TasteViewController.swift */,
+				D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */,
+				D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -181,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				D0B85F5C1EC7DD97003FCD7B /* GlobalDefinitions.swift */,
-				D0ECE9071EF2433D000DA99E /* ImageConstants.swift */,
 				D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */,
+				D00C8EBC1FDDECBE0085648C /* Constants.swift */,
 			);
 			name = shared;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */,
 				D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */,
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
@@ -329,13 +336,14 @@
 				D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */,
 				D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
-				D0ECE9081EF2433D000DA99E /* ImageConstants.swift in Sources */,
+				D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
+				D00C8EBB1FDDEAA90085648C /* CookingRecipesViewController.swift in Sources */,
+				D00C8EB71FDC739A0085648C /* TasteViewController.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
-				D05FCBD21FD8FAFC0020F89D /* PageViewController.swift in Sources */,
 				D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 			);

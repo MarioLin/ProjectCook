@@ -40,7 +40,7 @@ class ApiTransaction: NSObject {
         for (key, value) in params {
             parsedUrl += "\(key)=\(value)&"
         }
-        if parsedUrl.characters.last == "&" {
+        if parsedUrl.last == "&" {
             parsedUrl = parsedUrl.substring(to: parsedUrl.index(before:parsedUrl.endIndex))
         }
         return URL(string: parsedUrl)
