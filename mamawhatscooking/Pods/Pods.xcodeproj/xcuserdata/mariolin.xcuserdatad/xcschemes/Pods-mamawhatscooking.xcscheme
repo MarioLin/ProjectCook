@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5BF95A0B3EF0702E4945A5ACB84D8EC"
+               BlueprintIdentifier = "FA9204C36CEB24027DFF21DDB2967C29"
                BuildableName = "Pods_mamawhatscooking.framework"
                BlueprintName = "Pods-mamawhatscooking"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5BF95A0B3EF0702E4945A5ACB84D8EC"
+            BlueprintIdentifier = "FA9204C36CEB24027DFF21DDB2967C29"
             BuildableName = "Pods_mamawhatscooking.framework"
             BlueprintName = "Pods-mamawhatscooking"
             ReferencedContainer = "container:Pods.xcodeproj">

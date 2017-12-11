@@ -8,6 +8,7 @@
 
 // MARK: Image Constants
 public let kImageChefHat = "chef_hat"
+public let kImageCooking = "cooking"
 
 // MARK: Segues
 public let searchSegue = "to_search_segue"

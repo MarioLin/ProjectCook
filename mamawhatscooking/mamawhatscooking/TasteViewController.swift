@@ -64,15 +64,12 @@ class TasteViewController: UIViewController {
             params[savoryMaxParam] = "1"
             params[savoryMinParam] = "0.8"
         }
-        performSegue(withIdentifier: searchSegue, sender: self)
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? CookingRecipesViewController {
-            dest.searchParams = params
+        
+        if let main = presentingViewController as? MainViewController {
+            main.searchParams = params
+            self.dismiss(animated: true) {
+                main.segueToSearchScreen()
+            }
         }
     }
-    
-
 }

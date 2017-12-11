@@ -11,7 +11,20 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var startButton: RoundedBurritoButton!
+    
+    var searchParams:[String:String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func segueToSearchScreen() {
+        performSegue(withIdentifier: searchSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? CookingRecipesViewController {
+            dest.searchParams = searchParams
+        }
     }
 }

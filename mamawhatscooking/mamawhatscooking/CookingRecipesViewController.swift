@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Shimmer
 
 class CookingRecipesViewController: UIViewController {
     var searchParams: [String:String]! // this NEEDS to be injected by a VC
     var searchedRecipes: [YummlySearchModel]?
     
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var shimmerView: FBShimmeringView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         let yummlyReq = YummlyApiTransaction()
         yummlyReq.completion = { [weak self] (objects, response, error) in
@@ -27,6 +29,9 @@ class CookingRecipesViewController: UIViewController {
             }
         }
         yummlyReq.makeSearchRequest(params: searchParams)
+        shimmerView.contentView = infoLabel
+        view.addSubview(shimmerView)
+        shimmerView.isShimmering = true
     }
     
     private func handleSearchedRecipes() {
@@ -53,7 +58,19 @@ class CookingRecipesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    private func orbitAnimation(rect: CGRect) -> CAKeyframeAnimation {
+        let orbit = CAKeyframeAnimation()
+        orbit.keyPath = "position";
+        orbit.path = CGPath(ellipseIn: rect, transform: nil)
+        orbit.duration = 4;
+        orbit.isAdditive = true;
+        orbit.repeatCount = Float.greatestFiniteMagnitude;
+        orbit.calculationMode = kCAAnimationPaced;
+        orbit.rotationMode = kCAAnimationRotateAuto;
+        return orbit
+    }
+    
+    
     /*
     // MARK: - Navigation
 
