@@ -22,7 +22,6 @@
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
 		D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */; };
-		D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */; };
 		D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F521EC7C556003FCD7B /* UIView.swift */; };
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
@@ -54,7 +53,6 @@
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
 		D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorsModel.swift; sourceTree = "<group>"; };
-		D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0B85F521EC7C556003FCD7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D065757E1EE8D46400846D7D /* Launch Screen.storyboard */,
-				D0B85F501EC7BE64003FCD7B /* Default-568h@2x.png */,
 				D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */,
 				D01D03E21EC7BD1300B9ADF5 /* Products */,
 				B57FDDAAE18EA2D7E8832055 /* Pods */,
@@ -267,7 +264,6 @@
 				D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */,
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
 				D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */,
-				D0B85F511EC7BE64003FCD7B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +395,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -441,6 +438,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

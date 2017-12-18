@@ -9,7 +9,13 @@
 import UIKit
 
 class RecipeViewController: UIViewController {
-
+    
+    @IBAction func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    var recipeModel: RecipeModel! // NEEDS TO BE INJECTED
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

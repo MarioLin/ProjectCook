@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -87,7 +86,6 @@
                     </view>
                     <connections>
                         <outlet property="startButton" destination="fji-UX-OJ1" id="Qbh-a5-ZBL"/>
-                        <segue destination="NO3-go-S0u" kind="presentation" identifier="to_recipe_segue" id="3JZ-in-0Jz"/>
                         <segue destination="kkP-uZ-Pit" kind="presentation" identifier="to_search_segue" modalTransitionStyle="crossDissolve" id="IXI-pO-lHx"/>
                     </connections>
                 </viewController>
@@ -179,6 +177,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSS-bk-xAC">
+                                <rect key="frame" x="0.0" y="324" width="375" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooking" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-R5-Jck">
                                 <rect key="frame" x="144.5" y="231" width="85" height="85"/>
                                 <constraints>
@@ -196,22 +198,51 @@
                                 <rect key="frame" x="66" y="96" width="243" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53E-qs-hXW" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="71.5" y="472" width="232" height="47"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="tintColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Here's your recipe!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-TK-e04">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="kkP-uZ-Pit" eventType="touchUpInside" id="Efp-hs-wXY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WMV-zp-R13" firstAttribute="top" secondItem="rA3-vZ-NuJ" secondAttribute="bottom" constant="76" id="1ww-dI-r6g"/>
+                            <constraint firstItem="53E-qs-hXW" firstAttribute="centerY" secondItem="oSS-bk-xAC" secondAttribute="centerY" id="9Sg-tA-wfG"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="top" secondItem="WMV-zp-R13" secondAttribute="top" id="GwC-O0-rP3"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="width" secondItem="WMV-zp-R13" secondAttribute="width" id="HDc-3u-mVV"/>
+                            <constraint firstItem="oSS-bk-xAC" firstAttribute="width" secondItem="DOV-kT-Uy8" secondAttribute="width" id="IKP-wW-8mp"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="height" secondItem="WMV-zp-R13" secondAttribute="height" id="Kvk-Mg-3hG"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="leading" secondItem="WMV-zp-R13" secondAttribute="leading" id="M6t-5A-EHp"/>
+                            <constraint firstItem="EOB-TK-e04" firstAttribute="top" secondItem="rA3-vZ-NuJ" secondAttribute="bottom" id="NSC-tb-grM"/>
                             <constraint firstItem="3FU-R5-Jck" firstAttribute="centerX" secondItem="DOV-kT-Uy8" secondAttribute="centerX" id="NpB-4c-y5j"/>
+                            <constraint firstItem="53E-qs-hXW" firstAttribute="centerX" secondItem="oSS-bk-xAC" secondAttribute="centerX" id="X6K-Lk-m1V"/>
                             <constraint firstItem="3FU-R5-Jck" firstAttribute="centerY" secondItem="DOV-kT-Uy8" secondAttribute="centerY" constant="-60" id="aug-FP-nBC"/>
+                            <constraint firstItem="MVR-nT-9YP" firstAttribute="top" secondItem="oSS-bk-xAC" secondAttribute="bottom" id="b7P-LP-Fwf"/>
                             <constraint firstItem="WMV-zp-R13" firstAttribute="centerX" secondItem="DOV-kT-Uy8" secondAttribute="centerX" id="bRC-Pi-mDE"/>
+                            <constraint firstItem="oSS-bk-xAC" firstAttribute="leading" secondItem="DOV-kT-Uy8" secondAttribute="leading" id="drH-9v-JYA"/>
+                            <constraint firstItem="EOB-TK-e04" firstAttribute="leading" secondItem="DOV-kT-Uy8" secondAttribute="leading" constant="16" id="tV9-t3-XZ7"/>
+                            <constraint firstItem="oSS-bk-xAC" firstAttribute="top" secondItem="3FU-R5-Jck" secondAttribute="bottom" constant="8" symbolic="YES" id="xpM-rS-D7o"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cookPotImageView" destination="3FU-R5-Jck" id="L60-bN-Zry"/>
                         <outlet property="infoLabel" destination="WMV-zp-R13" id="YTL-OM-EjT"/>
+                        <outlet property="recipeButton" destination="53E-qs-hXW" id="vns-Pl-aWV"/>
                         <outlet property="shimmerView" destination="I36-ne-LIc" id="OMT-Y5-sX6"/>
+                        <segue destination="NO3-go-S0u" kind="presentation" identifier="to_recipe_segue" id="Sdp-dY-5Fi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL1-al-Pgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,12 +260,28 @@
                     <view key="view" contentMode="scaleToFill" id="WTC-Bc-ax9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khf-i7-apS">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="kkP-uZ-Pit" eventType="touchUpInside" id="1hM-J8-2jn"/>
+                                    <action selector="dismissButton:" destination="NO3-go-S0u" eventType="touchUpInside" id="GI2-9e-i82"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="khf-i7-apS" firstAttribute="top" secondItem="lnQ-8t-N5K" secondAttribute="bottom" id="fIJ-LZ-2iE"/>
+                            <constraint firstItem="khf-i7-apS" firstAttribute="leading" secondItem="WTC-Bc-ax9" secondAttribute="leading" constant="16" id="qaa-lo-ywO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-pF-myM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8658" y="-688"/>
+            <point key="canvasLocation" x="-7154" y="-690"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j0a-mo-BDn">

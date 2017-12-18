@@ -10,11 +10,21 @@ import UIKit
 import Shimmer
 
 class CookingRecipesViewController: UIViewController {
-    var searchParams: [String:String]! // this NEEDS to be injected by a VC
-    var searchedRecipes: [YummlySearchModel]?
+    @IBAction func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var shimmerView: FBShimmeringView!
+    @IBOutlet weak var cookPotImageView: UIImageView!
+    
+    @IBOutlet weak var recipeButton: RoundedBurritoButton!
+    
+    
+    var searchParams: [String:String]! // this NEEDS to be injected by a VC
+    var searchedRecipes: [YummlySearchModel]?
+    private var selectedRecipeModel: RecipeModel?
+    private var orbittingImageViews = [UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +42,8 @@ class CookingRecipesViewController: UIViewController {
         shimmerView.contentView = infoLabel
         view.addSubview(shimmerView)
         shimmerView.isShimmering = true
+        recipeButton.isHidden = true
+        setupOrbitImages()
     }
     
     private func handleSearchedRecipes() {
@@ -48,14 +60,24 @@ class CookingRecipesViewController: UIViewController {
         recipeReq.completion = { [weak self] (objects, response, error) in
             if let recipeModel = objects?.first as? RecipeModel {
                 // do something with recipe
+                self?.selectedRecipeModel = recipeModel
+                self?.recipeButton.isHidden = false
+                self?.recipeButton.touchUpInsideBlock = { [weak self] ctl in
+                    self?.performSegue(withIdentifier: recipeSegue, sender: self)
+                }
             }
         }
         recipeReq.makeRecipeRequest(recipeId: recipeId)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? RecipeViewController {
+            dest.recipeModel = selectedRecipeModel
+        }
+    }
+    
+    private func setupOrbitImages() {
+        
     }
     
     private func orbitAnimation(rect: CGRect) -> CAKeyframeAnimation {
@@ -70,15 +92,4 @@ class CookingRecipesViewController: UIViewController {
         return orbit
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
