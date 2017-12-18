@@ -12,7 +12,6 @@ class YummlySearchModel {
     var imageUrl: String?
     var smallImageUrls: [String]?
 
-    
     var ingredients: [String]?
     var recipeId: String?
     var flavorRating: FlavorsModel?

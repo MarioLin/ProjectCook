@@ -9,6 +9,7 @@
 import UIKit
 
 class RecipeViewController: UIViewController {
+    @IBOutlet weak var timingLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     @IBAction func dismissButton(_ sender: Any) {
@@ -21,6 +22,8 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timingLabel.text = recipeModel.totalTimeString ?? "N/A"
         setupTableView()
         
         setupModels()
@@ -35,13 +38,24 @@ class RecipeViewController: UIViewController {
         // register reuse
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "RecipeTableViewCell")
+        tableView.register(UINib(nibName: "SourceTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "SourceTableViewCell")
     }
     
     private func setupModels() {
         var models = [Any]()
+        let pictureModel = RecipeCellModel(imageString: recipeModel.largeImageUrl ?? "",
+                                           title: recipeModel.recipeName,
+                                           servings: recipeModel.yield,
+                                           cuisine: nil)
+        models.append(pictureModel)
         
-        models.append(RecipeCellModel(imageString: recipeModel.largeImageUrl ?? "", title: recipeModel.recipeName))
-        
+        if let source = recipeModel.sourceModel {
+            let sourceModel = SourceCellModel(recipeCreator: source.displayName) { ctl in
+                print("logg")
+            }
+            models.append(sourceModel)
+        }
         cellModels = models
     }
 }
@@ -60,12 +74,21 @@ extension RecipeViewController: UITableViewDataSource {
         
         let model = cellModels[indexPath.row]
         switch model.self {
+            
         case is RecipeCellModel:
             let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath) as! RecipeTableViewCell
             recipeCell.configure(model: model as! RecipeCellModel)
+            recipeCell.selectionStyle = .none
             return recipeCell
+            
+        case is SourceCellModel:
+            let sourceCell = tableView.dequeueReusableCell(withIdentifier: "SourceTableViewCell", for: indexPath) as! SourceTableViewCell
+            sourceCell.configure(model: model as! SourceCellModel)
+            sourceCell.selectionStyle = .none
+            return sourceCell
+            
         default:
-            return tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath)
+            fatalError("cellModels not sync'd with cells in table view")
         }
     }
 

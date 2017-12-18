@@ -9,22 +9,34 @@
 import Foundation
 
 class RecipeModel {
+    // core recipe details
     let recipeName: String
     let recipeId: String
+    let yield: String
+
+    // recipe time to prep/cook
     var prepTime: Int? // in seconds
     var cookTime: Int? // in seconds
     var totalTime: Int?
+    var totalTimeString: String?
+
+    // specific recipe details
     var flavors: FlavorsModel?
     var ingredients: [String]?
-//    let nutritionModel: NutritionModel?
     var smallImageUrl: String?
     var largeImageUrl: String?
+    
+    // credits
+    var attributionModel: AttributionModel?
+    var sourceModel: SourceModel?
+    
     init(recipeDict: [String : Any]) {
-        recipeName = recipeDict["name"] as! String
-        recipeId = recipeDict["id"] as! String
-        
+        recipeName = recipeDict["name"] as? String ?? ""
+        recipeId = recipeDict["id"] as? String ?? ""
+        yield = recipeDict["yield"] as? String ?? "No servings"
         prepTime = recipeDict["prepTimeInSeconds"] as? Int
         cookTime = recipeDict["cookTimeInSeconds"] as? Int
+        totalTimeString = recipeDict["totalTime"] as? String
         totalTime = recipeDict["totalTimeInSeconds"] as? Int
 
         if let flavorsDict = recipeDict["flavors"] as? [String : Float] {
@@ -43,5 +55,14 @@ class RecipeModel {
                 largeImageUrl = imageDict["hostedLargeUrl"] as? String
             }
         }
+        
+        if let attrDict = recipeDict["attribution"] as? [String : String] {
+            attributionModel = AttributionModel(dict: attrDict)
+        }
+        
+        if let srcDict = recipeDict["source"] as? [String : String] {
+            sourceModel = SourceModel(dict: srcDict)
+        }
+        
     }
 }

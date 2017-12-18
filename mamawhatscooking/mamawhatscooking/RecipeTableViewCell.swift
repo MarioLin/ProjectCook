@@ -9,12 +9,15 @@
 struct RecipeCellModel {
     let imageString: String
     let title: String
+    let servings: String?
+    let cuisine: String?
 }
 
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
 
@@ -29,9 +32,11 @@ class RecipeTableViewCell: UITableViewCell {
         if recipeImageView.image == nil {
             recipeImageView.downloadImage(link: model.imageString)
         }
+        if let servings = model.servings {
+            descriptionLabel.text = servings.count < 8 ? "\(servings) servings" : servings
+        } else {
+            descriptionLabel.text = "No serving info"
+        }
     }
     
-    func height(model: RecipeCellModel) {
-        
-    }
 }
