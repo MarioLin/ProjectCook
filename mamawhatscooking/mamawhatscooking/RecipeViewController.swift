@@ -10,31 +10,66 @@ import UIKit
 
 class RecipeViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func dismissButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    fileprivate var cellModels = [Any]()
     
     var recipeModel: RecipeModel! // NEEDS TO BE INJECTED
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTableView()
+        
+        setupModels()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 300
+        // register reuse
+        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "RecipeTableViewCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupModels() {
+        var models = [Any]()
+        
+        models.append(RecipeCellModel(imageString: recipeModel.largeImageUrl ?? "", title: recipeModel.recipeName))
+        
+        cellModels = models
     }
-    */
+}
 
+extension RecipeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension RecipeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row > cellModels.count { // something went wrong
+            fatalError("cellModels not sync'd with number of cells in table view")
+        }
+        
+        let model = cellModels[indexPath.row]
+        switch model.self {
+        case is RecipeCellModel:
+            let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath) as! RecipeTableViewCell
+            recipeCell.configure(model: model as! RecipeCellModel)
+            return recipeCell
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath)
+        }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellModels.count
+    }
 }

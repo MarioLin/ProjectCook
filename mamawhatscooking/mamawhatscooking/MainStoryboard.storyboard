@@ -271,13 +271,24 @@
                                     <action selector="dismissButton:" destination="NO3-go-S0u" eventType="touchUpInside" id="GI2-9e-i82"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-qz-xsE">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uJ1-5D-urA" firstAttribute="top" secondItem="u0C-qz-xsE" secondAttribute="bottom" id="8wt-CT-3LF"/>
+                            <constraint firstItem="u0C-qz-xsE" firstAttribute="top" secondItem="khf-i7-apS" secondAttribute="bottom" constant="10" id="9od-A9-q92"/>
+                            <constraint firstItem="u0C-qz-xsE" firstAttribute="leading" secondItem="WTC-Bc-ax9" secondAttribute="leading" id="M3F-H9-R1V"/>
                             <constraint firstItem="khf-i7-apS" firstAttribute="top" secondItem="lnQ-8t-N5K" secondAttribute="bottom" id="fIJ-LZ-2iE"/>
                             <constraint firstItem="khf-i7-apS" firstAttribute="leading" secondItem="WTC-Bc-ax9" secondAttribute="leading" constant="16" id="qaa-lo-ywO"/>
+                            <constraint firstItem="u0C-qz-xsE" firstAttribute="width" secondItem="WTC-Bc-ax9" secondAttribute="width" id="tcb-hI-wJO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="u0C-qz-xsE" id="N32-18-e9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-pF-myM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,6 +22,8 @@
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
 		D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC781EC956680038B6CE /* YummlySearchModel.swift */; };
 		D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */; };
+		D0847D861FE84BC500B27516 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0847D841FE84BC500B27516 /* RecipeTableViewCell.swift */; };
+		D0847D871FE84BC500B27516 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0847D851FE84BC500B27516 /* RecipeTableViewCell.xib */; };
 		D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F521EC7C556003FCD7B /* UIView.swift */; };
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
@@ -53,6 +55,8 @@
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
 		D06CAC781EC956680038B6CE /* YummlySearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlySearchModel.swift; sourceTree = "<group>"; };
 		D06CAC7A1EC956E50038B6CE /* FlavorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorsModel.swift; sourceTree = "<group>"; };
+		D0847D841FE84BC500B27516 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		D0847D851FE84BC500B27516 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		D0B85F521EC7C556003FCD7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		D01D03E31EC7BD1300B9ADF5 /* mamawhatscooking */ = {
 			isa = PBXGroup;
 			children = (
+				D0847D811FE84B6300B27516 /* cells */,
 				D0F6D7181FD269EC00349359 /* storyboards */,
 				D0ECE9061EF2432C000DA99E /* shared */,
 				D06CAC751EC9564D0038B6CE /* model */,
@@ -141,6 +146,15 @@
 				D0F68B1A1F98EDC600ABDF7D /* SelectionEntity.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		D0847D811FE84B6300B27516 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D0847D841FE84BC500B27516 /* RecipeTableViewCell.swift */,
+				D0847D851FE84BC500B27516 /* RecipeTableViewCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		D0B85F4E1EC7BE2B003FCD7B /* extensions */ = {
@@ -264,6 +278,7 @@
 				D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */,
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
 				D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */,
+				D0847D871FE84BC500B27516 /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +340,7 @@
 				D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */,
 				D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */,
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
+				D0847D861FE84BC500B27516 /* RecipeTableViewCell.swift in Sources */,
 				D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */,
 				D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */,
 				D06CAC7B1EC956E50038B6CE /* FlavorsModel.swift in Sources */,
