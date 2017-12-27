@@ -35,6 +35,7 @@ class RecipeViewController: UIViewController {
         tableView.separatorStyle = .singleLine
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
+        tableView.allowsSelection = false
         // register reuse
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "RecipeTableViewCell")
@@ -73,10 +74,6 @@ class RecipeViewController: UIViewController {
 extension RecipeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
     }
 }
 

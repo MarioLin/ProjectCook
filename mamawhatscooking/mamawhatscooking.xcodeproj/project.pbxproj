@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D00C8EB71FDC739A0085648C /* TasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EB61FDC739A0085648C /* TasteViewController.swift */; };
 		D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */; };
 		D00C8EBB1FDDEAA90085648C /* CookingRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */; };
 		D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EBC1FDDECBE0085648C /* Constants.swift */; };
 		D011E51C1FF4284F00A5F241 /* AttributionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E51A1FF4284F00A5F241 /* AttributionTableViewCell.swift */; };
 		D011E51D1FF4284F00A5F241 /* AttributionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D011E51B1FF4284F00A5F241 /* AttributionTableViewCell.xib */; };
 		D011E51F1FF436DF00A5F241 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */; };
+		D011E5211FF4523D00A5F241 /* TastesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E5201FF4523D00A5F241 /* TastesViewController.swift */; };
+		D011E5231FF45F0D00A5F241 /* CuisineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E5221FF45F0D00A5F241 /* CuisineViewController.swift */; };
 		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
 		D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2431EEE177F0094890A /* RecipeModel.swift */; };
 		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
@@ -43,13 +44,14 @@
 /* Begin PBXFileReference section */
 		1FC44F7C564FF026508EA444 /* Pods-mamawhatscooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.debug.xcconfig"; sourceTree = "<group>"; };
 		3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mamawhatscooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D00C8EB61FDC739A0085648C /* TasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteViewController.swift; sourceTree = "<group>"; };
 		D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingRecipesViewController.swift; sourceTree = "<group>"; };
 		D00C8EBC1FDDECBE0085648C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D011E51A1FF4284F00A5F241 /* AttributionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionTableViewCell.swift; sourceTree = "<group>"; };
 		D011E51B1FF4284F00A5F241 /* AttributionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributionTableViewCell.xib; sourceTree = "<group>"; };
 		D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		D011E5201FF4523D00A5F241 /* TastesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastesViewController.swift; sourceTree = "<group>"; };
+		D011E5221FF45F0D00A5F241 /* CuisineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineViewController.swift; sourceTree = "<group>"; };
 		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
 		D012B2431EEE177F0094890A /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D012B2471EEE18150094890A /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
@@ -105,6 +107,16 @@
 				E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D011E5241FF45F3000A5F241 /* recipe-selection */ = {
+			isa = PBXGroup;
+			children = (
+				D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */,
+				D011E5201FF4523D00A5F241 /* TastesViewController.swift */,
+				D011E5221FF45F0D00A5F241 /* CuisineViewController.swift */,
+			);
+			path = "recipe-selection";
 			sourceTree = "<group>";
 		};
 		D01D03D81EC7BD1300B9ADF5 = {
@@ -183,10 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				D05FCBCF1FD26A980020F89D /* MainViewController.swift */,
-				D00C8EB61FDC739A0085648C /* TasteViewController.swift */,
 				D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */,
 				D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */,
-				D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */,
+				D011E5241FF45F3000A5F241 /* recipe-selection */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -355,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */,
+				D011E5231FF45F0D00A5F241 /* CuisineViewController.swift in Sources */,
 				D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */,
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0847D861FE84BC500B27516 /* RecipeTableViewCell.swift in Sources */,
@@ -370,7 +382,6 @@
 				D011E51F1FF436DF00A5F241 /* SelectionViewController.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D00C8EBB1FDDEAA90085648C /* CookingRecipesViewController.swift in Sources */,
-				D00C8EB71FDC739A0085648C /* TasteViewController.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0847D8C1FE885F800B27516 /* SourceTableViewCell.swift in Sources */,
@@ -378,6 +389,7 @@
 				D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 				D011E51C1FF4284F00A5F241 /* AttributionTableViewCell.swift in Sources */,
+				D011E5211FF4523D00A5F241 /* TastesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

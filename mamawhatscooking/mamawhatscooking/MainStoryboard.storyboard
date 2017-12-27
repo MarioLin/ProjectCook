@@ -94,72 +94,6 @@
             </objects>
             <point key="canvasLocation" x="-8658.3999999999996" y="-1446.0269865067467"/>
         </scene>
-        <!--Tastes-->
-        <scene sceneID="8KF-ox-1yO">
-            <objects>
-                <viewController title="Tastes" id="Qui-bu-DhE" customClass="TasteViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zgn-pC-ih2"/>
-                        <viewControllerLayoutGuide type="bottom" id="x8s-WD-D83"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3B7-uN-M1X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-4B-NxW">
-                                <rect key="frame" x="25" y="207.5" width="230" height="212"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-kr-iRU" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="122" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="I like spicy!">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="spicyButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="zdN-m6-BQG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMY-ha-h9E" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="230" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="I have a sweet tooth!">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sweetButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="C7G-1C-lNl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-XK-C20" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="168" width="154" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="I want savory!">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="savoryButtonTapped:" destination="Qui-bu-DhE" eventType="touchUpInside" id="iZC-b4-gVU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jC2-4B-NxW" firstAttribute="centerY" secondItem="3B7-uN-M1X" secondAttribute="centerY" constant="-20" id="4M7-ab-j9F"/>
-                            <constraint firstItem="jC2-4B-NxW" firstAttribute="leading" secondItem="3B7-uN-M1X" secondAttribute="leading" constant="25" id="yxy-05-vub"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="cKr-sn-uoi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ug6-2Y-Ek1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7081" y="-1543"/>
-        </scene>
         <!--Cooking Recipes View Controller-->
         <scene sceneID="bTT-t6-kdC">
             <objects>
@@ -318,12 +252,52 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Qui-bu-DhE" kind="relationship" relationship="rootViewController" id="Jkf-Xw-dNy"/>
+                        <segue destination="xKv-Ux-d5d" kind="relationship" relationship="rootViewController" id="wlp-sB-13r"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCI-ol-gO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7836" y="-1543"/>
+        </scene>
+        <!--Tastes View Controller-->
+        <scene sceneID="RF3-RK-vcs">
+            <objects>
+                <viewController id="xKv-Ux-d5d" customClass="TastesViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d1Q-mg-clC"/>
+                        <viewControllerLayoutGuide type="bottom" id="8DX-Li-kHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m8q-II-tBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ev6-ZA-x66"/>
+                    <connections>
+                        <segue destination="Mtd-UW-d7a" kind="show" identifier="tasteToCuisineSegue" id="goN-if-A35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqM-Vz-A8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7090" y="-1543"/>
+        </scene>
+        <!--Cuisine View Controller-->
+        <scene sceneID="9iz-eE-Dwf">
+            <objects>
+                <viewController id="Mtd-UW-d7a" customClass="CuisineViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="anO-hE-bHy"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJa-XP-1a2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qoG-4I-mqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfS-n0-P5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6356" y="-1543"/>
         </scene>
     </scenes>
     <resources>

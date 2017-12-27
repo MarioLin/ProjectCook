@@ -32,6 +32,19 @@ class RoundedBurritoButton: UIButton {
         return CGSize(width: width, height: superContentSize.height)
     }
     
+    init(text: String, fontSize: CGFloat, backgroundColor: UIColor, titleColor: UIColor, borderRadius: CGFloat = 4.5) {
+        super.init(frame: .zero)
+        layer.cornerRadius = borderRadius
+        addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
+        self.backgroundColor = backgroundColor
+        
+        titleLabel?.font = UIFont(name: "HelveticaNeue", size: fontSize)
+        setTitle(text, for: .normal)
+        setTitleColor(titleColor, for: .normal)
+        savedBackgroundColor = self.backgroundColor
+        savedBorderColor = currentTitleColor
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.cornerRadius = 4.5
@@ -48,7 +61,7 @@ class RoundedBurritoButton: UIButton {
     }
 }
 
-private var associationKey = "block"
+private var associationKey = "UIButtonBlock"
 extension UIButton {
     var block: (() -> ())? {
         get {
