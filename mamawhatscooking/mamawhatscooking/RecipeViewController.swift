@@ -32,7 +32,7 @@ class RecipeViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
         // register reuse
@@ -40,7 +40,9 @@ class RecipeViewController: UIViewController {
                            forCellReuseIdentifier: "RecipeTableViewCell")
         tableView.register(UINib(nibName: "SourceTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "SourceTableViewCell")
-    }
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(UINib(nibName: "AttributionTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "AttributionTableViewCell")    }
     
     private func setupModels() {
         var models = [Any]()
@@ -56,6 +58,14 @@ class RecipeViewController: UIViewController {
             }
             models.append(sourceModel)
         }
+        
+        if let ingredients = recipeModel.ingredients {
+            ingredients.forEach { models.append($0) }
+        }
+        if let attributionModel = recipeModel.attributionModel {
+            models.append(attributionModel)
+        }
+        
         cellModels = models
     }
 }
@@ -86,6 +96,16 @@ extension RecipeViewController: UITableViewDataSource {
             sourceCell.configure(model: model as! SourceCellModel)
             sourceCell.selectionStyle = .none
             return sourceCell
+            
+        case is String:
+            let ingredientLineCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath) as UITableViewCell
+            ingredientLineCell.textLabel?.text = model as! String
+            return ingredientLineCell
+            
+        case is AttributionModel:
+            let attributionCell = tableView.dequeueReusableCell(withIdentifier: "AttributionTableViewCell", for: indexPath) as! AttributionTableViewCell
+            attributionCell.configure(model: model as! AttributionModel)
+            return attributionCell
             
         default:
             fatalError("cellModels not sync'd with cells in table view")

@@ -30,10 +30,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-KA-GpQ">
-                                <rect key="frame" x="126" y="236" width="122" height="95"/>
+                                <rect key="frame" x="130.5" y="236" width="113" height="95"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NqV-eV-rsL">
-                                        <rect key="frame" x="31" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="60" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wUG-WR-TFO">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -46,13 +46,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ijA-Qy-3eN">
-                                        <rect key="frame" x="0.0" y="65" width="122" height="30"/>
+                                        <rect key="frame" x="0.0" y="65" width="113" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fji-UX-OJ1" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="122" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Click here to start">
+                                                <state key="normal" title="Tap here to start">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>

@@ -47,3 +47,24 @@ class RoundedBurritoButton: UIButton {
         touchBlock(self)
     }
 }
+
+private var associationKey = "block"
+extension UIButton {
+    var block: (() -> ())? {
+        get {
+            return objc_getAssociatedObject(self, &associationKey) as? () -> ()
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &associationKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
+    func setTouchBlock(_ block: @escaping (_ sender: Any) -> ()) {
+        self.block = block
+        addTarget(self, action: #selector(touched), for: .touchUpInside)
+    }
+    
+    @objc private func touched() {
+        self.block?()
+    }
+}
