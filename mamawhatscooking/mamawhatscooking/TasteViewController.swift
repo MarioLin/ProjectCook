@@ -34,13 +34,14 @@ class TasteViewController: UIViewController {
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Tastes"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonPressed))
+        backButton.tintColor = .orange
         navigationItem.leftBarButtonItem = backButton;
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

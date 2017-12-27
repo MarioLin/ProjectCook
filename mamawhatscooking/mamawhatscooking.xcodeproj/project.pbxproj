@@ -13,6 +13,7 @@
 		D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C8EBC1FDDECBE0085648C /* Constants.swift */; };
 		D011E51C1FF4284F00A5F241 /* AttributionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E51A1FF4284F00A5F241 /* AttributionTableViewCell.swift */; };
 		D011E51D1FF4284F00A5F241 /* AttributionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D011E51B1FF4284F00A5F241 /* AttributionTableViewCell.xib */; };
+		D011E51F1FF436DF00A5F241 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */; };
 		D012B2421EEE05400094890A /* YummlyRecipeDetailTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */; };
 		D012B2441EEE177F0094890A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2431EEE177F0094890A /* RecipeModel.swift */; };
 		D012B2481EEE18150094890A /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012B2471EEE18150094890A /* NutritionModel.swift */; };
@@ -48,6 +49,7 @@
 		D00C8EBC1FDDECBE0085648C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D011E51A1FF4284F00A5F241 /* AttributionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionTableViewCell.swift; sourceTree = "<group>"; };
 		D011E51B1FF4284F00A5F241 /* AttributionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributionTableViewCell.xib; sourceTree = "<group>"; };
+		D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		D012B2411EEE053F0094890A /* YummlyRecipeDetailTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YummlyRecipeDetailTransaction.swift; sourceTree = "<group>"; };
 		D012B2431EEE177F0094890A /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D012B2471EEE18150094890A /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				D00C8EB61FDC739A0085648C /* TasteViewController.swift */,
 				D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */,
 				D00C8EBA1FDDEAA90085648C /* CookingRecipesViewController.swift */,
+				D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
 				D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
+				D011E51F1FF436DF00A5F241 /* SelectionViewController.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D00C8EBB1FDDEAA90085648C /* CookingRecipesViewController.swift in Sources */,
 				D00C8EB71FDC739A0085648C /* TasteViewController.swift in Sources */,
