@@ -259,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="-7836" y="-1543"/>
         </scene>
-        <!--Tastes View Controller-->
+        <!--Cuisine View Controller-->
         <scene sceneID="RF3-RK-vcs">
             <objects>
-                <viewController id="xKv-Ux-d5d" customClass="TastesViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xKv-Ux-d5d" customClass="CuisineViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d1Q-mg-clC"/>
                         <viewControllerLayoutGuide type="bottom" id="8DX-Li-kHi"/>
@@ -274,17 +274,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="ev6-ZA-x66"/>
                     <connections>
-                        <segue destination="Mtd-UW-d7a" kind="show" identifier="tasteToCuisineSegue" id="goN-if-A35"/>
+                        <segue destination="Mtd-UW-d7a" kind="show" identifier="cuisineToCourseSegue" id="goN-if-A35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqM-Vz-A8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7090" y="-1543"/>
+            <point key="canvasLocation" x="-7103" y="-1543"/>
         </scene>
-        <!--Cuisine View Controller-->
+        <!--Course View Controller-->
         <scene sceneID="9iz-eE-Dwf">
             <objects>
-                <viewController id="Mtd-UW-d7a" customClass="CuisineViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mtd-UW-d7a" customClass="CourseViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="anO-hE-bHy"/>
                         <viewControllerLayoutGuide type="bottom" id="CJa-XP-1a2"/>

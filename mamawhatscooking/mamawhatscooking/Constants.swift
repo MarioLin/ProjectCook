@@ -14,6 +14,7 @@ public let kImageCooking = "cooking"
 public let searchSegue = "to_search_segue"
 public let recipeSegue = "to_recipe_segue"
 public let tasteToCuisineSegue = "tasteToCuisineSegue"
+public let cuisineToCourseSegue = "cuisineToCourseSegue"
 
 // MARK: Yummly search params
 public let spicyMaxParam = "flavor.piquant.max"

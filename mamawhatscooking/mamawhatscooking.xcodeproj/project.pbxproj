@@ -30,6 +30,7 @@
 		D0847D871FE84BC500B27516 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0847D851FE84BC500B27516 /* RecipeTableViewCell.xib */; };
 		D0847D8C1FE885F800B27516 /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0847D8A1FE885F800B27516 /* SourceTableViewCell.swift */; };
 		D0847D8D1FE885F800B27516 /* SourceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0847D8B1FE885F800B27516 /* SourceTableViewCell.xib */; };
+		D09DFCE41FF57CD6002FD1CD /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DFCE31FF57CD6002FD1CD /* CourseViewController.swift */; };
 		D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F521EC7C556003FCD7B /* UIView.swift */; };
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
@@ -69,6 +70,7 @@
 		D0847D851FE84BC500B27516 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		D0847D8A1FE885F800B27516 /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
 		D0847D8B1FE885F800B27516 /* SourceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceTableViewCell.xib; sourceTree = "<group>"; };
+		D09DFCE31FF57CD6002FD1CD /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		D0B85F521EC7C556003FCD7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D011E51E1FF436DF00A5F241 /* SelectionViewController.swift */,
 				D011E5201FF4523D00A5F241 /* TastesViewController.swift */,
 				D011E5221FF45F0D00A5F241 /* CuisineViewController.swift */,
+				D09DFCE31FF57CD6002FD1CD /* CourseViewController.swift */,
 			);
 			path = "recipe-selection";
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */,
 				D012B2481EEE18150094890A /* NutritionModel.swift in Sources */,
 				D00C8EBD1FDDECBE0085648C /* Constants.swift in Sources */,
+				D09DFCE41FF57CD6002FD1CD /* CourseViewController.swift in Sources */,
 				D0B85F5B1EC7D8CC003FCD7B /* YummlyApiTransaction.swift in Sources */,
 				D011E51F1FF436DF00A5F241 /* SelectionViewController.swift in Sources */,
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,

@@ -43,7 +43,10 @@ class ApiTransaction: NSObject {
         if parsedUrl.last == "&" {
             parsedUrl = parsedUrl.substring(to: parsedUrl.index(before:parsedUrl.endIndex))
         }
-        return URL(string: parsedUrl)
+        if let wellformedUrl = parsedUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            return URL(string: wellformedUrl)
+        }
+        return nil
     }
     
     func serializeDataToJson(data: Data) -> [String: Any] {
