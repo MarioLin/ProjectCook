@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class SelectionViewController: UIViewController {
-    var params = [String:String]() // must be passed
-    var startParams = [String:String]()
     private var stackView: UIStackView!
     
     private lazy var buttons: [RoundedBurritoButton] = {
@@ -21,9 +19,6 @@ class SelectionViewController: UIViewController {
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        startParams = params
-        title = navTitle()
         
         stackView = UIStackView(arrangedSubviews: buttons)
         stackView.spacing = 25
@@ -37,14 +32,10 @@ class SelectionViewController: UIViewController {
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
     }
     
-    // MARK: Subclass overrides
     func selectableButtons() -> [RoundedBurritoButton] {
-        fatalError("subclass must override")
+        return [RoundedBurritoButton.defaultSelectionButton("Test") {idx in }]
     }
     
-    func navTitle() -> String {
-        fatalError("subclass must override")
-    }
 }
 
 extension RoundedBurritoButton {
