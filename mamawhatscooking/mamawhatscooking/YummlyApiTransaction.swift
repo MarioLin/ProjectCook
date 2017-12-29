@@ -23,7 +23,34 @@ class YummlyApiTransaction: ApiTransaction {
         self.url = URL(string: base_url + "recipes")
         makeNetworkRequest()
     }
-        
+    
+    // MARK: Class funcs and overrides
+    class func defaultSearchParams(_ type: RecipeCourseType) -> [String : String] {
+        var dict = [String : String]()
+        dict["requiresPictures"] = "true"
+        let keyValuePair = YummlyApiTransaction.courseKeyValuePair(type)
+        dict[keyValuePair.0] = keyValuePair.1
+        return dict
+    }
+
+    private class func courseKeyValuePair(_ type: RecipeCourseType) -> (String, String) {
+        let courseKey = "allowedCourse[]"
+        switch type {
+        case .breakfast:
+            return (courseKey, "course^course-Breakfast and Brunch")
+        case .lunch:
+            return (courseKey, "course^course-Lunch")
+        case .dinner:
+            return (courseKey, "course^course-Main Dishes")
+        case .dessert:
+            return (courseKey, "course^course-Desserts")
+        case .appetizer:
+            return (courseKey, "course^course-Appetizers")
+        case .drink:
+            return (courseKey, "course^course-Beverages")
+        }
+    }
+    
     override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
         guard let matches = dictionary["matches"] as? [[String : Any]],
             let attribution = dictionary["attribution"] as? [String : String] else { return [] }

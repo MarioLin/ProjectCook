@@ -12,8 +12,22 @@ class ImageTitleButton: UIButton {
     let imageTitleImageView = UIImageView()
     let imageTitleLabel = UILabel()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func setTouchBlock(_ block: @escaping (Any) -> ()) {
+        super.setTouchBlock(block)
+        imageTitleImageView.isUserInteractionEnabled = true
+        imageTitleLabel.isUserInteractionEnabled = true
+        imageTitleImageView.gestureRecognizers?.forEach(imageTitleLabel.removeGestureRecognizer)
+        imageTitleLabel.gestureRecognizers?.forEach(imageTitleLabel.removeGestureRecognizer)
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapBlock))
+        let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapBlock))
+
+        imageTitleImageView.addGestureRecognizer(imageTapGesture)
+        imageTitleLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func tapBlock() {
+        self.block?()
     }
     
     required init?(coder aDecoder: NSCoder) {

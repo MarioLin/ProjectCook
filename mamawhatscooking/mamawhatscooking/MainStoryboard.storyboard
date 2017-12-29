@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sCV-mm-IxS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sCV-mm-IxS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,28 +14,24 @@
         <scene sceneID="6Zm-vP-pPW">
             <objects>
                 <viewController storyboardIdentifier="main_storyboard" id="sCV-mm-IxS" customClass="MainViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="keB-zB-wMB"/>
-                        <viewControllerLayoutGuide type="bottom" id="YXh-w6-NIw"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0ZB-C9-agW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCm-xL-7NP" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="172.5" y="35" width="30" height="20"/>
+                                <rect key="frame" x="147.5" y="87" width="80" height="25"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ojR-du-nZ0"/>
+                                    <constraint firstAttribute="height" constant="25" id="ojR-du-nZ0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Any">
+                                <state key="normal" title="Cuisine: Any">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzk-4n-uKr">
-                                <rect key="frame" x="15" y="65" width="345" height="1"/>
+                                <rect key="frame" x="15" y="122" width="345" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ot5-qH-bQ3"/>
@@ -48,80 +45,100 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t61-ho-Tgt" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="76" width="187.5" height="188.5"/>
+                                <rect key="frame" x="0.0" y="133" width="187.5" height="169.5"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOc-nj-81g" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="452.5" width="187.5" height="188.5"/>
+                                <rect key="frame" x="0.0" y="471.5" width="187.5" height="169.5"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-3B-weV" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="187.5" y="264.5" width="187.5" height="188.5"/>
+                                <rect key="frame" x="187.5" y="302.5" width="187.5" height="169.5"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iet-3p-6ny" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="187.5" y="76" width="187.5" height="188.5"/>
+                                <rect key="frame" x="187.5" y="133" width="187.5" height="169.5"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-xo-6eJ" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="187.5" y="452.5" width="187.5" height="188.5"/>
+                                <rect key="frame" x="187.5" y="471.5" width="187.5" height="169.5"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBe-WS-5jy" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="264.5" width="187.5" height="188"/>
+                                <rect key="frame" x="0.0" y="302.5" width="187.5" height="169"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="228-EN-M31">
+                                <rect key="frame" x="74.5" y="35" width="227.5" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROJECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X7-u3-HJA">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufy-x9-uy3">
+                                        <rect key="frame" x="140" y="0.0" width="87.5" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wzk-4n-uKr" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" constant="15" id="1oZ-ZZ-7mb"/>
-                            <constraint firstItem="uOc-nj-81g" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" id="2zc-PB-yok"/>
-                            <constraint firstAttribute="trailing" secondItem="iet-3p-6ny" secondAttribute="trailing" id="3X2-mN-YF1"/>
+                            <constraint firstItem="Wzk-4n-uKr" firstAttribute="leading" secondItem="FYB-QS-Ji3" secondAttribute="leading" constant="15" id="1oZ-ZZ-7mb"/>
+                            <constraint firstItem="uOc-nj-81g" firstAttribute="leading" secondItem="FYB-QS-Ji3" secondAttribute="leading" id="2zc-PB-yok"/>
+                            <constraint firstItem="FYB-QS-Ji3" firstAttribute="trailing" secondItem="iet-3p-6ny" secondAttribute="trailing" id="3X2-mN-YF1"/>
+                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="top" secondItem="228-EN-M31" secondAttribute="bottom" constant="15" id="5G3-ad-os0"/>
                             <constraint firstItem="Wzk-4n-uKr" firstAttribute="top" secondItem="ZCm-xL-7NP" secondAttribute="bottom" constant="10" id="76m-pv-8bk"/>
                             <constraint firstItem="XhZ-xo-6eJ" firstAttribute="width" secondItem="uOc-nj-81g" secondAttribute="width" id="7VE-so-Vl0"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="top" secondItem="FeJ-3B-weV" secondAttribute="top" id="CKu-HV-K7Z"/>
-                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="Cii-By-h4B"/>
-                            <constraint firstAttribute="trailing" secondItem="XhZ-xo-6eJ" secondAttribute="trailing" id="DlX-5i-GzF"/>
+                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="centerX" secondItem="FYB-QS-Ji3" secondAttribute="centerX" id="Cii-By-h4B"/>
+                            <constraint firstItem="FYB-QS-Ji3" firstAttribute="trailing" secondItem="XhZ-xo-6eJ" secondAttribute="trailing" id="DlX-5i-GzF"/>
                             <constraint firstItem="M6d-GW-FRI" firstAttribute="top" secondItem="uOc-nj-81g" secondAttribute="bottom" constant="10" id="GfG-Nl-X9E"/>
                             <constraint firstItem="uOc-nj-81g" firstAttribute="top" secondItem="GBe-WS-5jy" secondAttribute="bottom" id="GiU-8w-VL3"/>
                             <constraint firstItem="t61-ho-Tgt" firstAttribute="top" secondItem="iet-3p-6ny" secondAttribute="top" id="Grx-8o-u53"/>
                             <constraint firstItem="iet-3p-6ny" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="HoZ-Lg-tDu"/>
-                            <constraint firstItem="M6d-GW-FRI" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" constant="15" id="LVS-QD-kHW"/>
+                            <constraint firstItem="M6d-GW-FRI" firstAttribute="leading" secondItem="FYB-QS-Ji3" secondAttribute="leading" constant="15" id="LVS-QD-kHW"/>
                             <constraint firstItem="FeJ-3B-weV" firstAttribute="width" secondItem="iet-3p-6ny" secondAttribute="width" id="P7N-BU-5ym"/>
                             <constraint firstItem="iet-3p-6ny" firstAttribute="leading" secondItem="t61-ho-Tgt" secondAttribute="trailing" id="Q46-Pw-yxH"/>
                             <constraint firstItem="uOc-nj-81g" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="Qs2-sy-dwl"/>
-                            <constraint firstAttribute="trailing" secondItem="Wzk-4n-uKr" secondAttribute="trailing" constant="15" id="RpK-gU-yXd"/>
+                            <constraint firstItem="228-EN-M31" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="R3B-yG-rpC"/>
+                            <constraint firstItem="FYB-QS-Ji3" firstAttribute="trailing" secondItem="Wzk-4n-uKr" secondAttribute="trailing" constant="15" id="RpK-gU-yXd"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="V24-r0-enF"/>
                             <constraint firstItem="XhZ-xo-6eJ" firstAttribute="bottom" secondItem="uOc-nj-81g" secondAttribute="bottom" id="Wjk-eq-fQg"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="leading" secondItem="t61-ho-Tgt" secondAttribute="leading" id="Wvz-CT-Oe9"/>
                             <constraint firstItem="FeJ-3B-weV" firstAttribute="height" secondItem="iet-3p-6ny" secondAttribute="height" id="XtS-Es-636"/>
-                            <constraint firstItem="YXh-w6-NIw" firstAttribute="top" secondItem="M6d-GW-FRI" secondAttribute="bottom" constant="15" id="ZxX-uG-utv"/>
+                            <constraint firstItem="FYB-QS-Ji3" firstAttribute="bottom" secondItem="M6d-GW-FRI" secondAttribute="bottom" constant="15" id="ZxX-uG-utv"/>
                             <constraint firstItem="iet-3p-6ny" firstAttribute="top" secondItem="Wzk-4n-uKr" secondAttribute="bottom" constant="10" id="b3d-gE-pQO"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="bkZ-f8-lOR"/>
-                            <constraint firstAttribute="trailing" secondItem="M6d-GW-FRI" secondAttribute="trailing" constant="15" id="cfV-FE-YsE"/>
+                            <constraint firstItem="FYB-QS-Ji3" firstAttribute="trailing" secondItem="M6d-GW-FRI" secondAttribute="trailing" constant="15" id="cfV-FE-YsE"/>
                             <constraint firstItem="FeJ-3B-weV" firstAttribute="top" secondItem="iet-3p-6ny" secondAttribute="bottom" id="dq7-1s-kHy"/>
                             <constraint firstItem="XhZ-xo-6eJ" firstAttribute="height" secondItem="uOc-nj-81g" secondAttribute="height" id="dwL-kt-MNF"/>
                             <constraint firstItem="iet-3p-6ny" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="gFr-gO-CfS"/>
                             <constraint firstItem="uOc-nj-81g" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="mBn-Uq-LWL"/>
-                            <constraint firstItem="t61-ho-Tgt" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" id="ozP-OE-8cg"/>
+                            <constraint firstItem="t61-ho-Tgt" firstAttribute="leading" secondItem="FYB-QS-Ji3" secondAttribute="leading" id="ozP-OE-8cg"/>
                             <constraint firstItem="FeJ-3B-weV" firstAttribute="leading" secondItem="iet-3p-6ny" secondAttribute="leading" id="r2L-s4-VFO"/>
-                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="top" secondItem="keB-zB-wMB" secondAttribute="bottom" constant="15" id="rtO-vn-48h"/>
+                            <constraint firstItem="228-EN-M31" firstAttribute="top" secondItem="FYB-QS-Ji3" secondAttribute="top" constant="15" id="tpz-lY-kLb"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="FYB-QS-Ji3"/>
                     </view>
                     <connections>
                         <outlet property="appetizerBtn" destination="uOc-nj-81g" id="C9B-nU-IWq"/>
@@ -141,10 +158,6 @@
         <scene sceneID="bTT-t6-kdC">
             <objects>
                 <viewController id="kkP-uZ-Pit" customClass="CookingRecipesViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rA3-vZ-NuJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="MVR-nT-9YP"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DOV-kT-Uy8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,23 +204,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WMV-zp-R13" firstAttribute="top" secondItem="rA3-vZ-NuJ" secondAttribute="bottom" constant="76" id="1ww-dI-r6g"/>
+                            <constraint firstItem="WMV-zp-R13" firstAttribute="top" secondItem="zUu-Ju-kRs" secondAttribute="top" constant="76" id="1ww-dI-r6g"/>
                             <constraint firstItem="53E-qs-hXW" firstAttribute="centerY" secondItem="oSS-bk-xAC" secondAttribute="centerY" id="9Sg-tA-wfG"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="top" secondItem="WMV-zp-R13" secondAttribute="top" id="GwC-O0-rP3"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="width" secondItem="WMV-zp-R13" secondAttribute="width" id="HDc-3u-mVV"/>
                             <constraint firstItem="oSS-bk-xAC" firstAttribute="width" secondItem="DOV-kT-Uy8" secondAttribute="width" id="IKP-wW-8mp"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="height" secondItem="WMV-zp-R13" secondAttribute="height" id="Kvk-Mg-3hG"/>
                             <constraint firstItem="I36-ne-LIc" firstAttribute="leading" secondItem="WMV-zp-R13" secondAttribute="leading" id="M6t-5A-EHp"/>
-                            <constraint firstItem="EOB-TK-e04" firstAttribute="top" secondItem="rA3-vZ-NuJ" secondAttribute="bottom" id="NSC-tb-grM"/>
-                            <constraint firstItem="3FU-R5-Jck" firstAttribute="centerX" secondItem="DOV-kT-Uy8" secondAttribute="centerX" id="NpB-4c-y5j"/>
+                            <constraint firstItem="EOB-TK-e04" firstAttribute="top" secondItem="zUu-Ju-kRs" secondAttribute="top" id="NSC-tb-grM"/>
+                            <constraint firstItem="3FU-R5-Jck" firstAttribute="centerX" secondItem="zUu-Ju-kRs" secondAttribute="centerX" id="NpB-4c-y5j"/>
                             <constraint firstItem="53E-qs-hXW" firstAttribute="centerX" secondItem="oSS-bk-xAC" secondAttribute="centerX" id="X6K-Lk-m1V"/>
                             <constraint firstItem="3FU-R5-Jck" firstAttribute="centerY" secondItem="DOV-kT-Uy8" secondAttribute="centerY" constant="-60" id="aug-FP-nBC"/>
-                            <constraint firstItem="MVR-nT-9YP" firstAttribute="top" secondItem="oSS-bk-xAC" secondAttribute="bottom" id="b7P-LP-Fwf"/>
-                            <constraint firstItem="WMV-zp-R13" firstAttribute="centerX" secondItem="DOV-kT-Uy8" secondAttribute="centerX" id="bRC-Pi-mDE"/>
-                            <constraint firstItem="oSS-bk-xAC" firstAttribute="leading" secondItem="DOV-kT-Uy8" secondAttribute="leading" id="drH-9v-JYA"/>
-                            <constraint firstItem="EOB-TK-e04" firstAttribute="leading" secondItem="DOV-kT-Uy8" secondAttribute="leading" constant="16" id="tV9-t3-XZ7"/>
+                            <constraint firstItem="zUu-Ju-kRs" firstAttribute="bottom" secondItem="oSS-bk-xAC" secondAttribute="bottom" id="b7P-LP-Fwf"/>
+                            <constraint firstItem="WMV-zp-R13" firstAttribute="centerX" secondItem="zUu-Ju-kRs" secondAttribute="centerX" id="bRC-Pi-mDE"/>
+                            <constraint firstItem="oSS-bk-xAC" firstAttribute="leading" secondItem="zUu-Ju-kRs" secondAttribute="leading" id="drH-9v-JYA"/>
+                            <constraint firstItem="EOB-TK-e04" firstAttribute="leading" secondItem="zUu-Ju-kRs" secondAttribute="leading" constant="16" id="tV9-t3-XZ7"/>
                             <constraint firstItem="oSS-bk-xAC" firstAttribute="top" secondItem="3FU-R5-Jck" secondAttribute="bottom" constant="8" symbolic="YES" id="xpM-rS-D7o"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zUu-Ju-kRs"/>
                     </view>
                     <connections>
                         <outlet property="cookPotImageView" destination="3FU-R5-Jck" id="L60-bN-Zry"/>
@@ -225,10 +239,6 @@
         <scene sceneID="KqK-46-Hyp">
             <objects>
                 <viewController id="NO3-go-S0u" customClass="RecipeViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lnQ-8t-N5K"/>
-                        <viewControllerLayoutGuide type="bottom" id="uJ1-5D-urA"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WTC-Bc-ax9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,16 +274,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lTy-Cl-IZK" firstAttribute="top" secondItem="khf-i7-apS" secondAttribute="top" constant="5" id="4hk-gI-fjt"/>
-                            <constraint firstItem="uJ1-5D-urA" firstAttribute="top" secondItem="u0C-qz-xsE" secondAttribute="bottom" id="8wt-CT-3LF"/>
+                            <constraint firstItem="jDo-vT-vBK" firstAttribute="bottom" secondItem="u0C-qz-xsE" secondAttribute="bottom" id="8wt-CT-3LF"/>
                             <constraint firstItem="u0C-qz-xsE" firstAttribute="top" secondItem="khf-i7-apS" secondAttribute="bottom" constant="10" id="9od-A9-q92"/>
-                            <constraint firstAttribute="trailing" secondItem="lTy-Cl-IZK" secondAttribute="trailing" constant="15" id="A02-8r-bDd"/>
-                            <constraint firstItem="u0C-qz-xsE" firstAttribute="leading" secondItem="WTC-Bc-ax9" secondAttribute="leading" id="M3F-H9-R1V"/>
+                            <constraint firstItem="jDo-vT-vBK" firstAttribute="trailing" secondItem="lTy-Cl-IZK" secondAttribute="trailing" constant="15" id="A02-8r-bDd"/>
+                            <constraint firstItem="u0C-qz-xsE" firstAttribute="leading" secondItem="jDo-vT-vBK" secondAttribute="leading" id="M3F-H9-R1V"/>
                             <constraint firstItem="lTy-Cl-IZK" firstAttribute="leading" secondItem="aIc-fq-XOD" secondAttribute="trailing" constant="7" id="bwf-3A-zx6"/>
-                            <constraint firstItem="khf-i7-apS" firstAttribute="top" secondItem="lnQ-8t-N5K" secondAttribute="bottom" id="fIJ-LZ-2iE"/>
-                            <constraint firstItem="aIc-fq-XOD" firstAttribute="top" secondItem="lnQ-8t-N5K" secondAttribute="bottom" id="hWg-FV-nyH"/>
-                            <constraint firstItem="khf-i7-apS" firstAttribute="leading" secondItem="WTC-Bc-ax9" secondAttribute="leading" constant="16" id="qaa-lo-ywO"/>
+                            <constraint firstItem="khf-i7-apS" firstAttribute="top" secondItem="jDo-vT-vBK" secondAttribute="top" id="fIJ-LZ-2iE"/>
+                            <constraint firstItem="aIc-fq-XOD" firstAttribute="top" secondItem="jDo-vT-vBK" secondAttribute="top" id="hWg-FV-nyH"/>
+                            <constraint firstItem="khf-i7-apS" firstAttribute="leading" secondItem="jDo-vT-vBK" secondAttribute="leading" constant="16" id="qaa-lo-ywO"/>
                             <constraint firstItem="u0C-qz-xsE" firstAttribute="width" secondItem="WTC-Bc-ax9" secondAttribute="width" id="tcb-hI-wJO"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="jDo-vT-vBK"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="u0C-qz-xsE" id="N32-18-e9w"/>
