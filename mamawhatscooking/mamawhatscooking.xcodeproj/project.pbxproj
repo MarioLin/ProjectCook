@@ -31,6 +31,7 @@
 		D0847D8C1FE885F800B27516 /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0847D8A1FE885F800B27516 /* SourceTableViewCell.swift */; };
 		D0847D8D1FE885F800B27516 /* SourceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0847D8B1FE885F800B27516 /* SourceTableViewCell.xib */; };
 		D09DFCE41FF57CD6002FD1CD /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DFCE31FF57CD6002FD1CD /* CourseViewController.swift */; };
+		D09DFCE81FF59B89002FD1CD /* ImageTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DFCE71FF59B89002FD1CD /* ImageTitleButton.swift */; };
 		D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F521EC7C556003FCD7B /* UIView.swift */; };
 		D0B85F561EC7C8C8003FCD7B /* RoundedBurritoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */; };
 		D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */; };
@@ -71,6 +72,7 @@
 		D0847D8A1FE885F800B27516 /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
 		D0847D8B1FE885F800B27516 /* SourceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceTableViewCell.xib; sourceTree = "<group>"; };
 		D09DFCE31FF57CD6002FD1CD /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		D09DFCE71FF59B89002FD1CD /* ImageTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleButton.swift; sourceTree = "<group>"; };
 		D0B85F521EC7C556003FCD7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBurritoButton.swift; sourceTree = "<group>"; };
 		D0B85F581EC7D709003FCD7B /* ApiTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTransaction.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B85F551EC7C8C8003FCD7B /* RoundedBurritoButton.swift */,
+				D09DFCE71FF59B89002FD1CD /* ImageTitleButton.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				D0F68B1B1F98EDC600ABDF7D /* SelectionEntity.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 				D011E51C1FF4284F00A5F241 /* AttributionTableViewCell.swift in Sources */,
+				D09DFCE81FF59B89002FD1CD /* ImageTitleButton.swift in Sources */,
 				D011E5211FF4523D00A5F241 /* TastesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

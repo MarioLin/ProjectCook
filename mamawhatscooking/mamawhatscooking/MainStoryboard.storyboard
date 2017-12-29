@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GillSans.ttc">
-            <string>GillSans-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="6Zm-vP-pPW">
@@ -26,67 +21,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="MiY-fY-avZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-KA-GpQ">
-                                <rect key="frame" x="83" y="224" width="208" height="119"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NqV-eV-rsL">
-                                        <rect key="frame" x="74" y="0.0" width="60" height="60"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wUG-WR-TFO">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef_hat" translatesAutoresizingMaskIntoConstraints="NO" id="gIU-UR-b3H">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ijA-Qy-3eN">
-                                        <rect key="frame" x="0.0" y="65" width="208" height="54"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fji-UX-OJ1" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="208" height="54"/>
-                                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <color key="tintColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Get my recipe">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="cej-t2-4sg" kind="presentation" id="Jp7-Yt-VXG"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Cookin'?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIL-y3-QkM">
-                                <rect key="frame" x="57" y="87.5" width="262" height="46.5"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="37"/>
-                                <color key="textColor" red="1" green="0.69167860939997161" blue="0.037096759155742176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.94901635362694303" green="0.5657054556516915" blue="0.065170334602926039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCm-xL-7NP" customClass="RoundedBurritoButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="172.5" y="35" width="30" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ojR-du-nZ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Any">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzk-4n-uKr">
+                                <rect key="frame" x="15" y="65" width="345" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ot5-qH-bQ3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-GW-FRI">
+                                <rect key="frame" x="15" y="651" width="345" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="jSj-7Y-bca"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t61-ho-Tgt" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="76" width="187.5" height="188.5"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOc-nj-81g" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="452.5" width="187.5" height="188.5"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-3B-weV" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="264.5" width="187.5" height="188.5"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iet-3p-6ny" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="76" width="187.5" height="188.5"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-xo-6eJ" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="452.5" width="187.5" height="188.5"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBe-WS-5jy" customClass="ImageTitleButton" customModule="mamawhatscooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="264.5" width="187.5" height="188"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MiY-fY-avZ" firstAttribute="centerY" secondItem="0ZB-C9-agW" secondAttribute="centerY" id="FLn-oF-5Dz"/>
-                            <constraint firstItem="MiY-fY-avZ" firstAttribute="height" secondItem="0ZB-C9-agW" secondAttribute="height" id="IhE-km-SO3"/>
-                            <constraint firstItem="R4h-KA-GpQ" firstAttribute="centerY" secondItem="0ZB-C9-agW" secondAttribute="centerY" constant="-50" id="NMt-gp-vnr"/>
-                            <constraint firstItem="MiY-fY-avZ" firstAttribute="width" secondItem="0ZB-C9-agW" secondAttribute="width" id="RbJ-uN-6ZM"/>
-                            <constraint firstItem="R4h-KA-GpQ" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="jNV-3d-0nY"/>
-                            <constraint firstItem="gIU-UR-b3H" firstAttribute="top" secondItem="iIL-y3-QkM" secondAttribute="bottom" constant="90" id="kGe-ja-AhL"/>
-                            <constraint firstItem="iIL-y3-QkM" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="nsF-AD-i74"/>
-                            <constraint firstItem="MiY-fY-avZ" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="oDn-i3-ZT3"/>
+                            <constraint firstItem="Wzk-4n-uKr" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" constant="15" id="1oZ-ZZ-7mb"/>
+                            <constraint firstItem="uOc-nj-81g" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" id="2zc-PB-yok"/>
+                            <constraint firstAttribute="trailing" secondItem="iet-3p-6ny" secondAttribute="trailing" id="3X2-mN-YF1"/>
+                            <constraint firstItem="Wzk-4n-uKr" firstAttribute="top" secondItem="ZCm-xL-7NP" secondAttribute="bottom" constant="10" id="76m-pv-8bk"/>
+                            <constraint firstItem="XhZ-xo-6eJ" firstAttribute="width" secondItem="uOc-nj-81g" secondAttribute="width" id="7VE-so-Vl0"/>
+                            <constraint firstItem="GBe-WS-5jy" firstAttribute="top" secondItem="FeJ-3B-weV" secondAttribute="top" id="CKu-HV-K7Z"/>
+                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="Cii-By-h4B"/>
+                            <constraint firstAttribute="trailing" secondItem="XhZ-xo-6eJ" secondAttribute="trailing" id="DlX-5i-GzF"/>
+                            <constraint firstItem="M6d-GW-FRI" firstAttribute="top" secondItem="uOc-nj-81g" secondAttribute="bottom" constant="10" id="GfG-Nl-X9E"/>
+                            <constraint firstItem="uOc-nj-81g" firstAttribute="top" secondItem="GBe-WS-5jy" secondAttribute="bottom" id="GiU-8w-VL3"/>
+                            <constraint firstItem="t61-ho-Tgt" firstAttribute="top" secondItem="iet-3p-6ny" secondAttribute="top" id="Grx-8o-u53"/>
+                            <constraint firstItem="iet-3p-6ny" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="HoZ-Lg-tDu"/>
+                            <constraint firstItem="M6d-GW-FRI" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" constant="15" id="LVS-QD-kHW"/>
+                            <constraint firstItem="FeJ-3B-weV" firstAttribute="width" secondItem="iet-3p-6ny" secondAttribute="width" id="P7N-BU-5ym"/>
+                            <constraint firstItem="iet-3p-6ny" firstAttribute="leading" secondItem="t61-ho-Tgt" secondAttribute="trailing" id="Q46-Pw-yxH"/>
+                            <constraint firstItem="uOc-nj-81g" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="Qs2-sy-dwl"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzk-4n-uKr" secondAttribute="trailing" constant="15" id="RpK-gU-yXd"/>
+                            <constraint firstItem="GBe-WS-5jy" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="V24-r0-enF"/>
+                            <constraint firstItem="XhZ-xo-6eJ" firstAttribute="bottom" secondItem="uOc-nj-81g" secondAttribute="bottom" id="Wjk-eq-fQg"/>
+                            <constraint firstItem="GBe-WS-5jy" firstAttribute="leading" secondItem="t61-ho-Tgt" secondAttribute="leading" id="Wvz-CT-Oe9"/>
+                            <constraint firstItem="FeJ-3B-weV" firstAttribute="height" secondItem="iet-3p-6ny" secondAttribute="height" id="XtS-Es-636"/>
+                            <constraint firstItem="YXh-w6-NIw" firstAttribute="top" secondItem="M6d-GW-FRI" secondAttribute="bottom" constant="15" id="ZxX-uG-utv"/>
+                            <constraint firstItem="iet-3p-6ny" firstAttribute="top" secondItem="Wzk-4n-uKr" secondAttribute="bottom" constant="10" id="b3d-gE-pQO"/>
+                            <constraint firstItem="GBe-WS-5jy" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="bkZ-f8-lOR"/>
+                            <constraint firstAttribute="trailing" secondItem="M6d-GW-FRI" secondAttribute="trailing" constant="15" id="cfV-FE-YsE"/>
+                            <constraint firstItem="FeJ-3B-weV" firstAttribute="top" secondItem="iet-3p-6ny" secondAttribute="bottom" id="dq7-1s-kHy"/>
+                            <constraint firstItem="XhZ-xo-6eJ" firstAttribute="height" secondItem="uOc-nj-81g" secondAttribute="height" id="dwL-kt-MNF"/>
+                            <constraint firstItem="iet-3p-6ny" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="gFr-gO-CfS"/>
+                            <constraint firstItem="uOc-nj-81g" firstAttribute="height" secondItem="t61-ho-Tgt" secondAttribute="height" id="mBn-Uq-LWL"/>
+                            <constraint firstItem="t61-ho-Tgt" firstAttribute="leading" secondItem="0ZB-C9-agW" secondAttribute="leading" id="ozP-OE-8cg"/>
+                            <constraint firstItem="FeJ-3B-weV" firstAttribute="leading" secondItem="iet-3p-6ny" secondAttribute="leading" id="r2L-s4-VFO"/>
+                            <constraint firstItem="ZCm-xL-7NP" firstAttribute="top" secondItem="keB-zB-wMB" secondAttribute="bottom" constant="15" id="rtO-vn-48h"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="fji-UX-OJ1" id="Qbh-a5-ZBL"/>
+                        <outlet property="appetizerBtn" destination="uOc-nj-81g" id="C9B-nU-IWq"/>
+                        <outlet property="breakfastBtn" destination="t61-ho-Tgt" id="I4e-9j-Kb6"/>
+                        <outlet property="dessertBtn" destination="FeJ-3B-weV" id="ZNx-tY-Pfm"/>
+                        <outlet property="dinnerBtn" destination="GBe-WS-5jy" id="9n2-CC-gVO"/>
+                        <outlet property="drinkBtn" destination="XhZ-xo-6eJ" id="0UC-UB-may"/>
+                        <outlet property="lunchBtn" destination="iet-3p-6ny" id="wsW-fr-YAP"/>
                         <segue destination="kkP-uZ-Pit" kind="presentation" identifier="to_search_segue" modalTransitionStyle="crossDissolve" id="IXI-pO-lHx"/>
                     </connections>
                 </viewController>
@@ -241,68 +284,8 @@
             </objects>
             <point key="canvasLocation" x="-7154.3999999999996" y="-690.40479760119945"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="j0a-mo-BDn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cej-t2-4sg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EVd-aD-Byg">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xKv-Ux-d5d" kind="relationship" relationship="rootViewController" id="wlp-sB-13r"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dCI-ol-gO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7836" y="-1543"/>
-        </scene>
-        <!--Cuisine View Controller-->
-        <scene sceneID="RF3-RK-vcs">
-            <objects>
-                <viewController id="xKv-Ux-d5d" customClass="CuisineViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d1Q-mg-clC"/>
-                        <viewControllerLayoutGuide type="bottom" id="8DX-Li-kHi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m8q-II-tBH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ev6-ZA-x66"/>
-                    <connections>
-                        <segue destination="Mtd-UW-d7a" kind="show" identifier="cuisineToCourseSegue" id="goN-if-A35"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xqM-Vz-A8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7103" y="-1543"/>
-        </scene>
-        <!--Course View Controller-->
-        <scene sceneID="9iz-eE-Dwf">
-            <objects>
-                <viewController id="Mtd-UW-d7a" customClass="CourseViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="anO-hE-bHy"/>
-                        <viewControllerLayoutGuide type="bottom" id="CJa-XP-1a2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qoG-4I-mqI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nfS-n0-P5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-6356" y="-1543"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="background" width="180" height="323"/>
-        <image name="chef_hat" width="60" height="60"/>
         <image name="cooking" width="57" height="57"/>
         <image name="timer" width="60" height="60"/>
     </resources>
