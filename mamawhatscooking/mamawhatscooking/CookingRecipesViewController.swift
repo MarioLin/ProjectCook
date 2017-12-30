@@ -10,22 +10,20 @@ import UIKit
 import Shimmer
 
 class CookingRecipesViewController: UIViewController {
-    @IBAction func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
+    // MARK: IBOutlets
+    @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var shimmerView: FBShimmeringView!
+    @IBOutlet private weak var cookPotImageView: UIImageView!
+    @IBOutlet private weak var recipeButton: RoundedBurritoButton!
     
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var shimmerView: FBShimmeringView!
-    @IBOutlet weak var cookPotImageView: UIImageView!
-    
-    @IBOutlet weak var recipeButton: RoundedBurritoButton!
-    
-    
+    // MARK: Properties
     var searchParams: [String:String]! // this NEEDS to be injected by a VC
     var searchedRecipes: [YummlySearchModel]?
     private var selectedRecipeModel: RecipeModel?
     private var orbittingImageViews = [UIImageView]()
     
+    // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -70,6 +68,12 @@ class CookingRecipesViewController: UIViewController {
         recipeReq.makeRecipeRequest(recipeId: recipeId)
     }
 
+    // MARK: IBActions
+    @IBAction func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? RecipeViewController {
             dest.recipeModel = selectedRecipeModel

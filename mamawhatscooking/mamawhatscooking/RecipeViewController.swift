@@ -9,17 +9,16 @@
 import UIKit
 
 class RecipeViewController: UIViewController {
-    @IBOutlet weak var timingLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBAction func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    // MARK: IBOutlets
+    @IBOutlet private weak var timingLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: Properties
     fileprivate var cellModels = [Any]()
-    
     var recipeModel: RecipeModel! // NEEDS TO BE INJECTED
     
+    // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +27,7 @@ class RecipeViewController: UIViewController {
         
         setupModels()
     }
-
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,14 +68,22 @@ class RecipeViewController: UIViewController {
         
         cellModels = models
     }
+    
+    // MARK: IBActions
+    @IBAction func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
 
+// MARK:
 extension RecipeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
+// MARK:
 extension RecipeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row > cellModels.count { // something went wrong

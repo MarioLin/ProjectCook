@@ -29,6 +29,9 @@
                                 <state key="normal" title="Cuisine: Any">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KWk-s9-ZKd" kind="presentation" id="qK9-Vg-7ye"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzk-4n-uKr">
                                 <rect key="frame" x="15" y="122" width="345" height="1"/>
@@ -153,6 +156,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dR-sm-waB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8658.3999999999996" y="-1446.0269865067467"/>
+        </scene>
+        <!--Cuisine Selection View Controller-->
+        <scene sceneID="oVj-Gn-mWQ">
+            <objects>
+                <viewController id="KWk-s9-ZKd" customClass="CuisineSelectionViewController" customModule="mamawhatscooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aKO-Fk-uJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-jq-M29">
+                                <rect key="frame" x="0.0" y="131.5" width="375" height="535.5"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ID-Xt-N9f">
+                                <rect key="frame" x="96" y="45" width="183" height="29"/>
+                                <string key="text">Choose a cuisine.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll save your choice, but you can always come back here and change it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-St-Sez">
+                                <rect key="frame" x="25" y="84" width="325" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="AQY-lo-LTr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwF-Ml-qQq">
+                                <rect key="frame" x="15" y="18" width="30" height="30"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="KWk-s9-ZKd" eventType="touchUpInside" id="mLH-hB-YuC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-Z5-2oR">
+                                <rect key="frame" x="0.0" y="130.5" width="375" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="U28-W2-Clx"/>
+                                    <constraint firstAttribute="height" constant="1" id="dml-Nq-Lw0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ea9-jq-M29" firstAttribute="centerX" secondItem="aKO-Fk-uJ0" secondAttribute="centerX" id="Fcv-ve-fXv"/>
+                            <constraint firstItem="lGE-lA-4TD" firstAttribute="trailing" secondItem="VZU-Z5-2oR" secondAttribute="trailing" id="HW3-UW-CLC"/>
+                            <constraint firstAttribute="trailing" secondItem="zyj-St-Sez" secondAttribute="trailing" constant="25" id="KH9-he-U71"/>
+                            <constraint firstItem="zyj-St-Sez" firstAttribute="leading" secondItem="aKO-Fk-uJ0" secondAttribute="leading" constant="25" id="LDy-Z2-aq9"/>
+                            <constraint firstItem="VZU-Z5-2oR" firstAttribute="top" secondItem="zyj-St-Sez" secondAttribute="bottom" constant="15" id="Pnb-oy-aYK"/>
+                            <constraint firstItem="ea9-jq-M29" firstAttribute="top" secondItem="VZU-Z5-2oR" secondAttribute="bottom" id="VFW-r6-fND"/>
+                            <constraint firstItem="ea9-jq-M29" firstAttribute="width" secondItem="aKO-Fk-uJ0" secondAttribute="width" id="aP2-ay-Ucg"/>
+                            <constraint firstItem="lGE-lA-4TD" firstAttribute="bottom" secondItem="ea9-jq-M29" secondAttribute="bottom" id="f6j-0g-PMa"/>
+                            <constraint firstItem="zyj-St-Sez" firstAttribute="top" secondItem="5ID-Xt-N9f" secondAttribute="bottom" constant="10" id="llK-bK-aeV"/>
+                            <constraint firstItem="jwF-Ml-qQq" firstAttribute="leading" secondItem="lGE-lA-4TD" secondAttribute="leading" constant="15" id="oxM-Sf-wSo"/>
+                            <constraint firstItem="5ID-Xt-N9f" firstAttribute="centerX" secondItem="lGE-lA-4TD" secondAttribute="centerX" id="tlj-zo-BUY"/>
+                            <constraint firstItem="5ID-Xt-N9f" firstAttribute="top" secondItem="lGE-lA-4TD" secondAttribute="top" constant="25" id="vWF-bu-4wP"/>
+                            <constraint firstItem="VZU-Z5-2oR" firstAttribute="leading" secondItem="lGE-lA-4TD" secondAttribute="leading" id="yQ5-qD-feJ"/>
+                            <constraint firstItem="jwF-Ml-qQq" firstAttribute="top" secondItem="aKO-Fk-uJ0" secondAttribute="top" constant="18" id="ye3-hc-fBZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lGE-lA-4TD"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ea9-jq-M29" id="pgi-ji-4Ee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9e-Ad-SV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7951.1999999999998" y="-1448.7256371814094"/>
         </scene>
         <!--Cooking Recipes View Controller-->
         <scene sceneID="bTT-t6-kdC">

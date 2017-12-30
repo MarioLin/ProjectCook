@@ -11,9 +11,10 @@ import UIKit
 
 class RoundedBurritoButton: UIButton {
     var touchUpInsideBlock: TouchBlock?
-    var savedBackgroundColor: UIColor?
-    var savedBorderColor: UIColor?
+    private var savedBackgroundColor: UIColor?
+    private var savedBorderColor: UIColor?
     
+    // MARK: Overrides
     override var isHighlighted: Bool {
         didSet {
             if let _ = savedBackgroundColor, let _ = savedBorderColor {
@@ -26,12 +27,14 @@ class RoundedBurritoButton: UIButton {
             }
         }
     }
+    
     override var intrinsicContentSize : CGSize {
         let superContentSize = super.intrinsicContentSize
         let width = superContentSize.width + 20
         return CGSize(width: width, height: superContentSize.height)
     }
     
+    // MARK: init
     init(text: String, fontSize: CGFloat, backgroundColor: UIColor, titleColor: UIColor, borderRadius: CGFloat = 4.5) {
         super.init(frame: .zero)
         layer.cornerRadius = borderRadius
@@ -61,6 +64,7 @@ class RoundedBurritoButton: UIButton {
     }
 }
 
+// MARK:
 private var associationKey = "UIButtonBlock"
 extension UIButton {
     var block: (() -> ())? {

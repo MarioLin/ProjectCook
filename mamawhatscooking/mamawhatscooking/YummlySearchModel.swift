@@ -14,7 +14,6 @@ class YummlySearchModel {
 
     var ingredients: [String]?
     var recipeId: String?
-    var flavorRating: FlavorsModel?
     var rating: Int?
     var recipeName: String?
     var timeInSeconds: Int?
@@ -29,14 +28,7 @@ class YummlySearchModel {
         recipeName = dict["recipeName"] as? String
         timeInSeconds = dict["totalTimeInSeconds"] as? Int
         ingredients = dict["ingredients"] as? [String]
-        if let flavorsDict = dict["flavors"] as? [String:Float] {
-            flavorRating = FlavorsModel(spicyRating: flavorsDict["piquant"],
-                                        meatyRating: flavorsDict["meaty"],
-                                        bitterRating: flavorsDict["bitter"],
-                                        sweetRating: flavorsDict["sweet"],
-                                        sourRating: flavorsDict["sour"],
-                                        saltRating: flavorsDict["salty"])
-        }
+
     }
 }
 

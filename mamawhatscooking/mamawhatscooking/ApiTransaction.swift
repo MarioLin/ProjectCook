@@ -15,6 +15,7 @@ class ApiTransaction: NSObject {
     var params: [String : String]?
     var didSucceed: Bool = false
     
+    // MARK: URLSession
     func makeNetworkRequest() {
         guard let parsedUrl = parseParamsWithURL() else { fatalError("malformed url") }
         print("API get request: " + parsedUrl.absoluteString)
@@ -32,6 +33,7 @@ class ApiTransaction: NSObject {
         datatask.resume()
     }
     
+    // MARK: Serialization
     func parseParamsWithURL() -> URL? {
         var parsedUrl: String
         guard let url = url, let params = params else { return nil }
@@ -59,9 +61,10 @@ class ApiTransaction: NSObject {
         return json
     }
     
+    // MARK: Subclass required overrides
     func saveObjectsFromDict(dictionary: [String: Any]) -> [Any] {
         // override
-        return []
+        fatalError("subclass must override")
     }
     
 }

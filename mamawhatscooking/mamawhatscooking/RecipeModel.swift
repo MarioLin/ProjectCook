@@ -21,7 +21,6 @@ class RecipeModel {
     var totalTimeString: String?
 
     // specific recipe details
-    var flavors: FlavorsModel?
     var ingredients: [String]?
     var smallImageUrl: String?
     var largeImageUrl: String?
@@ -38,16 +37,6 @@ class RecipeModel {
         cookTime = recipeDict["cookTimeInSeconds"] as? Int
         totalTimeString = recipeDict["totalTime"] as? String
         totalTime = recipeDict["totalTimeInSeconds"] as? Int
-
-        if let flavorsDict = recipeDict["flavors"] as? [String : Float] {
-            flavors = FlavorsModel(spicyRating: flavorsDict["piquant"],
-                                   meatyRating: flavorsDict["meaty"],
-                                   bitterRating: flavorsDict["bitter"],
-                                   sweetRating: flavorsDict["sweet"],
-                                   sourRating: flavorsDict["sour"],
-                                   saltRating: flavorsDict["salty"])
-
-        }
         ingredients = recipeDict["ingredientLines"] as? [String]
         if let imageArray = recipeDict["images"] as? [[String : Any]?] {
             if imageArray.count > 0, let imageDict = imageArray[0] {

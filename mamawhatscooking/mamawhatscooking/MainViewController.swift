@@ -21,12 +21,12 @@ enum RecipeCourseType {
 class MainViewController: UIViewController {
     
     // MARK: IBOutlets
-    @IBOutlet weak var breakfastBtn: ImageTitleButton!
-    @IBOutlet weak var lunchBtn: ImageTitleButton!
-    @IBOutlet weak var dinnerBtn: ImageTitleButton!
-    @IBOutlet weak var dessertBtn: ImageTitleButton!
-    @IBOutlet weak var appetizerBtn: ImageTitleButton!
-    @IBOutlet weak var drinkBtn: ImageTitleButton!
+    @IBOutlet private weak var breakfastBtn: ImageTitleButton!
+    @IBOutlet private weak var lunchBtn: ImageTitleButton!
+    @IBOutlet private weak var dinnerBtn: ImageTitleButton!
+    @IBOutlet private weak var dessertBtn: ImageTitleButton!
+    @IBOutlet private weak var appetizerBtn: ImageTitleButton!
+    @IBOutlet private weak var drinkBtn: ImageTitleButton!
     
     // MARK: Properties
     var searchParams:[String:String]?
