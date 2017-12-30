@@ -165,64 +165,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-jq-M29">
-                                <rect key="frame" x="0.0" y="131.5" width="375" height="535.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-jq-M29">
+                                <rect key="frame" x="0.0" y="165.5" width="375" height="501.5"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ID-Xt-N9f">
-                                <rect key="frame" x="96" y="45" width="183" height="29"/>
-                                <string key="text">Choose a cuisine.
-</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a cuisine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ID-Xt-N9f">
+                                <rect key="frame" x="99.5" y="67" width="176.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll save your choice, but you can always come back here and change it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-St-Sez">
-                                <rect key="frame" x="25" y="84" width="325" height="31.5"/>
+                                <rect key="frame" x="25" y="106" width="325" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="AQY-lo-LTr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwF-Ml-qQq">
-                                <rect key="frame" x="15" y="18" width="30" height="30"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="exitButton:" destination="KWk-s9-ZKd" eventType="touchUpInside" id="mLH-hB-YuC"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-Z5-2oR">
-                                <rect key="frame" x="0.0" y="130.5" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="164.5" width="375" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="U28-W2-Clx"/>
                                     <constraint firstAttribute="height" constant="1" id="dml-Nq-Lw0"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-S2-vkc">
+                                <rect key="frame" x="10" y="25" width="48" height="48"/>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <action selector="exitButtonAction:" destination="KWk-s9-ZKd" eventType="touchUpInside" id="Y5Y-Cv-Fhw"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.69167860940000003" blue="0.037096759159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="D69-S2-vkc" firstAttribute="top" secondItem="lGE-lA-4TD" secondAttribute="top" constant="5" id="Ci4-e8-jQY"/>
+                            <constraint firstItem="ea9-jq-M29" firstAttribute="bottom" secondItem="aKO-Fk-uJ0" secondAttribute="bottom" id="DfV-sw-iG1"/>
                             <constraint firstItem="ea9-jq-M29" firstAttribute="centerX" secondItem="aKO-Fk-uJ0" secondAttribute="centerX" id="Fcv-ve-fXv"/>
                             <constraint firstItem="lGE-lA-4TD" firstAttribute="trailing" secondItem="VZU-Z5-2oR" secondAttribute="trailing" id="HW3-UW-CLC"/>
                             <constraint firstAttribute="trailing" secondItem="zyj-St-Sez" secondAttribute="trailing" constant="25" id="KH9-he-U71"/>
                             <constraint firstItem="zyj-St-Sez" firstAttribute="leading" secondItem="aKO-Fk-uJ0" secondAttribute="leading" constant="25" id="LDy-Z2-aq9"/>
-                            <constraint firstItem="VZU-Z5-2oR" firstAttribute="top" secondItem="zyj-St-Sez" secondAttribute="bottom" constant="15" id="Pnb-oy-aYK"/>
+                            <constraint firstItem="VZU-Z5-2oR" firstAttribute="top" secondItem="zyj-St-Sez" secondAttribute="bottom" constant="25" id="Pnb-oy-aYK"/>
+                            <constraint firstItem="D69-S2-vkc" firstAttribute="leading" secondItem="lGE-lA-4TD" secondAttribute="leading" constant="10" id="RFQ-DO-ew3"/>
                             <constraint firstItem="ea9-jq-M29" firstAttribute="top" secondItem="VZU-Z5-2oR" secondAttribute="bottom" id="VFW-r6-fND"/>
                             <constraint firstItem="ea9-jq-M29" firstAttribute="width" secondItem="aKO-Fk-uJ0" secondAttribute="width" id="aP2-ay-Ucg"/>
-                            <constraint firstItem="lGE-lA-4TD" firstAttribute="bottom" secondItem="ea9-jq-M29" secondAttribute="bottom" id="f6j-0g-PMa"/>
                             <constraint firstItem="zyj-St-Sez" firstAttribute="top" secondItem="5ID-Xt-N9f" secondAttribute="bottom" constant="10" id="llK-bK-aeV"/>
-                            <constraint firstItem="jwF-Ml-qQq" firstAttribute="leading" secondItem="lGE-lA-4TD" secondAttribute="leading" constant="15" id="oxM-Sf-wSo"/>
                             <constraint firstItem="5ID-Xt-N9f" firstAttribute="centerX" secondItem="lGE-lA-4TD" secondAttribute="centerX" id="tlj-zo-BUY"/>
-                            <constraint firstItem="5ID-Xt-N9f" firstAttribute="top" secondItem="lGE-lA-4TD" secondAttribute="top" constant="25" id="vWF-bu-4wP"/>
+                            <constraint firstItem="5ID-Xt-N9f" firstAttribute="top" secondItem="D69-S2-vkc" secondAttribute="bottom" constant="-6" id="vWF-bu-4wP"/>
                             <constraint firstItem="VZU-Z5-2oR" firstAttribute="leading" secondItem="lGE-lA-4TD" secondAttribute="leading" id="yQ5-qD-feJ"/>
-                            <constraint firstItem="jwF-Ml-qQq" firstAttribute="top" secondItem="aKO-Fk-uJ0" secondAttribute="top" constant="18" id="ye3-hc-fBZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lGE-lA-4TD"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="D69-S2-vkc" id="dHa-ld-gvu"/>
                         <outlet property="scrollView" destination="ea9-jq-M29" id="pgi-ji-4Ee"/>
                     </connections>
                 </viewController>
@@ -268,9 +265,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-TK-e04">
-                                <rect key="frame" x="16" y="20" width="30" height="30"/>
-                                <state key="normal" title="Exit">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-TK-e04">
+                                <rect key="frame" x="16" y="20" width="48" height="48"/>
+                                <state key="normal" image="exit">
                                     <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -319,9 +316,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khf-i7-apS">
-                                <rect key="frame" x="16" y="20" width="30" height="30"/>
-                                <state key="normal" title="Exit">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khf-i7-apS">
+                                <rect key="frame" x="16" y="20" width="48" height="48"/>
+                                <state key="normal" image="exit">
                                     <color key="titleColor" red="0.94901635360000003" green="0.56570545569999997" blue="0.065170334600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -330,7 +327,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-qz-xsE">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTy-Cl-IZK">
@@ -363,6 +360,7 @@
                         <viewLayoutGuide key="safeArea" id="jDo-vT-vBK"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="khf-i7-apS" id="KJM-qQ-bxu"/>
                         <outlet property="tableView" destination="u0C-qz-xsE" id="N32-18-e9w"/>
                         <outlet property="timingLabel" destination="lTy-Cl-IZK" id="DVS-57-LDu"/>
                     </connections>
@@ -374,6 +372,7 @@
     </scenes>
     <resources>
         <image name="cooking" width="57" height="57"/>
+        <image name="exit" width="48" height="48"/>
         <image name="timer" width="60" height="60"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>

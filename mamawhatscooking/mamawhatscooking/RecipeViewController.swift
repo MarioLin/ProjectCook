@@ -13,6 +13,7 @@ class RecipeViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet private weak var timingLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var exitButton: UIButton!
     
     // MARK: Properties
     fileprivate var cellModels = [Any]()
@@ -21,6 +22,10 @@ class RecipeViewController: UIViewController {
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let exitImage = UIImage(named: "exit")?.imageWithColor(color: .yummyOrange) {
+            exitButton.setImage(exitImage, for: .normal)
+        }
         
         timingLabel.text = recipeModel.totalTimeString ?? "N/A"
         setupTableView()
@@ -91,33 +96,45 @@ extension RecipeViewController: UITableViewDataSource {
         }
         
         let model = cellModels[indexPath.row]
+        
         switch model.self {
             
         case is RecipeCellModel:
-            let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath) as! RecipeTableViewCell
-            recipeCell.configure(model: model as! RecipeCellModel)
-            recipeCell.selectionStyle = .none
-            return recipeCell
+            if let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell", for: indexPath) as? RecipeTableViewCell,
+                let model = model as? RecipeCellModel {
+                recipeCell.configure(model: model)
+                recipeCell.selectionStyle = .none
+                return recipeCell
+            }
             
         case is SourceCellModel:
-            let sourceCell = tableView.dequeueReusableCell(withIdentifier: "SourceTableViewCell", for: indexPath) as! SourceTableViewCell
-            sourceCell.configure(model: model as! SourceCellModel)
-            sourceCell.selectionStyle = .none
-            return sourceCell
+            if let sourceCell = tableView.dequeueReusableCell(withIdentifier: "SourceTableViewCell", for: indexPath) as? SourceTableViewCell,
+                let model = model as? SourceCellModel {
+                sourceCell.configure(model: model)
+                sourceCell.selectionStyle = .none
+                return sourceCell
+            }
             
         case is String:
-            let ingredientLineCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath) as UITableViewCell
-            ingredientLineCell.textLabel?.text = model as! String
-            return ingredientLineCell
+            let ingredientLineCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+            if let model = model as? String {
+                ingredientLineCell.textLabel?.text = model
+                return ingredientLineCell
+            }
             
         case is AttributionModel:
-            let attributionCell = tableView.dequeueReusableCell(withIdentifier: "AttributionTableViewCell", for: indexPath) as! AttributionTableViewCell
-            attributionCell.configure(model: model as! AttributionModel)
-            return attributionCell
-            
+            if let attributionCell = tableView.dequeueReusableCell(withIdentifier: "AttributionTableViewCell", for: indexPath) as? AttributionTableViewCell,
+                let model = model as? AttributionModel {
+                attributionCell.configure(model: model)
+                return attributionCell
+            }
         default:
-            fatalError("cellModels not sync'd with cells in table view")
+            assertionFailure("cellModel \(model) not sync'd with cells in table view")
         }
+        
+        // default cell, should never be hit
+        assertionFailure("cellModel \(model)'s cell not properly configured")
+        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

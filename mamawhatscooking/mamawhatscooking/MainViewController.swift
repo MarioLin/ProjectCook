@@ -88,17 +88,19 @@ class MainViewController: UIViewController {
     
     private func tappedRecipeButton(_ type: RecipeCourseType) {
         searchParams = YummlyApiTransaction.defaultSearchParams(type)
-        segueToSearchScreen()
+        performSegue(withIdentifier: searchSegue, sender: self)
     }
     
     // MARK: Navigation
-    func segueToSearchScreen() {
-        performSegue(withIdentifier: searchSegue, sender: self)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? CookingRecipesViewController {
             dest.searchParams = searchParams
+        }
+        else if let dest = segue.destination as? CuisineSelectionViewController {
+            dest.didSelectCuisineClosure = { cuisineType in
+                
+            }
         }
     }
 }

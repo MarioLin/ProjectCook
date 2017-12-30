@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+private enum Constants {
+    static let extraWidth: CGFloat = 20
+    static let defaultBorderRadius: CGFloat = 4.5
+}
+
 class RoundedBurritoButton: UIButton {
     var touchUpInsideBlock: TouchBlock?
     private var savedBackgroundColor: UIColor?
@@ -30,17 +35,20 @@ class RoundedBurritoButton: UIButton {
     
     override var intrinsicContentSize : CGSize {
         let superContentSize = super.intrinsicContentSize
-        let width = superContentSize.width + 20
+        let width = superContentSize.width + Constants.extraWidth
         return CGSize(width: width, height: superContentSize.height)
     }
     
     // MARK: init
-    init(text: String, fontSize: CGFloat, backgroundColor: UIColor, titleColor: UIColor, borderRadius: CGFloat = 4.5) {
+    init(text: String, fontSize: CGFloat, backgroundColor: UIColor, titleColor: UIColor, borderRadius: CGFloat = Constants.defaultBorderRadius) {
         super.init(frame: .zero)
         layer.cornerRadius = borderRadius
         addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
         self.backgroundColor = backgroundColor
         
+        layer.borderWidth = 0.5
+        layer.borderColor = titleColor.cgColor
+
         titleLabel?.font = UIFont(name: "HelveticaNeue", size: fontSize)
         setTitle(text, for: .normal)
         setTitleColor(titleColor, for: .normal)
@@ -50,7 +58,7 @@ class RoundedBurritoButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        layer.cornerRadius = 4.5
+        layer.cornerRadius = Constants.defaultBorderRadius
         addTarget(self, action: #selector(touchedUpInside), for: .touchUpInside)
         savedBackgroundColor = backgroundColor
         savedBorderColor = currentTitleColor
@@ -83,5 +91,13 @@ extension UIButton {
     
     @objc private func touched() {
         self.block?()
+    }
+}
+
+extension RoundedBurritoButton {
+    static func defaultSelectionButton(_ text: String, _ fontSize: CGFloat = 18, _ selectBlock: @escaping TouchBlock) -> RoundedBurritoButton {
+        let button = RoundedBurritoButton(text: text, fontSize: fontSize, backgroundColor: .white, titleColor: .yummyOrange, borderRadius: 0)
+        button.touchUpInsideBlock = selectBlock
+        return button
     }
 }

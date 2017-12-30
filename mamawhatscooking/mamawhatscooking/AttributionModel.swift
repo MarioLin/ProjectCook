@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: 
 struct AttributionModel {
     let text: String!
     let logo: String?
@@ -24,12 +25,7 @@ struct AttributionModel {
     
 }
 
-extension AttributionModel: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return "\(String(describing: text)), \n\(String(describing: logo)), \n\(String(describing: urlString))"
-    }
-}
-
+// MARK:
 struct SourceModel {
     let displayName: String!
     let siteUrl: String?
@@ -41,6 +37,13 @@ struct SourceModel {
         if displayName == nil || recipeUrl == nil {
             return nil
         }
+    }
+}
+
+// MARK: Descriptions
+extension AttributionModel: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "\(String(describing: text)), \n\(String(describing: logo)), \n\(String(describing: urlString))"
     }
 }
 

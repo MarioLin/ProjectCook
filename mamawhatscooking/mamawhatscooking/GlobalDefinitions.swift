@@ -17,6 +17,8 @@ extension UIColor {
     static var yummyOrange = UIColor(red: 255.0/255.0, green: 176.0/255.0, blue: 9.0/255.0, alpha: 1)
 }
 
+
+// derived from https://stackoverflow.com/questions/31803157/how-to-color-a-uiimage-in-swift
 extension UIImage {
     func imageWithColor(color: UIColor) -> UIImage? {
         var image = withRenderingMode(.alwaysTemplate)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class YummlySearchModel {
+struct YummlySearchModel {
     var imageUrl: String?
     var smallImageUrls: [String]?
 
@@ -32,6 +32,7 @@ class YummlySearchModel {
     }
 }
 
+// MARK: Descriptions
 extension YummlySearchModel: CustomStringConvertible {
     var description: String {
         return "id: \(recipeId ?? "no id") \nname: \(recipeName ?? "none")"
