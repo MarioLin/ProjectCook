@@ -17,20 +17,36 @@ class RecipeViewController: UIViewController {
     
     // MARK: Properties
     fileprivate var cellModels = [Any]()
-    var recipeModel: RecipeModel! // NEEDS TO BE INJECTED
+    var recipeModel: RecipeModel!
+    var searchParams: [String: String]! // NEEDS TO BE INJECTED, will trap in viewDidLoad otherwise
+    
+    private var loadingView: RecipeLoadingView! // guards in viewDidLoad
     
     // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        precondition(searchParams != nil)
         
         if let exitImage = UIImage(named: "exit")?.imageWithColor(color: .yummyOrange) {
             exitButton.setImage(exitImage, for: .normal)
         }
         
-        timingLabel.text = recipeModel.totalTimeString ?? "N/A"
-        setupTableView()
+        guard let loading = Bundle.main.loadNibNamed("RecipeLoadingView", owner: self, options: nil)?.first as? RecipeLoadingView else { fatalError("failed to load loading view nib") }
         
-        setupModels()
+        loadingView = loading
+        
+        view.addSubview(loadingView)
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.topAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
+        loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        timingLabel.text = ""
+        timingLabel.isHidden = true
+        
+        setupTableView()
+        getRecipeThenLoadData()
     }
     
     private func setupTableView() {
@@ -70,8 +86,46 @@ class RecipeViewController: UIViewController {
         if let attributionModel = recipeModel.attributionModel {
             models.append(attributionModel)
         }
-        
+        timingLabel.text = recipeModel.totalTimeString ?? "N/A"
         cellModels = models
+    }
+    
+    // MARK: API
+    private func getRecipeThenLoadData() {
+        let yummlyReq = YummlyApiTransaction()
+        yummlyReq.completion = { [weak self] (objects, response, error) in
+            if let recipes = objects as? [YummlySearchModel] {
+                self?.handle(searchedRecipes: recipes)
+            } else {
+                // error
+            }
+        }
+        yummlyReq.makeSearchRequest(params: searchParams)
+        
+    }
+    private func handle(searchedRecipes: [YummlySearchModel]) {
+        let randomNum = Int(arc4random_uniform(UInt32(searchedRecipes.count)))
+        let randomRecipe = searchedRecipes[randomNum]
+        
+        guard let recipeId = randomRecipe.recipeId else {
+            assertionFailure("no recipe ID found for random recipe")
+            return
+        }
+        
+        let recipeReq = YummlyRecipeDetailTransacation()
+        recipeReq.completion = { [weak self] (objects, response, error) in
+            if let recipeModel = objects?.first as? RecipeModel {
+                self?.recipeModel = recipeModel
+                self?.setupModels()
+                self?.tableView.reloadData()
+                
+                UIView.animate(withDuration: 0.5, animations: {
+                    self?.loadingView.isHidden = true
+                    self?.timingLabel.isHidden = false
+                })
+            }
+        }
+        recipeReq.makeRecipeRequest(recipeId: recipeId)
     }
     
     // MARK: IBActions

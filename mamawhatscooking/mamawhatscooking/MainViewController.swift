@@ -94,7 +94,7 @@ class MainViewController: UIViewController {
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? CookingRecipesViewController {
+        if let dest = segue.destination as? RecipeViewController {
             dest.searchParams = searchParams
         }
         else if let dest = segue.destination as? CuisineSelectionViewController {
