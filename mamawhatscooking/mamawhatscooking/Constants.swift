@@ -7,8 +7,14 @@
 //
 
 // MARK: Image Constants
-public let kImageChefHat = "chef_hat"
-public let kImageCooking = "cooking"
+public let imageStrChefHat = "chef_hat"
+public let imageStrCooking = "cooking"
+public let imageStrAppetizer = "appetizer"
+public let imageStrBreakfast = "brunch"
+public let imageStrLunch = "lunch"
+public let imageStrDinner = "dinner"
+public let imageStrDrink = "drink"
+public let imageStrDessert = "dessert"
 
 // MARK: Segues
 public let searchSegue = "to_search_segue"

@@ -27,7 +27,7 @@ class YummlyApiTransaction: ApiTransaction {
     // MARK: Class funcs and overrides
     class func defaultSearchParams(_ type: RecipeCourseType) -> [String : String] {
         var dict = [String : String]()
-        dict["requiresPictures"] = "true"
+        dict["requirePictures"] = "true"
         if let keyValuePair = courseKeyValuePair(type) {
             dict[keyValuePair.0] = keyValuePair.1
         }

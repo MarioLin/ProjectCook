@@ -280,6 +280,7 @@
                     <connections>
                         <outlet property="exitButton" destination="khf-i7-apS" id="KJM-qQ-bxu"/>
                         <outlet property="tableView" destination="u0C-qz-xsE" id="N32-18-e9w"/>
+                        <outlet property="timingImageView" destination="aIc-fq-XOD" id="y8Q-i2-eK9"/>
                         <outlet property="timingLabel" destination="lTy-Cl-IZK" id="DVS-57-LDu"/>
                     </connections>
                 </viewController>

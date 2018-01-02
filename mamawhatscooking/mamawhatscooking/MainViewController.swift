@@ -29,7 +29,8 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var drinkBtn: ImageTitleButton!
     
     // MARK: Properties
-    var searchParams:[String:String]?
+    private var searchParams: [String:String]?
+    private var recipeType: RecipeCourseType = .lunch
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -43,42 +44,42 @@ class MainViewController: UIViewController {
     
     // MARK: Private
     private func setupButtons() {
-        breakfastBtn.imageTitleImageView.image = UIImage(named: "brunch")?.imageWithColor(color: .yummyOrange)
+        breakfastBtn.imageTitleImageView.image = UIImage(named: imageStrBreakfast)?.imageWithColor(color: .yummyOrange)
         breakfastBtn.imageTitleLabel.textColor = .yummyOrange
         breakfastBtn.imageTitleLabel.text = "Breakfast/Brunch"
         breakfastBtn.setTouchBlock { [unowned self] (ctl) in
             self.tappedRecipeButton(.breakfast)
         }
         
-        lunchBtn.imageTitleImageView.image = UIImage(named: "lunch")?.imageWithColor(color: .white)
+        lunchBtn.imageTitleImageView.image = UIImage(named: imageStrLunch)?.imageWithColor(color: .white)
         lunchBtn.imageTitleLabel.textColor = .white
         lunchBtn.imageTitleLabel.text = "Lunch"
         lunchBtn.setTouchBlock { [unowned self] (ctl) in
             self.tappedRecipeButton(.lunch)
         }
         
-        dinnerBtn.imageTitleImageView.image = UIImage(named: "dinner")?.imageWithColor(color: .white)
+        dinnerBtn.imageTitleImageView.image = UIImage(named: imageStrDinner)?.imageWithColor(color: .white)
         dinnerBtn.imageTitleLabel.textColor = .white
         dinnerBtn.imageTitleLabel.text = "Dinner"
         dinnerBtn.setTouchBlock { [unowned self] (ctl) in
             self.tappedRecipeButton(.dinner)
         }
         
-        dessertBtn.imageTitleImageView.image = UIImage(named: "dessert")?.imageWithColor(color: .yummyOrange)
+        dessertBtn.imageTitleImageView.image = UIImage(named: imageStrDessert)?.imageWithColor(color: .yummyOrange)
         dessertBtn.imageTitleLabel.textColor = .yummyOrange
         dessertBtn.imageTitleLabel.text = "Dessert"
         dessertBtn.setTouchBlock { [unowned self] (ctl) in
             self.tappedRecipeButton(.dessert)
         }
         
-        appetizerBtn.imageTitleImageView.image = UIImage(named: "appetizer")?.imageWithColor(color: .yummyOrange)
+        appetizerBtn.imageTitleImageView.image = UIImage(named: imageStrAppetizer)?.imageWithColor(color: .yummyOrange)
         appetizerBtn.imageTitleLabel.textColor = .yummyOrange
         appetizerBtn.imageTitleLabel.text = "Appetizer"
         appetizerBtn.setTouchBlock { [unowned self] (ctl) in
             self.tappedRecipeButton(.appetizer)
         }
         
-        drinkBtn.imageTitleImageView.image = UIImage(named: "drink")?.imageWithColor(color: .white)
+        drinkBtn.imageTitleImageView.image = UIImage(named: imageStrDrink)?.imageWithColor(color: .white)
         drinkBtn.imageTitleLabel.textColor = .white
         drinkBtn.imageTitleLabel.text = "Drink"
         drinkBtn.setTouchBlock { [unowned self] (ctl) in
@@ -88,6 +89,7 @@ class MainViewController: UIViewController {
     
     private func tappedRecipeButton(_ type: RecipeCourseType) {
         searchParams = YummlyApiTransaction.defaultSearchParams(type)
+        recipeType = type
         performSegue(withIdentifier: searchSegue, sender: self)
     }
     
@@ -96,6 +98,7 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? RecipeViewController {
             dest.searchParams = searchParams
+            dest.recipeType = recipeType
         }
         else if let dest = segue.destination as? CuisineSelectionViewController {
             dest.didSelectCuisineClosure = { cuisineType in

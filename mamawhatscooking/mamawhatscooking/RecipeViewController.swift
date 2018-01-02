@@ -8,19 +8,27 @@
 
 import UIKit
 
+fileprivate enum Constants {
+    static let timeToWait: TimeInterval = 3.5
+}
+
 class RecipeViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet private weak var timingLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet private weak var exitButton: UIButton!
+    @IBOutlet private weak var timingImageView: UIImageView!
     
     // MARK: Properties
     fileprivate var cellModels = [Any]()
     var recipeModel: RecipeModel!
+    
     var searchParams: [String: String]! // NEEDS TO BE INJECTED, will trap in viewDidLoad otherwise
+    var recipeType: RecipeCourseType = .lunch // default lunch, this should be injected & changed by source VC
     
     private var loadingView: RecipeLoadingView! // guards in viewDidLoad
+    private var requestTime: Date?
     
     // MARK: View Controller
     override func viewDidLoad() {
@@ -34,6 +42,7 @@ class RecipeViewController: UIViewController {
         guard let loading = Bundle.main.loadNibNamed("RecipeLoadingView", owner: self, options: nil)?.first as? RecipeLoadingView else { fatalError("failed to load loading view nib") }
         
         loadingView = loading
+        loadingView.cuisineImageView.image = image(courseType: recipeType)
         
         view.addSubview(loadingView)
         loadingView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +53,7 @@ class RecipeViewController: UIViewController {
 
         timingLabel.text = ""
         timingLabel.isHidden = true
+        timingImageView.isHidden = true
         
         setupTableView()
         getRecipeThenLoadData()
@@ -89,10 +99,23 @@ class RecipeViewController: UIViewController {
         timingLabel.text = recipeModel.totalTimeString ?? "N/A"
         cellModels = models
     }
+
+    private func image(courseType: RecipeCourseType) -> UIImage? {
+        switch courseType {
+        case .breakfast: return UIImage(named: imageStrBreakfast)
+        case .lunch: return UIImage(named: imageStrLunch)
+        case .dinner: return UIImage(named: imageStrDinner)
+        case .dessert: return UIImage(named: imageStrDessert)
+        case .drink: return UIImage(named: imageStrDrink)
+        case .appetizer: return UIImage(named: imageStrAppetizer)
+        }
+    }
     
     // MARK: API
     private func getRecipeThenLoadData() {
         let yummlyReq = YummlyApiTransaction()
+        
+        requestTime = Date()
         yummlyReq.completion = { [weak self] (objects, response, error) in
             if let recipes = objects as? [YummlySearchModel] {
                 self?.handle(searchedRecipes: recipes)
@@ -114,16 +137,27 @@ class RecipeViewController: UIViewController {
         
         let recipeReq = YummlyRecipeDetailTransacation()
         recipeReq.completion = { [weak self] (objects, response, error) in
-            if let recipeModel = objects?.first as? RecipeModel {
-                self?.recipeModel = recipeModel
-                self?.setupModels()
-                self?.tableView.reloadData()
-                
-                UIView.animate(withDuration: 0.5, animations: {
-                    self?.loadingView.isHidden = true
-                    self?.timingLabel.isHidden = false
-                })
+            var timeForRequest: TimeInterval = 0
+            if let startDate = self?.requestTime {
+                timeForRequest = Date().timeIntervalSince(startDate)
             }
+            
+            let timeRemainingToWait = (timeForRequest > 0 && timeForRequest < 10) ? Constants.timeToWait - timeForRequest : 0
+            
+            let delayTime = DispatchTime.now() + timeRemainingToWait
+            DispatchQueue.main.asyncAfter(deadline: delayTime, execute: {
+                if let recipeModel = objects?.first as? RecipeModel {
+                    self?.recipeModel = recipeModel
+                    self?.setupModels()
+                    self?.tableView.reloadData()
+                    
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self?.loadingView.isHidden = true
+                        self?.timingImageView.isHidden = false
+                        self?.timingLabel.isHidden = false
+                    })
+                }
+            })
         }
         recipeReq.makeRecipeRequest(recipeId: recipeId)
     }
