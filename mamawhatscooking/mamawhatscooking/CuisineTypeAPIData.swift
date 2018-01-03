@@ -7,8 +7,8 @@
 //
 
 // the cuisine types that the api currently accepts
-enum CuisineType {
-    case american, italian, asian, mexican, southern, french, indian, chinese
+enum CuisineType: Int {
+    case american = 1, italian, asian, mexican, southern, french, indian, chinese
     case cajun, mediterranean, english, spanish, thai, german, moroccan, irish
     case japanese, cuban, hawaiian, swedish, hungarian, portuguese
     

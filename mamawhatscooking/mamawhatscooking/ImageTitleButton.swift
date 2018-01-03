@@ -11,6 +11,7 @@ import UIKit
 class ImageTitleButton: UIButton {
     let imageTitleImageView = UIImageView()
     let imageTitleLabel = UILabel()
+    private let stackView = UIStackView()
     
     override func setTouchBlock(_ block: @escaping (Any) -> ()) {
         super.setTouchBlock(block)
@@ -21,9 +22,11 @@ class ImageTitleButton: UIButton {
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapBlock))
         let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapBlock))
+        let stackViewGesture = UITapGestureRecognizer(target: self, action: #selector(tapBlock))
 
         imageTitleImageView.addGestureRecognizer(imageTapGesture)
         imageTitleLabel.addGestureRecognizer(tapGesture)
+        stackView.addGestureRecognizer(stackViewGesture)
     }
     
     @objc private func tapBlock() {
@@ -34,7 +37,8 @@ class ImageTitleButton: UIButton {
         super.init(coder: aDecoder)
         imageTitleImageView.contentMode = .scaleAspectFit
         
-        let stackView = UIStackView(arrangedSubviews: [imageTitleImageView, imageTitleLabel])
+        stackView.addArrangedSubview(imageTitleImageView)
+        stackView.addArrangedSubview(imageTitleLabel)
         stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing

@@ -16,6 +16,7 @@ class YummlyApiTransaction: ApiTransaction {
         var defaultParams = [String:String]()
         defaultParams["_app_id"] = yummly_app_id
         defaultParams["_app_key"] = yummly_app_key
+        defaultParams["maxResult"] = "50"
         for (k,v) in params {
             defaultParams[k] = v
         }

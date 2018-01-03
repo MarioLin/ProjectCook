@@ -15,6 +15,7 @@ public let imageStrLunch = "lunch"
 public let imageStrDinner = "dinner"
 public let imageStrDrink = "drink"
 public let imageStrDessert = "dessert"
+public let imageStrSettings = "settings"
 
 // MARK: Segues
 public let searchSegue = "to_search_segue"

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+private let cuisineTypeDefaultsKey = "cuisineTypeDefaultsKey"
+
 enum RecipeCourseType {
     case breakfast
     case lunch
@@ -27,6 +29,9 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var dessertBtn: ImageTitleButton!
     @IBOutlet private weak var appetizerBtn: ImageTitleButton!
     @IBOutlet private weak var drinkBtn: ImageTitleButton!
+    @IBOutlet private weak var cuisineTypeButton: RoundedBurritoButton!
+    
+    @IBOutlet private weak var settingsButton: UIImageView!
     
     // MARK: Properties
     private var searchParams: [String:String]?
@@ -36,6 +41,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
+        setupCuisineTypeButton()
+        if let settingsImage = UIImage(named: imageStrSettings)?.imageWithColor(color: .yummyOrange) {
+            settingsButton.image = settingsImage
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,9 +96,23 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func setupCuisineTypeButton() {
+        let cuisineRawValue = UserDefaults.standard.integer(forKey: cuisineTypeDefaultsKey)
+        if let cuisineType = CuisineType(rawValue: cuisineRawValue) {
+            cuisineTypeButton.setTitle("Cuisine: \(CuisineType.typeToDisplayParamString(cuisineType).displayName)",
+                for: .normal)
+        }
+    }
+    
     private func tappedRecipeButton(_ type: RecipeCourseType) {
-        searchParams = YummlyApiTransaction.defaultSearchParams(type)
+        var params = YummlyApiTransaction.defaultSearchParams(type)
         recipeType = type
+        let cuisineRawValue = UserDefaults.standard.integer(forKey: cuisineTypeDefaultsKey)
+        if let cuisineType = CuisineType(rawValue: cuisineRawValue) {
+            let cuisineKVPair = cuisineKeyValuePair(cuisineType)
+            params[cuisineKVPair.key] = cuisineKVPair.value
+        }
+        searchParams = params
         performSegue(withIdentifier: searchSegue, sender: self)
     }
     
@@ -102,7 +125,8 @@ class MainViewController: UIViewController {
         }
         else if let dest = segue.destination as? CuisineSelectionViewController {
             dest.didSelectCuisineClosure = { cuisineType in
-                
+                UserDefaults.standard.set(cuisineType.rawValue, forKey: cuisineTypeDefaultsKey)
+                self.setupCuisineTypeButton()
             }
         }
     }

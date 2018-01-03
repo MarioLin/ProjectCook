@@ -24,6 +24,7 @@ class RecipeModel {
     var ingredients: [String]?
     var smallImageUrl: String?
     var largeImageUrl: String?
+    var rating: Int?
     
     // credits
     var attributionModel: AttributionModel?
@@ -38,6 +39,7 @@ class RecipeModel {
         totalTimeString = recipeDict["totalTime"] as? String
         totalTime = recipeDict["totalTimeInSeconds"] as? Int
         ingredients = recipeDict["ingredientLines"] as? [String]
+        rating = recipeDict["rating"] as? Int
         if let imageArray = recipeDict["images"] as? [[String : Any]?] {
             if imageArray.count > 0, let imageDict = imageArray[0] {
                 smallImageUrl = imageDict["hostedSmallUrl"] as? String

@@ -16,8 +16,8 @@ struct RecipeCellModel {
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
-    @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
 
