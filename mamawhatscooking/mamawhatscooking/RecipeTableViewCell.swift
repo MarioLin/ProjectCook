@@ -11,11 +11,14 @@ struct RecipeCellModel {
     let title: String
     let servings: String?
     let cuisine: String?
+    let rating: Int?
 }
 
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
+    
+    @IBOutlet var starButtons: [UIImageView]!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var label: UILabel!
@@ -37,6 +40,14 @@ class RecipeTableViewCell: UITableViewCell {
         } else {
             descriptionLabel.text = "No serving info"
         }
+        
+        for star in starButtons {
+            if star.tag + 1 <= model.rating ?? 1 {
+                star.image = #imageLiteral(resourceName: "filled_star").imageWithColor(color: .yummyOrange)
+            } else {
+                star.image = #imageLiteral(resourceName: "empty_star").imageWithColor(color: .yummyOrange)
+            }
+        }
+        
     }
-    
 }

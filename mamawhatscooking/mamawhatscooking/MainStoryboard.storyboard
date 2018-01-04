@@ -104,7 +104,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="8Jt-kW-bgq">
-                                <rect key="frame" x="335" y="25" width="32" height="32"/>
+                                <rect key="frame" x="335" y="37" width="32" height="32"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,7 +129,6 @@
                             <constraint firstItem="uOc-nj-81g" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="Qs2-sy-dwl"/>
                             <constraint firstItem="228-EN-M31" firstAttribute="centerX" secondItem="0ZB-C9-agW" secondAttribute="centerX" id="R3B-yG-rpC"/>
                             <constraint firstItem="FYB-QS-Ji3" firstAttribute="trailing" secondItem="Wzk-4n-uKr" secondAttribute="trailing" constant="15" id="RpK-gU-yXd"/>
-                            <constraint firstItem="8Jt-kW-bgq" firstAttribute="top" secondItem="FYB-QS-Ji3" secondAttribute="top" constant="5" id="TcC-Ig-Umb"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="width" secondItem="t61-ho-Tgt" secondAttribute="width" id="V24-r0-enF"/>
                             <constraint firstItem="XhZ-xo-6eJ" firstAttribute="bottom" secondItem="uOc-nj-81g" secondAttribute="bottom" id="Wjk-eq-fQg"/>
                             <constraint firstItem="GBe-WS-5jy" firstAttribute="leading" secondItem="t61-ho-Tgt" secondAttribute="leading" id="Wvz-CT-Oe9"/>
@@ -145,6 +144,7 @@
                             <constraint firstItem="t61-ho-Tgt" firstAttribute="leading" secondItem="FYB-QS-Ji3" secondAttribute="leading" id="ozP-OE-8cg"/>
                             <constraint firstItem="FeJ-3B-weV" firstAttribute="leading" secondItem="iet-3p-6ny" secondAttribute="leading" id="r2L-s4-VFO"/>
                             <constraint firstItem="228-EN-M31" firstAttribute="top" secondItem="FYB-QS-Ji3" secondAttribute="top" constant="15" id="tpz-lY-kLb"/>
+                            <constraint firstItem="8Jt-kW-bgq" firstAttribute="top" secondItem="Ufy-x9-uy3" secondAttribute="top" constant="2" id="xyW-y9-7eF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FYB-QS-Ji3"/>
                     </view>

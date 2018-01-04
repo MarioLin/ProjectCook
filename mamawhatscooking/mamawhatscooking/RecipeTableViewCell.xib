@@ -25,7 +25,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-37-gKD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-37-gKD">
                         <rect key="frame" x="15" y="78" width="107" height="20.5"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                         <nil key="textColor"/>
@@ -43,16 +43,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-EM-ac2">
                                 <rect key="frame" x="0.0" y="0.0" width="25" height="29"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-ee-Dai">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-ee-Dai">
                                 <rect key="frame" x="25" y="0.0" width="25" height="29"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Lj-hx5">
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Lj-hx5">
                                 <rect key="frame" x="50" y="0.0" width="25" height="29"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="pSP-yd-tB1">
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="pSP-yd-tB1">
                                 <rect key="frame" x="75" y="0.0" width="25" height="29"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="zRh-Mr-5mt">
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_star" translatesAutoresizingMaskIntoConstraints="NO" id="zRh-Mr-5mt">
                                 <rect key="frame" x="100" y="0.0" width="25" height="29"/>
                             </imageView>
                         </subviews>
@@ -77,6 +77,11 @@
                 <outlet property="descriptionLabel" destination="IX1-37-gKD" id="daW-XH-PPh"/>
                 <outlet property="label" destination="F2t-AU-K8g" id="k2k-Cd-PCc"/>
                 <outlet property="recipeImageView" destination="iFO-C8-PY8" id="4F5-l2-5yJ"/>
+                <outletCollection property="starButtons" destination="ALb-EM-ac2" collectionClass="NSMutableArray" id="ex2-L7-uxJ"/>
+                <outletCollection property="starButtons" destination="MyC-ee-Dai" collectionClass="NSMutableArray" id="QHK-XF-q8o"/>
+                <outletCollection property="starButtons" destination="g0m-Lj-hx5" collectionClass="NSMutableArray" id="CER-0h-5cH"/>
+                <outletCollection property="starButtons" destination="pSP-yd-tB1" collectionClass="NSMutableArray" id="20N-Kz-9CY"/>
+                <outletCollection property="starButtons" destination="zRh-Mr-5mt" collectionClass="NSMutableArray" id="QUy-Eg-kyS"/>
             </connections>
             <point key="canvasLocation" x="79.5" y="203"/>
         </tableViewCell>

@@ -9,7 +9,7 @@
 import UIKit
 
 fileprivate enum Constants {
-    static let timeToWait: TimeInterval = 3.5
+    static let timeToWait: TimeInterval = 1.5
 }
 
 class RecipeViewController: UIViewController {
@@ -39,7 +39,9 @@ class RecipeViewController: UIViewController {
             exitButton.setImage(exitImage, for: .normal)
         }
         
-        guard let loading = Bundle.main.loadNibNamed("RecipeLoadingView", owner: self, options: nil)?.first as? RecipeLoadingView else { fatalError("failed to load loading view nib") }
+        guard let loading = Bundle.main.loadNibNamed("RecipeLoadingView", owner: self, options: nil)?.first as? RecipeLoadingView else {
+            fatalError("failed to load loading view nib")
+        }
         
         loadingView = loading
         loadingView.cuisineImageView.image = image(courseType: recipeType)
@@ -80,7 +82,8 @@ class RecipeViewController: UIViewController {
         let pictureModel = RecipeCellModel(imageString: recipeModel.largeImageUrl ?? "",
                                            title: recipeModel.recipeName,
                                            servings: recipeModel.yield,
-                                           cuisine: nil)
+                                           cuisine: nil,
+                                           rating: recipeModel.rating)
         models.append(pictureModel)
         
         if let source = recipeModel.sourceModel {

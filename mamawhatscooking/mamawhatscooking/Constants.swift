@@ -16,6 +16,8 @@ public let imageStrDinner = "dinner"
 public let imageStrDrink = "drink"
 public let imageStrDessert = "dessert"
 public let imageStrSettings = "settings"
+public let imageStrEmptyStar = "empty_star"
+public let imageStrFilledStar = "filled_star"
 
 // MARK: Segues
 public let searchSegue = "to_search_segue"
