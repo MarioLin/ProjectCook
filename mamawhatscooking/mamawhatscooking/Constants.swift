@@ -6,6 +6,9 @@
 //  Copyright © 2017 Mario Lin. All rights reserved.
 //
 
+// MARK: UserDefaults
+
+
 // MARK: Image Constants
 public let imageStrChefHat = "chef_hat"
 public let imageStrCooking = "cooking"
@@ -22,8 +25,7 @@ public let imageStrFilledStar = "filled_star"
 // MARK: Segues
 public let searchSegue = "to_search_segue"
 public let recipeSegue = "to_recipe_segue"
-public let tasteToCuisineSegue = "tasteToCuisineSegue"
-public let cuisineToCourseSegue = "cuisineToCourseSegue"
+public let mainToSettingsSegue = "main_settings_segue"
 
 // MARK: Yummly search params
 public let spicyMaxParam = "flavor.piquant.max"

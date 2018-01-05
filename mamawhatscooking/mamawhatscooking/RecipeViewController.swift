@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 fileprivate enum Constants {
     static let timeToWait: TimeInterval = 1.5
@@ -15,10 +16,11 @@ fileprivate enum Constants {
 class RecipeViewController: UIViewController {
     
     // MARK: IBOutlets
-    @IBOutlet private weak var timingLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var exitButton: UIButton!
-    @IBOutlet private weak var timingImageView: UIImageView!
+    @IBOutlet weak var recipeNameLabel: UILabel!
+    
+    @IBOutlet weak var refreshButton: UIButton!
     
     // MARK: Properties
     fileprivate var cellModels = [Any]()
@@ -35,9 +37,9 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         precondition(searchParams != nil)
         
-        if let exitImage = UIImage(named: "exit")?.imageWithColor(color: .yummyOrange) {
-            exitButton.setImage(exitImage, for: .normal)
-        }
+        exitButton.setImage(#imageLiteral(resourceName: "exit").imageWithColor(color: .yummyOrange), for: .normal)
+        
+        refreshButton.setImage(#imageLiteral(resourceName: "refresh").imageWithColor(color: .yummyOrange), for: .normal)
         
         guard let loading = Bundle.main.loadNibNamed("RecipeLoadingView", owner: self, options: nil)?.first as? RecipeLoadingView else {
             fatalError("failed to load loading view nib")
@@ -52,11 +54,9 @@ class RecipeViewController: UIViewController {
         loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
-        timingLabel.text = ""
-        timingLabel.isHidden = true
-        timingImageView.isHidden = true
         
+        refreshButton.isHidden = true
+        recipeNameLabel.alpha = 0
         setupTableView()
         getRecipeThenLoadData()
     }
@@ -87,8 +87,12 @@ class RecipeViewController: UIViewController {
         models.append(pictureModel)
         
         if let source = recipeModel.sourceModel {
-            let sourceModel = SourceCellModel(recipeCreator: source.displayName) { ctl in
-                print("logg")
+            let sourceModel = SourceCellModel(recipeCreator: source.displayName, totalTimeString: recipeModel.totalTimeString ?? "No time information") { [weak self] ctl in
+                if let wellformedUrl = source.recipeUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                    let url = URL(string: wellformedUrl) {
+                    let safariVC = SFSafariViewController(url: url)
+                    self?.present(safariVC, animated: true, completion: nil)
+                }
             }
             models.append(sourceModel)
         }
@@ -99,7 +103,6 @@ class RecipeViewController: UIViewController {
         if let attributionModel = recipeModel.attributionModel {
             models.append(attributionModel)
         }
-        timingLabel.text = recipeModel.totalTimeString ?? "N/A"
         cellModels = models
     }
 
@@ -120,7 +123,7 @@ class RecipeViewController: UIViewController {
         
         requestTime = Date()
         yummlyReq.completion = { [weak self] (objects, response, error) in
-            if let recipes = objects as? [YummlySearchModel] {
+            if let recipes = objects as? [YummlySearchModel], recipes.count > 0, error == nil {
                 self?.handle(searchedRecipes: recipes)
             } else {
                 // error
@@ -151,13 +154,13 @@ class RecipeViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: delayTime, execute: {
                 if let recipeModel = objects?.first as? RecipeModel {
                     self?.recipeModel = recipeModel
+                    self?.recipeNameLabel.text = recipeModel.recipeName
                     self?.setupModels()
                     self?.tableView.reloadData()
                     
                     UIView.animate(withDuration: 0.5, animations: {
                         self?.loadingView.isHidden = true
-                        self?.timingImageView.isHidden = false
-                        self?.timingLabel.isHidden = false
+                        self?.refreshButton.isHidden = false
                     })
                 }
             })
@@ -170,6 +173,12 @@ class RecipeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func refreshTapped(_ sender: Any) {
+        loadingView.isHidden = false
+        refreshButton.isHidden = true
+        // if they re-roll, make sure the rating is 4+
+        getRecipeThenLoadData()
+    }
 }
 
 // MARK:
@@ -209,6 +218,7 @@ extension RecipeViewController: UITableViewDataSource {
         case is String:
             let ingredientLineCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
             if let model = model as? String {
+                ingredientLineCell.textLabel?.numberOfLines = 0
                 ingredientLineCell.textLabel?.text = model
                 return ingredientLineCell
             }
@@ -217,6 +227,13 @@ extension RecipeViewController: UITableViewDataSource {
             if let attributionCell = tableView.dequeueReusableCell(withIdentifier: "AttributionTableViewCell", for: indexPath) as? AttributionTableViewCell,
                 let model = model as? AttributionModel {
                 attributionCell.configure(model: model)
+                attributionCell.tappedYummlyLink = { [weak self] in
+                    if let wellformedUrl = model.urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                        let url = URL(string: wellformedUrl) {
+                        let safariVC = SFSafariViewController(url: url)
+                        self?.present(safariVC, animated: true, completion: nil)
+                    }
+                }
                 return attributionCell
             }
         default:
@@ -230,5 +247,19 @@ extension RecipeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellModels.count
+    }
+}
+
+extension RecipeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let maxDistanceAlpha: CGFloat = 100.0
+        let percentScrolled = scrollView.contentOffset.y / maxDistanceAlpha
+        if percentScrolled < 0 {
+            self.recipeNameLabel.alpha = 0
+        } else if percentScrolled > 1 {
+            self.recipeNameLabel.alpha = 1
+        } else {
+            self.recipeNameLabel.alpha = percentScrolled
+        }
     }
 }

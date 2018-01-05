@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RecipeModel {
+struct RecipeModel {
     // core recipe details
     let recipeName: String
     let recipeId: String
@@ -19,6 +19,7 @@ class RecipeModel {
     var cookTime: Int? // in seconds
     var totalTime: Int?
     var totalTimeString: String?
+    var prepTimeString: String?
 
     // specific recipe details
     var ingredients: [String]?
@@ -35,6 +36,7 @@ class RecipeModel {
         recipeId = recipeDict["id"] as? String ?? ""
         yield = recipeDict["yield"] as? String ?? "No servings"
         prepTime = recipeDict["prepTimeInSeconds"] as? Int
+        prepTimeString = recipeDict["prepTime"] as? String
         cookTime = recipeDict["cookTimeInSeconds"] as? Int
         totalTimeString = recipeDict["totalTime"] as? String
         totalTime = recipeDict["totalTimeInSeconds"] as? Int

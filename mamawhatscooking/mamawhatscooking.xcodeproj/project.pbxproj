@@ -33,6 +33,7 @@
 		D0BCA7F81FF726B2008426B0 /* CuisineTypeAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCA7F71FF726B2008426B0 /* CuisineTypeAPIData.swift */; };
 		D0BCA7FA1FFB008F008426B0 /* RecipeLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCA7F91FFB008F008426B0 /* RecipeLoadingView.swift */; };
 		D0BCA7FC1FFB0179008426B0 /* RecipeLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BCA7FB1FFB0179008426B0 /* RecipeLoadingView.xib */; };
+		D0BCA7FE1FFEF331008426B0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCA7FD1FFEF331008426B0 /* SettingsTableViewController.swift */; };
 		D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */; };
 		D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */; };
 		D8C1901BDB159D301482028C /* Pods_mamawhatscooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389E7C16ADF9BAC923EAEBC /* Pods_mamawhatscooking.framework */; };
@@ -69,6 +70,7 @@
 		D0BCA7F71FF726B2008426B0 /* CuisineTypeAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineTypeAPIData.swift; sourceTree = "<group>"; };
 		D0BCA7F91FFB008F008426B0 /* RecipeLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLoadingView.swift; sourceTree = "<group>"; };
 		D0BCA7FB1FFB0179008426B0 /* RecipeLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeLoadingView.xib; sourceTree = "<group>"; };
+		D0BCA7FD1FFEF331008426B0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDefinitions.swift; sourceTree = "<group>"; };
 		D0F6D7191FD26A0200349359 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mamawhatscooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-mamawhatscooking/Pods-mamawhatscooking.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				D05FCBCF1FD26A980020F89D /* MainViewController.swift */,
 				D00C8EB81FDDE9FA0085648C /* RecipeViewController.swift */,
 				D0BCA7F51FF714D4008426B0 /* CuisineSelectionViewController.swift */,
+				D0BCA7FD1FFEF331008426B0 /* SettingsTableViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
 				D0847D8C1FE885F800B27516 /* SourceTableViewCell.swift in Sources */,
+				D0BCA7FE1FFEF331008426B0 /* SettingsTableViewController.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
 				D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */,
 				D011E51C1FF4284F00A5F241 /* AttributionTableViewCell.swift in Sources */,

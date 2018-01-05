@@ -44,6 +44,8 @@ class MainViewController: UIViewController {
         setupCuisineTypeButton()
         if let settingsImage = UIImage(named: imageStrSettings)?.imageWithColor(color: .yummyOrange) {
             settingsButton.image = settingsImage
+            settingsButton.isUserInteractionEnabled = true
+            settingsButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedSettings)))
         }
     }
     
@@ -114,6 +116,10 @@ class MainViewController: UIViewController {
         }
         searchParams = params
         performSegue(withIdentifier: searchSegue, sender: self)
+    }
+    
+    @objc private func tappedSettings() {
+        performSegue(withIdentifier: mainToSettingsSegue, sender: self)
     }
     
     // MARK: Navigation

@@ -9,7 +9,14 @@
 import UIKit
 
 class AttributionTableViewCell: UITableViewCell {
-
+    var tappedYummlyLink: VoidBlock? {
+        didSet {
+            fullRecipeBtn.setTouchBlock { [weak self] (any) in
+                self?.tappedYummlyLink?()
+            }
+        }
+    }
+    
     @IBOutlet weak var poweredByLabel: UILabel!
     @IBOutlet weak var attributionLogo: UIImageView!
 
