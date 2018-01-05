@@ -181,16 +181,25 @@
                                     <action selector="exitButtonTapped:" destination="Nhk-6s-8sX" eventType="touchUpInside" id="92n-Zu-mEe"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SSB-Xy-69U">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6F6-6u-J8d" firstAttribute="bottom" secondItem="SSB-Xy-69U" secondAttribute="bottom" id="7oT-VG-tri"/>
                             <constraint firstItem="m9K-fv-ApJ" firstAttribute="top" secondItem="6F6-6u-J8d" secondAttribute="top" id="TMB-4W-xBo"/>
+                            <constraint firstItem="6F6-6u-J8d" firstAttribute="trailing" secondItem="SSB-Xy-69U" secondAttribute="trailing" id="ahG-FK-ZV5"/>
                             <constraint firstItem="m9K-fv-ApJ" firstAttribute="leading" secondItem="6F6-6u-J8d" secondAttribute="leading" constant="12" id="cNf-Gx-GlH"/>
+                            <constraint firstItem="SSB-Xy-69U" firstAttribute="leading" secondItem="6F6-6u-J8d" secondAttribute="leading" id="d0d-CL-Tz6"/>
+                            <constraint firstItem="SSB-Xy-69U" firstAttribute="top" secondItem="m9K-fv-ApJ" secondAttribute="bottom" id="vvM-hZ-fer"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6F6-6u-J8d"/>
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="m9K-fv-ApJ" id="bln-Xq-hYY"/>
+                        <outlet property="tableView" destination="SSB-Xy-69U" id="LvM-1z-ION"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G98-Nq-mAY" userLabel="First Responder" sceneMemberID="firstResponder"/>

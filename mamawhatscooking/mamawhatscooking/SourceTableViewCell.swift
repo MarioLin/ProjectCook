@@ -21,7 +21,7 @@ class SourceTableViewCell: UITableViewCell {
     @IBOutlet weak var cookingTimerImageView: UIImageView!
     
     func configure(model: SourceCellModel) {
-        authorLabel.text = "Recipe created by: \(model.recipeCreator)"
+        authorLabel.text = "Recipe author: \(model.recipeCreator)"
         recipeSourceButton.touchUpInsideBlock = model.touchBlock
         cookingTime.text = model.totalTimeString
         cookingTimerImageView.image = #imageLiteral(resourceName: "timer").imageWithColor(color: .yummyOrange)

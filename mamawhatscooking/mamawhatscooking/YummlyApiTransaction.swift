@@ -10,7 +10,7 @@ import Foundation
 
 class YummlyApiTransaction: ApiTransaction {
     fileprivate let base_url = "https://api.yummly.com/v1/api/"
-    var attributionModel: [String : String]?
+    var searchAttribution: AttributionModel?
     
     func makeSearchRequest(params: Dictionary<String, String>) {
         var defaultParams = [String:String]()
@@ -38,7 +38,7 @@ class YummlyApiTransaction: ApiTransaction {
     override func saveObjectsFromDict(dictionary: [String : Any]) -> [Any] {
         guard let matches = dictionary["matches"] as? [[String : Any]],
             let attribution = dictionary["attribution"] as? [String : String] else { return [] }
-        attributionModel = attribution
+        searchAttribution = AttributionModel(dict: attribution)
         let matchModels = matches.flatMap { (matchDict: [String : Any]) -> YummlySearchModel? in
             let model = YummlySearchModel(withDictionary: matchDict)
             return model

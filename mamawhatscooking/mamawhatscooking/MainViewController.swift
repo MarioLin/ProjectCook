@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-private let cuisineTypeDefaultsKey = "cuisineTypeDefaultsKey"
-
 enum RecipeCourseType {
     case breakfast
     case lunch
@@ -99,8 +97,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupCuisineTypeButton() {
-        let cuisineRawValue = UserDefaults.standard.integer(forKey: cuisineTypeDefaultsKey)
-        if let cuisineType = CuisineType(rawValue: cuisineRawValue) {
+        if let cuisineType = UserDefaults.getDefaultForCuisine() {
             cuisineTypeButton.setTitle("Cuisine: \(CuisineType.typeToDisplayParamString(cuisineType).displayName)",
                 for: .normal)
         }
@@ -109,10 +106,12 @@ class MainViewController: UIViewController {
     private func tappedRecipeButton(_ type: RecipeCourseType) {
         var params = YummlyApiTransaction.defaultSearchParams(type)
         recipeType = type
-        let cuisineRawValue = UserDefaults.standard.integer(forKey: cuisineTypeDefaultsKey)
-        if let cuisineType = CuisineType(rawValue: cuisineRawValue) {
+        if let cuisineType = UserDefaults.getDefaultForCuisine() {
             let cuisineKVPair = cuisineKeyValuePair(cuisineType)
             params[cuisineKVPair.key] = cuisineKVPair.value
+        }
+        if UserDefaults.getDefaultForVegetarianOption() {
+            params[vegetarianKeyValuePair().key] = vegetarianKeyValuePair().value
         }
         searchParams = params
         performSegue(withIdentifier: searchSegue, sender: self)
@@ -131,7 +130,7 @@ class MainViewController: UIViewController {
         }
         else if let dest = segue.destination as? CuisineSelectionViewController {
             dest.didSelectCuisineClosure = { cuisineType in
-                UserDefaults.standard.set(cuisineType.rawValue, forKey: cuisineTypeDefaultsKey)
+                UserDefaults.setDefaultForCuisine(type: cuisineType)
                 self.setupCuisineTypeButton()
             }
         }

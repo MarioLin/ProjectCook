@@ -23,7 +23,12 @@ class ApiTransaction: NSObject {
             if error == nil {
                 self.didSucceed = true
             }
-            guard let data = data, let response = response else { return }
+            guard let data = data, let response = response else {
+                DispatchQueue.main.async {
+                    self.completion?(nil, nil, error)
+                }
+                return
+            }
             let dict = self.serializeDataToJson(data: data)
             let savedObjects = self.saveObjectsFromDict(dictionary: dict)
             DispatchQueue.main.async {

@@ -16,6 +16,9 @@
 		D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D03E41EC7BD1300B9ADF5 /* AppDelegate.swift */; };
 		D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */; };
 		D01F2B6B1FFF214700F23CE9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F2B6A1FFF214700F23CE9 /* SettingsViewController.swift */; };
+		D01F2B6E1FFF2C5B00F23CE9 /* CustomizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F2B6C1FFF2C5B00F23CE9 /* CustomizationTableViewCell.swift */; };
+		D01F2B6F1FFF2C5B00F23CE9 /* CustomizationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01F2B6D1FFF2C5B00F23CE9 /* CustomizationTableViewCell.xib */; };
+		D01F2B711FFF327E00F23CE9 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F2B701FFF327E00F23CE9 /* SharedDefaults.swift */; };
 		D05FCBD01FD26A980020F89D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FCBCF1FD26A980020F89D /* MainViewController.swift */; };
 		D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D065757E1EE8D46400846D7D /* Launch Screen.storyboard */; };
 		D06CAC771EC9565B0038B6CE /* AttributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06CAC761EC9565B0038B6CE /* AttributionModel.swift */; };
@@ -53,6 +56,9 @@
 		D01D03EB1EC7BD1300B9ADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01D03F01EC7BD1300B9ADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01F2B6A1FFF214700F23CE9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D01F2B6C1FFF2C5B00F23CE9 /* CustomizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationTableViewCell.swift; sourceTree = "<group>"; };
+		D01F2B6D1FFF2C5B00F23CE9 /* CustomizationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationTableViewCell.xib; sourceTree = "<group>"; };
+		D01F2B701FFF327E00F23CE9 /* SharedDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
 		D05FCBCF1FD26A980020F89D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D065757E1EE8D46400846D7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D06CAC761EC9565B0038B6CE /* AttributionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionModel.swift; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 				D0847D8B1FE885F800B27516 /* SourceTableViewCell.xib */,
 				D011E51A1FF4284F00A5F241 /* AttributionTableViewCell.swift */,
 				D011E51B1FF4284F00A5F241 /* AttributionTableViewCell.xib */,
+				D01F2B6C1FFF2C5B00F23CE9 /* CustomizationTableViewCell.swift */,
+				D01F2B6D1FFF2C5B00F23CE9 /* CustomizationTableViewCell.xib */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 				D0ECE9091EF24639000DA99E /* PrivateDefinitions.swift */,
 				D00C8EBC1FDDECBE0085648C /* Constants.swift */,
 				D0BCA7F71FF726B2008426B0 /* CuisineTypeAPIData.swift */,
+				D01F2B701FFF327E00F23CE9 /* SharedDefaults.swift */,
 			);
 			name = shared;
 			sourceTree = "<group>";
@@ -260,7 +269,7 @@
 					D01D03E01EC7BD1300B9ADF5 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BZWKCXTTT2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -290,6 +299,7 @@
 				D065757F1EE8D46400846D7D /* Launch Screen.storyboard in Resources */,
 				D0847D8D1FE885F800B27516 /* SourceTableViewCell.xib in Resources */,
 				D01D03EC1EC7BD1300B9ADF5 /* Assets.xcassets in Resources */,
+				D01F2B6F1FFF2C5B00F23CE9 /* CustomizationTableViewCell.xib in Resources */,
 				D0F6D71A1FD26A0200349359 /* MainStoryboard.storyboard in Resources */,
 				D0BCA7FC1FFB0179008426B0 /* RecipeLoadingView.xib in Resources */,
 				D0847D871FE84BC500B27516 /* RecipeTableViewCell.xib in Resources */,
@@ -353,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00C8EB91FDDE9FB0085648C /* RecipeViewController.swift in Sources */,
+				D01F2B6E1FFF2C5B00F23CE9 /* CustomizationTableViewCell.swift in Sources */,
 				D06CAC791EC956680038B6CE /* YummlySearchModel.swift in Sources */,
 				D01D03E51EC7BD1300B9ADF5 /* AppDelegate.swift in Sources */,
 				D0847D861FE84BC500B27516 /* RecipeTableViewCell.swift in Sources */,
@@ -365,6 +376,7 @@
 				D0ECE90A1EF24639000DA99E /* PrivateDefinitions.swift in Sources */,
 				D0B85F531EC7C556003FCD7B /* UIView.swift in Sources */,
 				D0B85F5D1EC7DD97003FCD7B /* GlobalDefinitions.swift in Sources */,
+				D01F2B711FFF327E00F23CE9 /* SharedDefaults.swift in Sources */,
 				D01F2B6B1FFF214700F23CE9 /* SettingsViewController.swift in Sources */,
 				D0847D8C1FE885F800B27516 /* SourceTableViewCell.swift in Sources */,
 				D0B85F591EC7D709003FCD7B /* ApiTransaction.swift in Sources */,
@@ -480,11 +492,15 @@
 			baseConfigurationReference = 1FC44F7C564FF026508EA444 /* Pods-mamawhatscooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BZWKCXTTT2;
 				INFOPLIST_FILE = mamawhatscooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariolin.mamawhatscooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ac600a8d-7d14-42f1-881a-d21314be163c";
+				PROVISIONING_PROFILE_SPECIFIER = "Project Cook Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -494,11 +510,15 @@
 			baseConfigurationReference = E140CA5E883753DAA838B9CB /* Pods-mamawhatscooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mario Lin (BZWKCXTTT2)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BZWKCXTTT2;
 				INFOPLIST_FILE = mamawhatscooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariolin.mamawhatscooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "de60c102-a833-43c7-979b-56c436707a26";
+				PROVISIONING_PROFILE_SPECIFIER = "Project Cook App Store Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

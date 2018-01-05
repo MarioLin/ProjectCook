@@ -28,8 +28,5 @@ class AttributionTableViewCell: UITableViewCell {
             attributionLogo.downloadImage(link: logo)
         }
         fullRecipeBtn.titleLabel?.textAlignment = .center
-        fullRecipeBtn.setTouchBlock { (sender) in
-            
-        }
     }
 }

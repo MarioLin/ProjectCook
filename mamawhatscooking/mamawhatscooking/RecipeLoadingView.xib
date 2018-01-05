@@ -22,11 +22,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tu-ZX-IUb" customClass="FBShimmeringView">
-                    <rect key="frame" x="50" y="107" width="275.5" height="33"/>
+                    <rect key="frame" x="15" y="107" width="345" height="33"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking up a recipe..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkP-Vq-VF3">
-                    <rect key="frame" x="50" y="107" width="275.5" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking up a recipe..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkP-Vq-VF3">
+                    <rect key="frame" x="15" y="107" width="345" height="33"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -47,11 +47,15 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="FOH-qf-dqD">
                             <rect key="frame" x="157" y="160.5" width="60" height="60"/>
                         </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegetarian" translatesAutoresizingMaskIntoConstraints="NO" id="CfM-KC-Xan">
+                            <rect key="frame" x="157.5" y="15" width="60" height="60"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="uPd-Gv-JvV" firstAttribute="centerY" secondItem="ML0-mc-iQ8" secondAttribute="centerY" constant="-30" id="3Eo-mr-2hn"/>
                         <constraint firstItem="vVx-vL-pmP" firstAttribute="centerY" secondItem="ML0-mc-iQ8" secondAttribute="centerY" constant="-30" id="Kab-sm-f3R"/>
+                        <constraint firstItem="CfM-KC-Xan" firstAttribute="centerX" secondItem="ML0-mc-iQ8" secondAttribute="centerX" id="UQp-vM-aja"/>
                         <constraint firstItem="FOH-qf-dqD" firstAttribute="centerX" secondItem="ML0-mc-iQ8" secondAttribute="centerX" id="VJp-Hx-aaw"/>
                         <constraint firstItem="FOH-qf-dqD" firstAttribute="leading" secondItem="vVx-vL-pmP" secondAttribute="trailing" constant="55" id="YOg-k8-w6c"/>
                         <constraint firstItem="uPd-Gv-JvV" firstAttribute="leading" secondItem="FOH-qf-dqD" secondAttribute="trailing" constant="55" id="mcy-e8-07a"/>
@@ -75,17 +79,17 @@
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-ji-GiA" userLabel="powered by">
-                    <rect key="frame" x="93" y="631" width="190.5" height="16"/>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-ji-GiA" userLabel="powered by">
+                    <rect key="frame" x="74.5" y="616" width="226" height="16"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe search powered by " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-9t-EGb">
-                            <rect key="frame" x="0.0" y="0.0" width="141.5" height="16"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <rect key="frame" x="0.0" y="0.0" width="174" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-et-cc5">
-                            <rect key="frame" x="138.5" y="0.0" width="52" height="16"/>
+                            <rect key="frame" x="174" y="0.0" width="52" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="HaP-AH-Z4S"/>
                                 <constraint firstAttribute="width" constant="52" id="oec-Tx-PIW"/>
@@ -101,9 +105,12 @@
                 <constraint firstItem="4tu-ZX-IUb" firstAttribute="width" secondItem="EkP-Vq-VF3" secondAttribute="width" id="9m9-lw-pfr"/>
                 <constraint firstItem="4tu-ZX-IUb" firstAttribute="height" secondItem="EkP-Vq-VF3" secondAttribute="height" id="EiY-Wx-BWz"/>
                 <constraint firstItem="VKh-Dc-ZIx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GbY-v7-NaZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hkT-ji-GiA" secondAttribute="bottom" constant="20" id="L2n-XR-ch6"/>
+                <constraint firstItem="CfM-KC-Xan" firstAttribute="top" secondItem="EkP-Vq-VF3" secondAttribute="bottom" constant="15" id="Iav-fk-dID"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hkT-ji-GiA" secondAttribute="bottom" constant="35" id="L2n-XR-ch6"/>
                 <constraint firstItem="NzE-5g-ylI" firstAttribute="bottom" secondItem="ML0-mc-iQ8" secondAttribute="bottom" id="MHG-D2-mus"/>
-                <constraint firstItem="hkT-ji-GiA" firstAttribute="top" secondItem="ML0-mc-iQ8" secondAttribute="bottom" constant="50" id="S9P-ly-9wy"/>
+                <constraint firstItem="EkP-Vq-VF3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Rpr-nr-I4N"/>
+                <constraint firstItem="hkT-ji-GiA" firstAttribute="top" secondItem="ML0-mc-iQ8" secondAttribute="bottom" constant="35" id="S9P-ly-9wy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EkP-Vq-VF3" secondAttribute="trailing" constant="15" id="U5K-ux-6TI"/>
                 <constraint firstItem="4tu-ZX-IUb" firstAttribute="top" secondItem="EkP-Vq-VF3" secondAttribute="top" id="VX4-fp-uRo"/>
                 <constraint firstItem="4tu-ZX-IUb" firstAttribute="top" secondItem="VKh-Dc-ZIx" secondAttribute="bottom" constant="35" id="Vkg-x2-Fnl"/>
                 <constraint firstItem="NzE-5g-ylI" firstAttribute="top" secondItem="ML0-mc-iQ8" secondAttribute="top" id="ZKg-tW-jlo"/>
@@ -117,11 +124,15 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="attributionStack" destination="hkT-ji-GiA" id="oyC-pa-JtI"/>
                 <outlet property="containerView" destination="ML0-mc-iQ8" id="mxQ-73-cp1"/>
                 <outlet property="cuisineImageView" destination="vVx-vL-pmP" id="y9k-Gx-kiB"/>
                 <outlet property="infoLabel" destination="EkP-Vq-VF3" id="bdD-3P-eaR"/>
+                <outlet property="poweredByImageView" destination="Pex-et-cc5" id="shJ-mO-23R"/>
+                <outlet property="poweredByLabel" destination="C4F-9t-EGb" id="FaA-92-2Xb"/>
                 <outlet property="shimmerView" destination="4tu-ZX-IUb" id="3rm-yz-pUi"/>
                 <outlet property="stackViewShimmer" destination="NzE-5g-ylI" id="QkM-cx-SSw"/>
+                <outlet property="vegetarianHintView" destination="CfM-KC-Xan" id="J5M-hX-beL"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>
@@ -131,5 +142,6 @@
         <image name="pot" width="50" height="50"/>
         <image name="poweredby" width="44" height="10"/>
         <image name="right_arrow" width="60" height="60"/>
+        <image name="vegetarian" width="60" height="60"/>
     </resources>
 </document>

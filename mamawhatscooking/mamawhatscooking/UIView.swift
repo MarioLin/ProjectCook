@@ -110,4 +110,12 @@ extension UIView {
     static func genericCloseButton(block: () -> ()) -> UIImageView {
         return UIImageView()
     }
+    
+    func removeAllGestureRecognizers() {
+        if let gr = gestureRecognizers {
+            for g in gr {
+                removeGestureRecognizer(g)
+            }
+        }
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 fileprivate enum Constants {
-    static let timeToWait: TimeInterval = 1.5
+    static let timeToWait: TimeInterval = 3.5
 }
 
 class RecipeViewController: UIViewController {
@@ -28,6 +28,7 @@ class RecipeViewController: UIViewController {
     
     var searchParams: [String: String]! // NEEDS TO BE INJECTED, will trap in viewDidLoad otherwise
     var recipeType: RecipeCourseType = .lunch // default lunch, this should be injected & changed by source VC
+    var isVegetarianMode: Bool = UserDefaults.getDefaultForVegetarianOption()
     
     private var loadingView: RecipeLoadingView! // guards in viewDidLoad
     private var requestTime: Date?
@@ -54,7 +55,8 @@ class RecipeViewController: UIViewController {
         loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+        loadingView.vegetarianHintView.isHidden = !isVegetarianMode
+
         refreshButton.isHidden = true
         recipeNameLabel.alpha = 0
         setupTableView()
@@ -122,16 +124,28 @@ class RecipeViewController: UIViewController {
         let yummlyReq = YummlyApiTransaction()
         
         requestTime = Date()
-        yummlyReq.completion = { [weak self] (objects, response, error) in
+        yummlyReq.completion = { [weak self, weak yummlyReq] (objects, response, error) in
             if let recipes = objects as? [YummlySearchModel], recipes.count > 0, error == nil {
+                if let attribution = yummlyReq?.searchAttribution {
+                    self?.loadingView.showAttribution(text: attribution.text, logoURL: attribution.logo) { [weak self] in
+                        if let wellformedUrl = attribution.urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                            let url = URL(string: wellformedUrl) {
+                            let safariVC = SFSafariViewController(url: url)
+                            self?.present(safariVC, animated: true, completion: nil)
+                        }
+
+                    }
+                }
                 self?.handle(searchedRecipes: recipes)
             } else {
                 // error
+                self?.handleError(emptyResult: error == nil)
             }
         }
         yummlyReq.makeSearchRequest(params: searchParams)
         
     }
+    
     private func handle(searchedRecipes: [YummlySearchModel]) {
         let randomNum = Int(arc4random_uniform(UInt32(searchedRecipes.count)))
         let randomRecipe = searchedRecipes[randomNum]
@@ -157,7 +171,7 @@ class RecipeViewController: UIViewController {
                     self?.recipeNameLabel.text = recipeModel.recipeName
                     self?.setupModels()
                     self?.tableView.reloadData()
-                    
+                    self?.scrollToFirstRow()
                     UIView.animate(withDuration: 0.5, animations: {
                         self?.loadingView.isHidden = true
                         self?.refreshButton.isHidden = false
@@ -168,6 +182,19 @@ class RecipeViewController: UIViewController {
         recipeReq.makeRecipeRequest(recipeId: recipeId)
     }
     
+    func scrollToFirstRow() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+
+    private func handleError(emptyResult: Bool = false) {
+        let errorStr = emptyResult ? "There appeared to be no recipes with this criteria, try searching with a different course and/or cuisine." 
+                                    : "Oh no! There was an error getting the recipe, tap the refresh button on the top right to try again."
+        loadingView.infoLabel.text = errorStr
+        loadingView.infoLabel.font = UIFont(name: "Helvetica Neue", size: 14)
+        refreshButton.isHidden = false
+    }
+    
     // MARK: IBActions
     @IBAction func dismissButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -176,7 +203,11 @@ class RecipeViewController: UIViewController {
     @IBAction func refreshTapped(_ sender: Any) {
         loadingView.isHidden = false
         refreshButton.isHidden = true
-        // if they re-roll, make sure the rating is 4+
+
+        // reset loadingView in case of error state
+        loadingView.infoLabel.text = "Cooking up a recipe..."
+        loadingView.infoLabel.font = UIFont(name: "Helvetica Neue", size: 28)
+        
         getRecipeThenLoadData()
     }
 }
