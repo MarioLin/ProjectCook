@@ -185,14 +185,22 @@
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bti-Qg-XWR">
+                                <rect key="frame" x="150.5" y="33" width="74.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bti-Qg-XWR" firstAttribute="centerX" secondItem="6F6-6u-J8d" secondAttribute="centerX" id="5l1-Gt-NJ2"/>
                             <constraint firstItem="6F6-6u-J8d" firstAttribute="bottom" secondItem="SSB-Xy-69U" secondAttribute="bottom" id="7oT-VG-tri"/>
                             <constraint firstItem="m9K-fv-ApJ" firstAttribute="top" secondItem="6F6-6u-J8d" secondAttribute="top" id="TMB-4W-xBo"/>
                             <constraint firstItem="6F6-6u-J8d" firstAttribute="trailing" secondItem="SSB-Xy-69U" secondAttribute="trailing" id="ahG-FK-ZV5"/>
                             <constraint firstItem="m9K-fv-ApJ" firstAttribute="leading" secondItem="6F6-6u-J8d" secondAttribute="leading" constant="12" id="cNf-Gx-GlH"/>
                             <constraint firstItem="SSB-Xy-69U" firstAttribute="leading" secondItem="6F6-6u-J8d" secondAttribute="leading" id="d0d-CL-Tz6"/>
+                            <constraint firstItem="bti-Qg-XWR" firstAttribute="centerY" secondItem="m9K-fv-ApJ" secondAttribute="centerY" id="iD3-67-Uid"/>
                             <constraint firstItem="SSB-Xy-69U" firstAttribute="top" secondItem="m9K-fv-ApJ" secondAttribute="bottom" id="vvM-hZ-fer"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6F6-6u-J8d"/>

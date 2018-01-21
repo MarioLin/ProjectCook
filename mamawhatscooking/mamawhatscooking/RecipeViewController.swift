@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 fileprivate enum Constants {
-    static let timeToWait: TimeInterval = 3.5
+    static let timeToWait: TimeInterval = 2.9
 }
 
 class RecipeViewController: UIViewController {
@@ -188,7 +188,7 @@ class RecipeViewController: UIViewController {
     }
 
     private func handleError(emptyResult: Bool = false) {
-        let errorStr = emptyResult ? "There appeared to be no recipes with this criteria, try searching with a different course and/or cuisine." 
+        let errorStr = emptyResult ? "There appeared to be no recipes with this criteria, try searching with a different course and/or cuisine."
                                     : "Oh no! There was an error getting the recipe, tap the refresh button on the top right to try again."
         loadingView.infoLabel.text = errorStr
         loadingView.infoLabel.font = UIFont(name: "Helvetica Neue", size: 14)
